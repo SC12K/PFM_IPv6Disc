@@ -3,6 +3,8 @@
 import socket
 import sys
 import getopt
+import string
+import random as rnd
 
 def printV(line):
 	global verbose
@@ -32,12 +34,14 @@ def setParams():
 	global bruteforce
 	global random
 	global maxiter
+	global sizeStr
 	
 	verbose = False
 	anadir = False
 	bruteforce = False
 	random = False
 	maxiter = 1000000
+	sizeStr = 0
 	
 	for opt, arg in options:
 		if(opt in ('-h','--help')):
@@ -48,14 +52,15 @@ def setParams():
 		elif (opt == '-a'):
 			printV("Append Mode On")
 			anadir = True
-		elif (opt == '-b'):
-			printV("Brute Force On")
+		elif (opt == '-b'):	
 			if(random == False):
+				printV("Brute Force On")
 				bruteforce = True
 		elif (opt == '-r'):
-			printV("Radom Mode On")
 			if(bruteforce == False):
+				printV("Radom Mode On. Size: " + arg)
 				random = True
+				sizeStr = int(arg)
 		elif (opt == '-i'):
 			printV("Input File " + arg)
 			infilename = arg
@@ -116,11 +121,9 @@ def incStr(str):
 		res, carro = incStr(str[1:])
 		if(carro == False):
 			result = str[0] + res
-			print result
 		else:
 			res2, carro = incChar(str[0])
 			result = res2 + res
-			print result
 		
 	return result, carro
 		
@@ -128,7 +131,7 @@ def bruteForce():
 	printV("BruteForce")
 	global maxiter
 	
-	name = "ty"
+	name = "a"
 	doms = [".es", ".com", ".org", ".de", ".fr", ".uk"]
 	iter = 0
 	while iter < maxiter:
@@ -149,6 +152,24 @@ def bruteForce():
 	
 def randomMode():
 	printV("randomMode")
+	global maxiter
+	global sizeStr
+	
+	name = ''.join(rnd.choice("abcdefghijklmñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
+	doms = [".es", ".com", ".org", ".de", ".fr", ".uk"]
+	iter = 0
+	while iter < maxiter:
+		urlbase = "www." + name
+		for ext in doms:
+			url = urlbase + ext
+			printV("Peticion a " + url + " ...")
+			ipv6addr = peticion(url)
+			if(ipv6addr != ""):
+				outfile.write(url + ';' + ipv6addr + '\n')
+		
+		name = ''.join(rnd.choice("abcdefghijklmñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
+		
+		iter = iter + 1
 	
 #tratamiento de args
 global verbose
