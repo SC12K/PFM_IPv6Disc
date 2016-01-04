@@ -104,7 +104,7 @@ def fileSearch():
 	infile.close()
 
 def incChar(char):
-	Alfabeto="abcdefghijklmñopqrstuvwxyz0123456789-_"
+	Alfabeto="abcdefghijklmnñopqrstuvwxyz0123456789-_"
 	i = Alfabeto.index(char)
 	i = i + 1
 	carro = False
@@ -131,7 +131,7 @@ def bruteForce():
 	printV("BruteForce")
 	global maxiter
 	
-	name = "a"
+	name = "e4s"
 	doms = [".es", ".com", ".org", ".de", ".fr", ".uk"]
 	iter = 0
 	while iter < maxiter:
@@ -155,7 +155,7 @@ def randomMode():
 	global maxiter
 	global sizeStr
 	
-	name = ''.join(rnd.choice("abcdefghijklmñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
+	name = ''.join(rnd.choice("abcdefghijklmnñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
 	doms = [".es", ".com", ".org", ".de", ".fr", ".uk"]
 	iter = 0
 	while iter < maxiter:
@@ -167,7 +167,7 @@ def randomMode():
 			if(ipv6addr != ""):
 				outfile.write(url + ';' + ipv6addr + '\n')
 		
-		name = ''.join(rnd.choice("abcdefghijklmñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
+		name = ''.join(rnd.choice("abcdefghijklmnñopqrstuvwxyz0123456789-_") for _ in range(sizeStr))
 		
 		iter = iter + 1
 	
