@@ -131,7 +131,7 @@ def bruteForce():
 	printV("BruteForce")
 	global maxiter
 	
-	name = "e4s"
+	name = "a"
 	doms = [".es", ".com", ".org", ".de", ".fr", ".uk"]
 	iter = 0
 	while iter < maxiter:
@@ -142,6 +142,7 @@ def bruteForce():
 			ipv6addr = peticion(url)
 			if(ipv6addr != ""):
 				outfile.write(url + ';' + ipv6addr + '\n')
+				outfile.flush()
 		
 		name, carro = incStr(name)
 		if (carro == True):
