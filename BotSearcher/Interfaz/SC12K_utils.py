@@ -1,5 +1,6 @@
 ﻿# Conjunto de funciones sueltas.
 # Y constantes utiles.
+# Centralización de punteros
 
 global debug
 debug = False

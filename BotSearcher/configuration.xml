@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<instrucciones>
+	<instruccion nombre='ListarSondas' modulo='ListarSondas' path='./'/>
+	<instruccion nombre='NuevaSonda' modulo='NuevaSonda' path='./'/>
+	<instruccion nombre='Parametro' modulo='Parametro' path='./'/>
+</instrucciones>
