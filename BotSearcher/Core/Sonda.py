@@ -1,19 +1,25 @@
 
-def Sonda() :
-	def __init__(self, dispensador, ejecutor):
+class Sonda:
+	def __init__(self, nombre, dispensador, ejecutor):
 		self.id = 0
-		self.dispensador = dispensador
-		self.ejecutor = ejecutor
-		self._name = ""
+		self._dispensador = dispensador
+		self._ejecutor = ejecutor
+		self._name = nombre
 		
-	def Lanzar(iteraciones):
-		pass
+	def ejecutarPaso(self):
+		self._ejecutor.ejecutarPaso(self._dispensador.getDireccionIPv6())
 		
-	def getResultInfo():
+	def getResultInfo(self):
 		pass
 	
-	def setName(name)
+	def setName(self, name):
 		self._name = name
 	
-	def getName()
-		return ""
+	def getName(self):
+		return self._name
+		
+	def getNombreDispensador(self):
+		return self._dispensador.__class__.__name__
+		
+	def getNombreEjecutor(self):
+		return self._ejecutor.__class__.__name__

@@ -1,15 +1,19 @@
+from EjecutorSondeo import EjecutorSondeo
 
-class EjecutorSondeo() :
+class EjecutorSYN(EjecutorSondeo) :
 	def __init__(self):
 		pass
 		
-	def ejecutarPaso():
-		return False
+	def ejecutarPaso(self, ipv6):
+		print "Ejecutor: " + ipv6
+		return True
 	
 	def setParametro(key, value):
 		if key == "name":
 			self_name = name
-		return False
+		else:
+			return False
+		return True
 	
 	def getResultInfo():
 		pass
@@ -18,4 +22,4 @@ class EjecutorSondeo() :
 		val = ""
 		if key == "name":
 			val = self._name
-			
+		return val
