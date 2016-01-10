@@ -29,6 +29,7 @@ class Interprete :
 		
 	
 	def __init__(self):
+		logging.info('Abriendo interprete...')
 		print "BotSearcher IPv6 Manager"
 		print " ____   ____ _ ____  _  __  _____"                    
 		print "/ ___| / ___/ |___ \| |/ / |_   _|__  __ _ _ __ ___"  

@@ -4,6 +4,7 @@ from SC12K_utils import *
 from DispensadorIPv6 import DispensadorIPv6
 from EjecutorSondeo import EjecutorSondeo
 from Sonda import Sonda
+import xml.etree.ElementTree as xmlparser
 
 class GestorDeSondas():
 	def __init__(self):
@@ -11,8 +12,16 @@ class GestorDeSondas():
 		self._Dispensadores = dict()
 		self._Ejecutores = dict()
 		pass
+		
+	def anadirSonda(self,nombre, dispensadorIPv6, ejecutorSondeo):
+		result = self._anadirSonda(nombre, dispensadorIPv6, ejecutorSondeo)
+		if result:
+			if 'Y' == raw_input('Escriba Y para cargar siempre  '):
+				attributes={'nombre' : nombre, 'dispensador': dispensadorIPv6, 'ejecutor' : ejecutorSondeo}
+				xmlparser.SubElement(self.tree.getroot(),"sonda", attrib=attributes)
+		return result
 	
-	def anadirSonda(self, nombre, dispensadorIPv6, ejecutorSondeo):
+	def _anadirSonda(self, nombre, dispensadorIPv6, ejecutorSondeo):
 		if not (dispensadorIPv6 in self._Dispensadores):
 			logging.warning("Dispensador IPv6 " + dispensadorIPv6 + " no existe")
 			print "Dispensador IPv6 " + dispensadorIPv6 + " no existe"
@@ -32,11 +41,18 @@ class GestorDeSondas():
 		ejec = self._Ejecutores[ejecutorSondeo]()
 		sonda = Sonda(nombre, disp, ejec)
 		self._Sondas[nombre] = sonda
-		sonda.ejecutarPaso()
 		
 		return True
-		
-	def cargarDispensador(self,folder, modulename, disp):
+	
+	def cargarDispensador(self,folder, modulename, ejec):
+		result = self._cargarDispensador(folder, modulename, ejec)
+		if result:
+			if 'Y' == raw_input('Escriba Y para cargar siempre  '):
+				attributes={'folder' : folder, 'modulo': modulename, 'clase' : ejec}
+				xmlparser.SubElement(self.tree.getroot(),"dispensador", attrib=attributes)
+		return result
+	
+	def _cargarDispensador(self,folder, modulename, disp):
 		sobr = 'Y'
 		if disp in self._Dispensadores:
 			print "El dispensador " + disp + " ya esta cargado."
@@ -69,17 +85,25 @@ class GestorDeSondas():
 		else:
 			return False
 	
-	def cargarEjecutor(self,folder, modulename, disp):
+	def cargarEjecutor(self,folder, modulename, ejec):
+		result = self._cargarEjecutor(folder, modulename, ejec)
+		if result:
+			if 'Y' == raw_input('Escriba Y para cargar siempre  '):
+				attributes={'folder' : folder, 'modulo': modulename, 'clase' : ejec}
+				xmlparser.SubElement(self.tree.getroot(),"ejecutor", attrib=attributes)
+		return result
+		
+	def _cargarEjecutor(self,folder, modulename, ejec):
 		sobr = 'Y'
-		if disp in self._Ejecutores:
-			print "El ejecutor " + disp + " ya esta cargado."
+		if ejec in self._Ejecutores:
+			print "El ejecutor " + ejec + " ya esta cargado."
 			sobr = raw_input("Escriba 'Y' para sobrescribirlo")
 		
 		if sobr == 'Y':
-			logging.info('cargarEjecutor Folder: ' + folder + ' Module ' + modulename + ' Ejecutor ' + disp)
-			clase = cargarClase(folder, modulename, disp)
+			logging.info('cargarEjecutor Folder: ' + folder + ' Module ' + modulename + ' Ejecutor ' + ejec)
+			clase = cargarClase(folder, modulename, ejec)
 			if clase != None :
-				self._Ejecutores[disp] = clase
+				self._Ejecutores[ejec] = clase
 				if self.checkEjec(clase):
 					logging.info('\tOk')
 					print "Cargado"
@@ -95,8 +119,8 @@ class GestorDeSondas():
 		else:
 			return True
 				
-	def checkEjec(self, DispClass):
-		methods = dir(DispClass)
+	def checkEjec(self, EjecClass):
+		methods = dir(EjecClass)
 		if 'getResultInfo' in methods:
 			return True
 		else:
@@ -127,8 +151,93 @@ class GestorDeSondas():
 			print "  " + key + "\t\t\t" + "IRAN LOS PARAMETROS"
 		print "--------------------------------------------------------------------"
 	
-	def eliminarSonda(self, id):
-		pass
+	def eliminarEjecutor(self, nombre):
+		if nombre in self._Ejecutores:
+			del self._Ejecutores[nombre]
+			root = self.tree.getroot()
+			for ejec in root.findall("ejecutor"):
+				if ejec.attrib['clase'] == nombre:
+					root.remove(ejec)
+			return True
+		else:
+			print "No existe el ejecutor " + nombre
+			return False
+			
+	def eliminarDispensador(self, nombre):
+		if nombre in self._Dispensadores:
+			del self._Dispensadores[nombre]
+			root = self.tree.getroot()
+			for disp in root.findall("dispensador"):
+				if disp.attrib['clase'] == nombre:
+					root.remove(disp)
+			return True
+		else:
+			print "No existe el dispensador " + nombre
+			return False
 		
-	def cargar(self):
-		pass
+	def eliminarSonda(self, nombre):
+		if nombre in self._Sondas:
+			del self._Sondas[nombre]
+			root = self.tree.getroot()
+			for sonda in root.findall("sonda"):
+				if sonda.attrib['nombre'] == nombre:
+					root.remove(sonda)
+			return True
+		else:
+			print "No existe la sonda " + nombre
+			return False
+		
+	def cargar(self, xmlfile):
+		logging.info('Cargando modulos desde el fichero ' + xmlfile)
+		#importar el fichero:
+		self.tree = xmlparser.parse(xmlfile)
+		root = self.tree.getroot()
+		
+		for xml_dispensador in root.findall('dispensador'):
+			print 'Cargando dispensador ' + xml_dispensador.attrib['clase']
+			if not self._cargarDispensador(xml_dispensador.attrib['folder'],xml_dispensador.attrib['modulo'],xml_dispensador.attrib['clase']):
+				root.remove(xml_dispensador)
+			
+		for xml_ejecutor in root.findall('ejecutor'):
+			print 'Cargando ejecutor ' + xml_ejecutor.attrib['clase']
+			if not self._cargarEjecutor(xml_ejecutor.attrib['folder'],xml_ejecutor.attrib['modulo'],xml_ejecutor.attrib['clase']):
+				root.remove(xml_ejecutor)
+			
+		for xml_sonda in root.findall('sonda'):
+			print 'Creando sonda ' + xml_sonda.attrib['nombre']
+			if not self._anadirSonda(xml_sonda.attrib['nombre'], xml_sonda.attrib['dispensador'], xml_sonda.attrib['ejecutor']):
+				root.remove(xml_sonda)
+			
+	def	guardar(self):
+		self.tree.write('modulos.xml')
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -6,7 +6,10 @@ sys.path.append('./Core')
 #Función para realizar prints solo cuando debug este activado.
 
 import logging
-logging.basicConfig(filename='BotSearcherIPv6.log', format='[%(asctime)s]\t%(levelname)s\t: %(message)s', level=logging.DEBUG)
+tlevel=logging.DEBUG
+#tlevel=logging.INFO
+#tlevel=logging.WARNING
+logging.basicConfig(filename='BotSearcherIPv6.log', format='[%(asctime)s]\t%(levelname)s\t: %(message)s', level=tlevel)
 
 		
 def cargarClase(path, modulename, classname):

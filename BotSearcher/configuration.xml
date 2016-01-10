@@ -7,4 +7,7 @@
 	<instruccion nombre='Parametro' modulo='Parametro' path='./'/>
 	<instruccion nombre='CargarDispensador' modulo='CargarDispensador' path='./'/>
 	<instruccion nombre='CargarEjecutor' modulo='CargarEjecutor' path='./'/>
+	<instruccion nombre='EliminarEjecutor' modulo='Eliminar' path='./'/>
+	<instruccion nombre='EliminarDispensador' modulo='Eliminar' path='./'/>
+	<instruccion nombre='EliminarSonda' modulo='Eliminar' path='./'/>
 </instrucciones>

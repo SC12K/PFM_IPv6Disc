@@ -6,8 +6,13 @@ logging.info('Cargando repositorio de instrucciones en interprete. Fichero:' + f
 interprete.cargarRepertorio(filename)
 logging.info('Repositorio cargado.')
 logging.info('Cargando gestor de sondas.')
-GdS.cargar()
+GdS.cargar('modulos.xml')
 logging.info('Gestor de sondas cargado.')
 
 interprete.ejecutarBucle()
+logging.info('Interprete Cerrado')
+logging.info('Guardando Gestor de Sondas')
+GdS.guardar()
+logging.info('Cerrar')
+
 
