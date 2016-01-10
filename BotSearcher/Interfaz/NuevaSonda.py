@@ -12,7 +12,7 @@ class NuevaSonda(Instruccion) :
 		self.name = "NuevaSonda"
 	
 	def run(self, params, interprete):
-		printD("Nueva Sonda\nparams: " + str(params))
+		logging.debug("Ejecutando Nueva Sonda. Parametros: " + str(params))
 		return True
 		
 	def help(self):

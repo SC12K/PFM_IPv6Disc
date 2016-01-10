@@ -5,10 +5,9 @@ sys.path.append('./Interfaz')
 sys.path.append('./Core')
 #Función para realizar prints solo cuando debug este activado.
 
+import logging
+logging.basicConfig(filename='BotSearcherIPv6.log', format='[%(asctime)s]\t%(levelname)s\t: %(message)s', level=logging.DEBUG)
 
-def printD(str):
-	if debug:
-		print str
 		
 def cargarClase(path, modulename, classname):
 	try:
@@ -16,21 +15,22 @@ def cargarClase(path, modulename, classname):
 			sys.path.append(path)
 		module = __import__(modulename)
 		class_ = getattr(module, classname)
-		printD(dir(class_))
 	except Exception as E:
 		print E
 		class_ = None
 	return class_
 	
 def pathToFolderModule(path):
+		logging.debug("pathToFolderModule path: " + path)
 		pathParts =  path.rsplit('/',1)
-		print pathParts
 		if len(pathParts) > 1 :
 			folder = pathParts[0] + "/"
 			module = pathParts[1].split('.',1)[0]
 		else :
 			module = pathParts[0].split('.',1)[0]
 			folder = "./"
+			
+		logging.debug("pathToFolderModule path: " + path + "--> Folder: " + folder + " Module: " + module)
 		return folder, module
 		
 def NormalizeAddr(addr):
@@ -53,7 +53,7 @@ def NormalizeAddr(addr):
 		padding = padding + "0000:"
 	
 	addrNorm = addrLeft + padding + addrAux
-	
+	logging.debug("NormalizeAddr addrIn: " + addr + " --> addrOut: " + addrNorm[:-1])
 	return addrNorm[:-1]
 		
 #importamos las clases base
@@ -67,8 +67,4 @@ interprete = Interprete()
 #Gestor de Sondas
 global GdS
 GdS = GestorDeSondas()
-
-#Flag de debug para printD
-global debug
-debug = False
 

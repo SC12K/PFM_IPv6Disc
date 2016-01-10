@@ -12,7 +12,6 @@ class Interprete :
 			self.name = "Ayuda"
 		
 		def run(self, params, interprete):
-			printD("Ayuda")
 			if (params == None) :
 				res = self.help()
 				print res
@@ -44,7 +43,7 @@ class Interprete :
 		
 	
 	def ejecInstr(self, instr, params) :
-		printD(self.repertorio.viewkeys())
+		logging.debug('ejecInstr repo keys: ' + str(self.repertorio.viewkeys()))
 		if instr in self.repertorio :
 			#separar parametros de instruccion
 			return self.repertorio[instr].run(params,self)
@@ -53,7 +52,7 @@ class Interprete :
 
 	def cargarInstruccion(self, path, modulename, classname):
 		clase = cargarClase(path, modulename, classname)
-		printD(dir(clase))
+		logging.debug('cargarInstruccion atributos y funciones de ' + classname + ' : ' + str(dir(clase)))
 		if clase == None:
 			return None
 		if not self.checkInstr(clase):
@@ -77,7 +76,7 @@ class Interprete :
 		tree = xmlparser.parse(xmlfile)
 		root = tree.getroot()
 		for child in root:
-			printD(child.attrib['path'] +" "+ child.attrib['modulo'] +" "+ child.attrib['nombre'])
+			logging.info('Cargando instruccion: ' + child.attrib['path'] +" "+ child.attrib['modulo'] +" "+ child.attrib['nombre'])
 			instruccion = self.cargarInstruccion(child.attrib['path'], child.attrib['modulo'], child.attrib['nombre'])
 			if instruccion != None:
 				self.repertorio[instruccion.name]= instruccion
@@ -95,22 +94,28 @@ class Interprete :
 		while instr != "Exit":
 		
 			instr = raw_input('$>>')
-			printD("instruccion " + instr)
+			logging.info('Instruccion introducida: ' + instr)
 			
 			instrParts = instr.split(' ', 1)
+			
 			if len(instrParts) != 2 :
+				logging.info('\tNo contiene parametros')
 				execu = self.ejecInstr(instrParts[0], None)
 				if instrParts[0] == 'Ayuda':
 					for instrName in self.repertorio.viewkeys():
 						print "\t*  " + instrName
 					print "\t*  Exit"
 			else : 
+				logging.info('\tContiene parametros')
 				execu = self.ejecInstr(instrParts[0], instrParts[1])
 				
 			if(not execu and instrParts[0] != "Exit"):
+				logging.warning('\tError de ejecucion')
 				print "Error en la ejecucion."
 
 				if instrParts[0] in self.repertorio :
+					logging.warning('\tLa instruccion existe.')
 					print self.repertorio[instrParts[0]].help()
 				else :
+					logging.warning('\tLa instruccion no existe.')
 					print "La instruccion no existe. Usa 'Ayuda'"

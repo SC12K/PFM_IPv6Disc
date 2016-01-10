@@ -12,7 +12,7 @@ class CargarDispensador(Instruccion) :
 		self.name = "CargarDispensador"
 	
 	def run(self, params, interprete):
-		printD("CargarDispensador\nparams: " + str(params))
+		logging.debug("Ejecutando CargarDispensador. Parametros: " + str(params))
 		#folder: desde el principio hasta el último '/'.
 		#module: desde el ultimo '/' hasta el '.' del py
 		#disp: nombre de la clase: igual que el module o dado por el usuario.
@@ -28,14 +28,10 @@ class CargarDispensador(Instruccion) :
 		else :
 			disp = module
 		
-		printD("params " + params)
-		printD("folder " + folder)
-		printD("module " + module)
-		printD("disp " + disp)
-		
 		return GdS.cargarDispensador(folder, module, disp)
 		
 	def help(self):
+		logging.debug("Ejecutando CargarDispensador help")
 		res = ""
 		res+= "************************** Cargar Dispensador ******************************\n"
 		res+= "CargarDispensador <path> : Carga el modulo .py dado en el path y la clase\n"

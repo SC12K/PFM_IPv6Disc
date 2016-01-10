@@ -12,8 +12,9 @@ class Parametro(Instruccion) :
 		self.name = "Parametro"
 	
 	def run(self, params, interprete):
-		printD("Parametro\nparams: " + str(params))
+		logging.debug("Ejecutando Parametro. Parametros: " + str(params))
 		return True
 		
 	def help(self):
+		logging.debug("Ejecutando Parametro help")
 		return "Help for Parametro"

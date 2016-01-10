@@ -8,10 +8,13 @@ class Instruccion :
 		self.init()
 		
 	def init(self):
+		logging.error('init No implementado!')
 		self.name = ""
 	
 	def run(self, params, interprete):
+		logging.error('run No implementado!')
 		pass
 		
 	def help(self):
+		logging.error('help No implementado!')
 		pass

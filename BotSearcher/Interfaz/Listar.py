@@ -12,11 +12,12 @@ class ListarSondas(Instruccion) :
 		self.name = "ListarSondas"
 	
 	def run(self, params, interprete):
-		printD("Listar Sondas\nparams: " + str(params))
+		logging.debug("Ejecutando Listar Sondas. Parametros: " + str(params))
 		GdS.listarSondas()
 		return True
 		
 	def help(self):
+		logging.debug("Ejecutando Listar Sondas help")
 		return "Help for Listar Sondas"
 		
 class ListarDispensadores(Instruccion) :
@@ -28,11 +29,12 @@ class ListarDispensadores(Instruccion) :
 		self.name = "ListarDispensadores"
 	
 	def run(self, params, interprete):
-		printD("Listar Dispensadores\nparams: " + str(params))
+		logging.debug("Ejecutando Listar Dispensadores. Parametros: " + str(params))
 		GdS.listarDispensadores()
 		return True
 		
 	def help(self):
+		logging.debug("Ejecutando Listar Dispensadores help")
 		return "Help for Listar Dispensadores"
 
 class ListarEjecutores(Instruccion) :
@@ -44,9 +46,10 @@ class ListarEjecutores(Instruccion) :
 		self.name = "ListarEjecutores"
 	
 	def run(self, params, interprete):
-		printD("Listar Ejecutores\nparams: " + str(params))
+		logging.debug("Ejecutando Listar Ejecutores. Parametros: " + str(params))
 		GdS.listarEjecutores()
 		return True
 		
 	def help(self):
+		logging.debug("Ejecutando Listar Ejecutores help")
 		return "Help for Listar Ejecutores"

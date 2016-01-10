@@ -18,18 +18,18 @@ class GestorDeSondas():
 		if disp in self._Dispensadores:
 			print "El dispensador " + disp + " ya esta cargado."
 		else:
-			printD("Fold " + folder)
-			printD("Mod " + modulename)
-			printD("Dips " + disp)
+			logging.info('cargarDispensador Folder: ' + folder + ' Module' + modulename + 'Dispensador ' + disp)
 			clase = cargarClase(folder, modulename, disp)
 			if clase != None :
-				printD(dir(clase))
 				self._Dispensadores[disp] = clase
 				if self.checkDisp(clase):
+					logging.info('\tOk')
 					return True
 				else:
+					logging.warning('\tLa clase no coincide con el patron. ' + dir(clase))
 					return False
 			else :
+				logging.warning('\tError al abrir el archivo')
 				return False
 	
 	def checkDisp(self, DispClass):
@@ -43,18 +43,18 @@ class GestorDeSondas():
 		if disp in self._Ejecutor:
 			print "El ejecutor " + disp + " ya esta cargado."
 		else:
-			printD("Fold " + folder)
-			printD("Mod " + modulename)
-			printD("Dips " + disp)
+			logging.info('cargarEjecutor Folder: ' + folder + ' Module' + modulename + 'Dispensador ' + disp)
 			clase = cargarClase(folder, modulename, disp)
 			if clase != None :
-				printD(dir(clase))
 				self._Ejecutor[disp] = clase
 				if self.checkEjec(clase):
+					logging.info('\tOk')
 					return True
 				else:
+					logging.warning('\tLa clase no coincide con el patron.' + dir(clase))
 					return False
 			else :
+				ogging.warning('\tError al abrir el archivo')
 				return False
 				
 	def checkEjec(self, DispClass):
