@@ -1,4 +1,7 @@
-﻿from Instruccion import Instruccion
+﻿import sys
+sys.path.append('../')
+from SC12K_utils import *
+from Instruccion import Instruccion
 
 class NuevaSonda(Instruccion) :
 
@@ -8,8 +11,8 @@ class NuevaSonda(Instruccion) :
 	def init(self):
 		self.name = "NuevaSonda"
 	
-	def run(self, params):
-		print "Nueva Sonda"
+	def run(self, params, interprete):
+		printD("Nueva Sonda\nparams: " + str(params))
 		return True
 		
 	def help(self):

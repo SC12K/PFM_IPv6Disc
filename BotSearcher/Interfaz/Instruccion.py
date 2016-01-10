@@ -1,4 +1,6 @@
-﻿from SC12K_utils import printD
+﻿import sys
+sys.path.append('../')
+from SC12K_utils import *
 
 class Instruccion :
 
@@ -8,7 +10,7 @@ class Instruccion :
 	def init(self):
 		self.name = ""
 	
-	def run(self, params):
+	def run(self, params, interprete):
 		pass
 		
 	def help(self):

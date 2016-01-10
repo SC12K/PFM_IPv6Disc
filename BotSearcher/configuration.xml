@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <instrucciones>
-	<instruccion nombre='ListarSondas' modulo='ListarSondas' path='./'/>
+	<instruccion nombre='ListarSondas' modulo='Listar' path='./'/>
+	<instruccion nombre='ListarDispensadores' modulo='Listar' path='./'/>
+	<instruccion nombre='ListarEjecutores' modulo='Listar' path='./'/>
 	<instruccion nombre='NuevaSonda' modulo='NuevaSonda' path='./'/>
 	<instruccion nombre='Parametro' modulo='Parametro' path='./'/>
+	<instruccion nombre='CargarDispensador' modulo='CargarDispensador' path='./'/>
+	<instruccion nombre='CargarEjecutor' modulo='CargarEjecutor' path='./'/>
 </instrucciones>

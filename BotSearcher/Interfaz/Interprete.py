@@ -1,8 +1,9 @@
-﻿import Instruccion
-from SC12K_utils import printD
+﻿import sys
+sys.path.append('../')
+import SC12K_utils
+from SC12K_utils import *
+import Instruccion
 import xml.etree.ElementTree as xmlparser
-
-import importlib as il
 
 class Interprete :
 	
@@ -10,13 +11,13 @@ class Interprete :
 		def init(self):
 			self.name = "Ayuda"
 		
-		def run(self, params, interpreter):
+		def run(self, params, interprete):
 			printD("Ayuda")
 			if (params == None) :
 				res = self.help()
 				print res
 			else :
-				res = interpreter.ejecHelp(params)
+				res = interprete.ejecHelp(params)
 				print res
 
 			return True
@@ -43,7 +44,7 @@ class Interprete :
 		
 	
 	def ejecInstr(self, instr, params) :
-		printD(self.repertorio.keys)
+		printD(self.repertorio.viewkeys())
 		if instr in self.repertorio :
 			#separar parametros de instruccion
 			return self.repertorio[instr].run(params,self)
@@ -51,12 +52,22 @@ class Interprete :
 			return False
 
 	def cargarInstruccion(self, path, modulename, classname):
-		if (path != "" and path != "./"):
-			sys.path.append(path)
-		module = __import__(modulename)
-		class_ = getattr(module, classname)
-		instance = class_()
-		return instance
+		clase = cargarClase(path, modulename, classname)
+		printD(dir(clase))
+		if clase == None:
+			return None
+		if not self.checkInstr(clase):
+			return None
+		instancia = clase()
+		return instancia
+	
+		
+	def checkInstr(self, InstrClass) :
+		methods = dir(InstrClass)
+		if 'run' in methods and 'help' in methods:
+			return True
+		else:
+			return False
 	
 	def cargarRepertorio(self, xmlfile) :
 		instruccion = self.Ayuda()
@@ -66,8 +77,10 @@ class Interprete :
 		tree = xmlparser.parse(xmlfile)
 		root = tree.getroot()
 		for child in root:
+			printD(child.attrib['path'] +" "+ child.attrib['modulo'] +" "+ child.attrib['nombre'])
 			instruccion = self.cargarInstruccion(child.attrib['path'], child.attrib['modulo'], child.attrib['nombre'])
-			self.repertorio[instruccion.name]= instruccion
+			if instruccion != None:
+				self.repertorio[instruccion.name]= instruccion
 		
 		
 	def ejecHelp(self, instr) :
@@ -77,10 +90,9 @@ class Interprete :
 			return "La instruccion no existe"
 		
 		
-	def ejecutarBucle(self) :	
-		
+	def ejecutarBucle(self) :
 		instr = ''
-		while instr != "exit":
+		while instr != "Exit":
 		
 			instr = raw_input('$>>')
 			printD("instruccion " + instr)
@@ -91,6 +103,7 @@ class Interprete :
 				if instrParts[0] == 'Ayuda':
 					for instrName in self.repertorio.viewkeys():
 						print "\t*  " + instrName
+					print "\t*  Exit"
 			else : 
 				execu = self.ejecInstr(instrParts[0], instrParts[1])
 				
