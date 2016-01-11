@@ -1,29 +1,41 @@
+from SC12K_utils import *
 
 class EjecutorSondeo() :
 	def __init__(self):
+		self.binit()
 		self.init()
-		pass
+		
+	def binit(self): 
+		self._atributos = dict()
 	
-	def init():
+	def init(self):
 		logging.error(self.__class__.__name__ + ' : init: Metodo no implementado implementado!')
 		
-	def ejecutarPaso():
+	def ejecutarPaso(self):
 		logging.error(self.__class__.__name__ + ' : ejecutarPaso: Metodo no implementado implementado!')
 		return False
 	
-	def setParametro(key, value):
-		logging.error(self.__class__.__name__ + ' : setParametro: Metodo no implementado implementado!')
-		if key == "name":
-			self_name = name
-		return False
-	
-	def getResultInfo():
+	def getResultInfo(self):
 		logging.error(self.__class__.__name__ + ' : getResultInfo: Metodo no implementado implementado!')
 		pass
 	
-	def getParamValue(key):
-		logging.error(self.__class__.__name__ + ' : getParamValue: Metodo no implementado implementado!')
-		val = ""
-		if key == "name":
-			val = self._name
+	def setParametro(self, key, value):
+		if key in self._atributos:
+			self._atributos[key] = str(value)
+
+	def getParamValue(self, key):
+		if key in self._atributos:
+			return self._atributos[key]
 			
+		return None
+		
+	def getParamList(self):
+		return self._atributos.keys()
+		
+	def cargarDesdeTree(self, tree):
+		logging.debug('EjecutorSondeo cargarDesdeTree')
+		for attr in tree.attrib:
+			logging.debug('Attr completo ' + attr)
+			logging.debug('\tAttr --> ' + attr[0] + " : " + attr[1])
+			if attr[0] in self._atributos:
+				self._atributos[attr[0]] = attr[1]

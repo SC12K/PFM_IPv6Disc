@@ -6,9 +6,9 @@ from socket import AF_INET, inet_aton
 
 
 class D_IPv4MappedIPv6(DispensadorIPv6) :
-	def __init__(self):
-		self._name = "hello"
-		self._dirInts = [0,0,0,0]
+	def init(self):
+		self._atributos["ipv4Ini"] = "0.0.0.0"
+		
 	
 	def esPrivada(self, ip):
 		ip_rep = unpack('!I',inet_aton(ip))[0]
@@ -49,6 +49,10 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
 			self._dirInts[0] = self._dirInts[0] + 1
 	
 	def getDireccionIPv6(self):
+		if not self._inicicializado:
+			ipv4p = self._atributos["ipv4Ini"].split('.')
+			self._dirInts = [format(ipv4p[0]),format(ipv4p[1]),format(ipv4p[2]),format(ipv4p[3])]
+			self._inicicializado = True
 		
 		while self.esPrivada(self.getDireccionIPv4String()):
 			incrementarIPv4()
@@ -67,14 +71,3 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
 					ipv6+=":"
 				
 		return ipv6
-	
-	def setParametro(self, key, value):
-		if key == "name":
-			self._name = name
-
-	def getParamValue(self, key):
-		val = ""
-		if key == "name":
-			val = self._name
-			
-		return val

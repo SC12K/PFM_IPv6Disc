@@ -7,18 +7,59 @@ from Sonda import Sonda
 import xml.etree.ElementTree as xmlparser
 
 class GestorDeSondas():
+#--------------------------------------------------------------------------------------------------------
+#-------------------------------------------- GESTOR DE SONDAS ------------------------------------------
+
 	def __init__(self):
 		self._Sondas = dict()
 		self._Dispensadores = dict()
 		self._Ejecutores = dict()
 		pass
 		
+	def cargar(self, xmlfile):
+		logging.info('Cargando modulos desde el fichero ' + xmlfile)
+		#importar el fichero:
+		self.tree = xmlparser.parse(xmlfile)
+		root = self.tree.getroot()
+		
+		for xml_dispensador in root.findall('dispensador'):
+			print 'Cargando dispensador ' + xml_dispensador.attrib['clase']
+			if not self._cargarDispensador(xml_dispensador.attrib['folder'],xml_dispensador.attrib['modulo'],xml_dispensador.attrib['clase']):
+				root.remove(xml_dispensador)
+			
+		for xml_ejecutor in root.findall('ejecutor'):
+			print 'Cargando ejecutor ' + xml_ejecutor.attrib['clase']
+			if not self._cargarEjecutor(xml_ejecutor.attrib['folder'],xml_ejecutor.attrib['modulo'],xml_ejecutor.attrib['clase']):
+				root.remove(xml_ejecutor)
+			
+		for xml_sonda in root.findall('sonda'):
+			print 'Creando sonda ' + xml_sonda.attrib['nombre']
+			if not self._anadirSonda(xml_sonda.attrib['nombre'], xml_sonda.attrib['dispensador'], xml_sonda.attrib['ejecutor']):
+				root.remove(xml_sonda)
+			else:
+				self._Sondas[xml_sonda.attrib['nombre']].cargarDesdeTree(xml_sonda)
+			
+	def	guardar(self):
+		self.tree.write('modulos.xml')
+	
+	def listarParametros(self, sonda,doe):
+		if sonda in self._Sondas:
+			return self._Sondas[sonda].listParam(doe)
+		return False
+		
+	def setParametro(self, sonda, doe, key, value):
+		if sonda in self._Sondas:
+			return self._Sondas[sonda].setParametro(doe, key, value)
+		return False
+#--------------------------------------------------------------------------------------------------------
+#------------------------------------------------- SONDAS -----------------------------------------------
 	def anadirSonda(self,nombre, dispensadorIPv6, ejecutorSondeo):
 		result = self._anadirSonda(nombre, dispensadorIPv6, ejecutorSondeo)
 		if result:
 			if 'Y' == raw_input('Escriba Y para cargar siempre  '):
 				attributes={'nombre' : nombre, 'dispensador': dispensadorIPv6, 'ejecutor' : ejecutorSondeo}
-				xmlparser.SubElement(self.tree.getroot(),"sonda", attrib=attributes)
+				elem = xmlparser.SubElement(self.tree.getroot(),"sonda", attrib=attributes)
+				self._Sondas[nombre].newTreeRoot(elem)
 		return result
 	
 	def _anadirSonda(self, nombre, dispensadorIPv6, ejecutorSondeo):
@@ -43,7 +84,29 @@ class GestorDeSondas():
 		self._Sondas[nombre] = sonda
 		
 		return True
-	
+		
+	def listarSondas(self):
+		nameKeys = self._Sondas.viewkeys()
+		print "---------------------------- Sondas --------------------------------"
+		print "Nombre\t\t\tDispensadorIPv6\t\t\tSondeo"
+		for key in nameKeys:
+			print key + "\t\t\t" + self._Sondas[key].getNombreDispensador() + "\t\t\t" + self._Sondas[key].getNombreEjecutor()
+		print "--------------------------------------------------------------------"
+			
+	def eliminarSonda(self, nombre):
+		if nombre in self._Sondas:
+			del self._Sondas[nombre]
+			root = self.tree.getroot()
+			for sonda in root.findall("sonda"):
+				if sonda.attrib['nombre'] == nombre:
+					root.remove(sonda)
+			return True
+		else:
+			print "No existe la sonda " + nombre
+			return False
+
+#--------------------------------------------------------------------------------------------------------
+#--------------------------------------------- DISPENSADORES --------------------------------------------			
 	def cargarDispensador(self,folder, modulename, ejec):
 		result = self._cargarDispensador(folder, modulename, ejec)
 		if result:
@@ -85,6 +148,28 @@ class GestorDeSondas():
 		else:
 			return False
 	
+	def listarDispensadores(self):
+		nameKeys = self._Dispensadores.viewkeys()
+		print "------------------------- Dispensadores ----------------------------"
+		print "  Nombre\t\t\t\tParametros"
+		for key in nameKeys:
+			print "  " + key + "\t\t\t" + "IRAN LOS PARAMETROS"
+		print "--------------------------------------------------------------------"
+	
+	def eliminarDispensador(self, nombre):
+		if nombre in self._Dispensadores:
+			del self._Dispensadores[nombre]
+			root = self.tree.getroot()
+			for disp in root.findall("dispensador"):
+				if disp.attrib['clase'] == nombre:
+					root.remove(disp)
+			return True
+		else:
+			print "No existe el dispensador " + nombre
+			return False
+
+#--------------------------------------------------------------------------------------------------------
+#----------------------------------------------- EJECUTORES ---------------------------------------------				
 	def cargarEjecutor(self,folder, modulename, ejec):
 		result = self._cargarEjecutor(folder, modulename, ejec)
 		if result:
@@ -125,23 +210,6 @@ class GestorDeSondas():
 			return True
 		else:
 			return False
-	
-	
-	def listarSondas(self):
-		nameKeys = self._Sondas.viewkeys()
-		print "---------------------------- Sondas --------------------------------"
-		print "Nombre\t\t\tDispensadorIPv6\t\t\tSondeo"
-		for key in nameKeys:
-			print key + "\t\t\t" + self._Sondas[key].getNombreDispensador() + "\t\t\t" + self._Sondas[key].getNombreEjecutor()
-		print "--------------------------------------------------------------------"
-		
-	def listarDispensadores(self):
-		nameKeys = self._Dispensadores.viewkeys()
-		print "------------------------- Dispensadores ----------------------------"
-		print "  Nombre\t\t\t\tParametros"
-		for key in nameKeys:
-			print "  " + key + "\t\t\t" + "IRAN LOS PARAMETROS"
-		print "--------------------------------------------------------------------"
 		
 	def listarEjecutores(self):
 		nameKeys = self._Ejecutores.viewkeys()
@@ -162,82 +230,3 @@ class GestorDeSondas():
 		else:
 			print "No existe el ejecutor " + nombre
 			return False
-			
-	def eliminarDispensador(self, nombre):
-		if nombre in self._Dispensadores:
-			del self._Dispensadores[nombre]
-			root = self.tree.getroot()
-			for disp in root.findall("dispensador"):
-				if disp.attrib['clase'] == nombre:
-					root.remove(disp)
-			return True
-		else:
-			print "No existe el dispensador " + nombre
-			return False
-		
-	def eliminarSonda(self, nombre):
-		if nombre in self._Sondas:
-			del self._Sondas[nombre]
-			root = self.tree.getroot()
-			for sonda in root.findall("sonda"):
-				if sonda.attrib['nombre'] == nombre:
-					root.remove(sonda)
-			return True
-		else:
-			print "No existe la sonda " + nombre
-			return False
-		
-	def cargar(self, xmlfile):
-		logging.info('Cargando modulos desde el fichero ' + xmlfile)
-		#importar el fichero:
-		self.tree = xmlparser.parse(xmlfile)
-		root = self.tree.getroot()
-		
-		for xml_dispensador in root.findall('dispensador'):
-			print 'Cargando dispensador ' + xml_dispensador.attrib['clase']
-			if not self._cargarDispensador(xml_dispensador.attrib['folder'],xml_dispensador.attrib['modulo'],xml_dispensador.attrib['clase']):
-				root.remove(xml_dispensador)
-			
-		for xml_ejecutor in root.findall('ejecutor'):
-			print 'Cargando ejecutor ' + xml_ejecutor.attrib['clase']
-			if not self._cargarEjecutor(xml_ejecutor.attrib['folder'],xml_ejecutor.attrib['modulo'],xml_ejecutor.attrib['clase']):
-				root.remove(xml_ejecutor)
-			
-		for xml_sonda in root.findall('sonda'):
-			print 'Creando sonda ' + xml_sonda.attrib['nombre']
-			if not self._anadirSonda(xml_sonda.attrib['nombre'], xml_sonda.attrib['dispensador'], xml_sonda.attrib['ejecutor']):
-				root.remove(xml_sonda)
-			
-	def	guardar(self):
-		self.tree.write('modulos.xml')
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
