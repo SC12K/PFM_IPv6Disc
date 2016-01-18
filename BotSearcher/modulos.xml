@@ -1,2 +1,2 @@
 <modulos>
-	<dispensador clase="D_IPv4MappedIPv6" folder="./" modulo="D_IPv4MappedIPv6" /><ejecutor clase="EjecutorSYN" folder="./" modulo="EjecutorSYN" /><sonda dispensador="D_IPv4MappedIPv6" ejecutor="EjecutorSYN" nombre="Sonda1"><idisp ipv4Ini="1.123.1.3" /><iejec /></sonda></modulos>
+	<dispensador clase="D_IPv4TEST" folder="./" modulo="D_IPv4TEST" /><ejecutor clase="Ping" folder="./" modulo="Ping" /><sonda dispensador="D_IPv4TEST" ejecutor="Ping" nombre="Sonda1"><idisp ipv4Ini="0.0.0.0" /><iejec /></sonda></modulos>

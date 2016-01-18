@@ -10,10 +10,14 @@ class Sonda:
 		self._treeroot = None
 		
 	def ejecutarPaso(self):
-		self._ejecutor.ejecutarPaso(self._dispensador.getDireccionIPv6())
+		logging.debug("sonda.ejecutarPaso")
+		ipv6 = self._dispensador.getDireccionIPv6()
+		logging.debug("IPv6: " + ipv6)
+		self._ejecutor.ejecutarPaso(ipv6)
+		logging.debug("finEjecucion")
 		
 	def getResultInfo(self):
-		pass
+		return "Algo"
 		
 	def newTreeRoot(self, tree):
 		logging.debug('Sonda newTreeRoot')

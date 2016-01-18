@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>RepertorioGSondas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;RepertorioGSondas
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="RepertorioGSondas-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="RepertorioGSondas-module.html">Module RepertorioGSondas</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Repertorio de instrucciones del Gestro de Sondas.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Las instrucciones disponibles permiten crear, configurar, eliminar y ver las</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">sondas, los dispensadores y los ejecutores.</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'../'</tt><tt class="py-op">)</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module SC12K_utils=SC12K_utils-module.html"><a title="SC12K_utils" class="py-name" href="#" onclick="return doclink('link-0', 'SC12K_utils', 'link-0');">SC12K_utils</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module Instruccion=Instruccion-module.html,Class Instruccion.Instruccion=Instruccion.Instruccion-class.html"><a title="Instruccion
+Instruccion.Instruccion" class="py-name" href="#" onclick="return doclink('link-1', 'Instruccion', 'link-1');">Instruccion</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name"><a title="Instruccion
+Instruccion.Instruccion" class="py-name" href="#" onclick="return doclink('link-2', 'Instruccion', 'link-1');">Instruccion</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">getopt</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#------------------------------- Funciones de Carga ----------------------------</tt> </tt>
+<a name="NuevaSonda"></a><div id="NuevaSonda-def"><a name="L12"></a><tt class="py-lineno"> 12</tt> <a class="py-toggle" href="#" id="NuevaSonda-toggle" onclick="return toggle('NuevaSonda');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.NuevaSonda-class.html">NuevaSonda</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NuevaSonda-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="NuevaSonda-expanded"><a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    La instruccion NuevaSonda permite crear una sonda con un dispensador y </tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    un ejecutor previamente cargado.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="NuevaSonda.init"></a><div id="NuevaSonda.init-def"><a name="L17"></a><tt class="py-lineno"> 17</tt> <a class="py-toggle" href="#" id="NuevaSonda.init-toggle" onclick="return toggle('NuevaSonda.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.NuevaSonda-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NuevaSonda.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NuevaSonda.init-expanded"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'NuevaSonda'</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"NuevaSonda"</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="NuevaSonda.run"></a><div id="NuevaSonda.run-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="NuevaSonda.run-toggle" onclick="return toggle('NuevaSonda.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.NuevaSonda-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NuevaSonda.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NuevaSonda.run-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">        Carga una sonda con nombre &lt;nombre&gt;, dispensador tipo &lt;disp&gt; y ejecutor</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        tipo &lt;ejec&gt; y la anade a la Lista de Sondas para configurarse.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.anadirSonda(&lt;nombre&gt;,&lt;disp&gt;,&lt;ejec&gt;)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Usa parametros C-style:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">            - -n, --nombre &lt;nombre&gt;: nombre de la sonda a crear.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">            - -d, --dispensador &lt;disp&gt;: nombre del dispensador de la sonda</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">            - -e, --ejecutor &lt;ejec&gt;: nombre del ejecutor de  la sonda.</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Cierto si la sonda se ha anadido correctamente.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Nueva Sonda. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">args</tt> <tt class="py-op">=</tt> <tt class="py-name">getopt</tt><tt class="py-op">.</tt><tt class="py-name">getopt</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">'n:d:e:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                                      <tt class="py-op">[</tt><tt class="py-string">'nombre='</tt><tt class="py-op">,</tt> <tt class="py-string">'dispensador='</tt><tt class="py-op">,</tt><tt class="py-string">'ejecutor='</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Options: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">options</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Args: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">args</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">opt</tt> <tt class="py-keyword">in</tt> <tt class="py-name">options</tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-n'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">opt</tt><tt class="py-op">==</tt> <tt class="py-string">'nombre'</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                <tt class="py-name">nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-d'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">opt</tt><tt class="py-op">==</tt> <tt class="py-string">'dispensador'</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-name">dispensador</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-e'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">opt</tt><tt class="py-op">==</tt> <tt class="py-string">'ejecutor'</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-name">ejecutor</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method Instruccion.Instruccion.help()=Instruccion.Instruccion-class.html#help,Method Interprete.Interprete.Ayuda.help()=Interprete.Interprete.Ayuda-class.html#help,Method RepertorioEjecucion.Ejecutar.help()=RepertorioEjecucion.Ejecutar-class.html#help,Method RepertorioEjecucion.EliminarDeEjecucion.help()=RepertorioEjecucion.EliminarDeEjecucion-class.html#help,Method RepertorioEjecucion.ListaEjecucion.help()=RepertorioEjecucion.ListaEjecucion-class.html#help,Method RepertorioEjecucion.Parar.help()=RepertorioEjecucion.Parar-class.html#help,Method RepertorioEjecucion.PonerEnCola.help()=RepertorioEjecucion.PonerEnCola-class.html#help,Method RepertorioGSondas.CargarDispensador.help()=RepertorioGSondas.CargarDispensador-class.html#help,Method RepertorioGSondas.CargarEjecutor.help()=RepertorioGSondas.CargarEjecutor-class.html#help,Method RepertorioGSondas.EliminarDispensador.help()=RepertorioGSondas.EliminarDispensador-class.html#help,Method RepertorioGSondas.EliminarEjecutor.help()=RepertorioGSondas.EliminarEjecutor-class.html#help,Method RepertorioGSondas.EliminarSonda.help()=RepertorioGSondas.EliminarSonda-class.html#help,Method RepertorioGSondas.ListarDispensadores.help()=RepertorioGSondas.ListarDispensadores-class.html#help,Method RepertorioGSondas.ListarEjecutores.help()=RepertorioGSondas.ListarEjecutores-class.html#help,Method RepertorioGSondas.ListarSondas.help()=RepertorioGSondas.ListarSondas-class.html#help,Method RepertorioGSondas.NuevaSonda.help()=RepertorioGSondas.NuevaSonda-class.html#help,Method RepertorioGSondas.Parametros.help()=RepertorioGSondas.Parametros-class.html#help"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-3', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">"Anadiendo sonda "</tt> <tt class="py-op">+</tt> <tt class="py-name">nombre</tt> <tt class="py-op">+</tt> <tt class="py-string">" Dispensador: "</tt> <tt class="py-op">+</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                     <tt class="py-name">dispensador</tt> <tt class="py-op">+</tt> <tt class="py-string">" Ejecutor: "</tt> <tt class="py-op">+</tt> <tt class="py-name">ejecutor</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-4" class="py-name" targets="Variable EjecutorSYN.GdS=EjecutorSYN-module.html#GdS,Variable Ping.GdS=Ping-module.html#GdS,Variable RepertorioEjecucion.GdS=RepertorioEjecucion-module.html#GdS,Variable RepertorioGSondas.GdS=RepertorioGSondas-module.html#GdS,Variable SC12K_utils.GdS=SC12K_utils-module.html#GdS"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-4', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method GestorDeEjecucion.GestorDeEjecucion.anadirSonda()=GestorDeEjecucion.GestorDeEjecucion-class.html#anadirSonda,Method GestorDeSondas.GestorDeSondas.anadirSonda()=GestorDeSondas.GestorDeSondas-class.html#anadirSonda"><a title="GestorDeEjecucion.GestorDeEjecucion.anadirSonda
+GestorDeSondas.GestorDeSondas.anadirSonda" class="py-name" href="#" onclick="return doclink('link-5', 'anadirSonda', 'link-5');">anadirSonda</a></tt><tt class="py-op">(</tt><tt class="py-name">nombre</tt><tt class="py-op">,</tt> <tt class="py-name">dispensador</tt><tt class="py-op">,</tt> <tt class="py-name">ejecutor</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="NuevaSonda.help"></a><div id="NuevaSonda.help-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="NuevaSonda.help-toggle" onclick="return toggle('NuevaSonda.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.NuevaSonda-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NuevaSonda.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NuevaSonda.help-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion NuevaSonda.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"******************************* Nueva Sonda "</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"***********************************\n"</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"NuevaSonda --nombre &lt;nombre&gt; --dispensador &lt;DispensadorIPv6&gt;\n"</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"        --ejecutor &lt;EjecutorSondeo&gt;"</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"NuevaSonda -n Nombre -d Dispensador -e EjecutorSondeo\n"</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Crea una nueva sonda con un dispensador y un ejecutor "</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"previamente cargados\n"</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Usando el nombre nos podemos referir a ella para configurarla.\n"</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"***************"</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="CargarDispensador"></a><div id="CargarDispensador-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="CargarDispensador-toggle" onclick="return toggle('CargarDispensador');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.CargarDispensador-class.html">CargarDispensador</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarDispensador-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="CargarDispensador-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">    La instruccion CargarDispensador permite cargar un dispensador dado una</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">    direccion de fichero o bien una direccion y un nombre de clase.</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">     </tt>
+<a name="CargarDispensador.init"></a><div id="CargarDispensador.init-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="CargarDispensador.init-toggle" onclick="return toggle('CargarDispensador.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarDispensador-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarDispensador.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarDispensador.init-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'CargarDispensador'</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"CargarDispensador"</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="CargarDispensador.run"></a><div id="CargarDispensador.run-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="CargarDispensador.run-toggle" onclick="return toggle('CargarDispensador.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarDispensador-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarDispensador.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarDispensador.run-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring">        Carga un dispensador a partir de un path y lo anade a la Lista de </tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">        dispensadores para configurarse. Calcula la carpeta, el modulo y el</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">        nombre de la clase a partir de un path dado o de un path y una clase.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.cargarDispensador(&lt;folder&gt;,&lt;module&gt;,</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        &lt;classname&gt;)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Los parametros pueden ser:</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">            - &lt;path&gt;: se calcula la carpeta, el modulo y el nombre de la clase</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">                a partir de un &lt;path&gt;. El modulo y la clase tendran el mismo</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">                nombre.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">            - &lt;path&gt; &lt;classname&gt;: se calcula la carpeta y el modulo a partir del</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">                &lt;path&gt; y se usa como nombre de clase &lt;classname&gt;</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Cierto si el dispensador se ha cargado correctamente.</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando CargarDispensador. Parametros: "</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                      <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt> <tt class="py-keyword">or</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-6', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">paramList</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-name">folder</tt><tt class="py-op">,</tt> <tt class="py-name">module</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name" targets="Function SC12K_utils.pathToFolderModule()=SC12K_utils-module.html#pathToFolderModule"><a title="SC12K_utils.pathToFolderModule" class="py-name" href="#" onclick="return doclink('link-7', 'pathToFolderModule', 'link-7');">pathToFolderModule</a></tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">         </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">1</tt> <tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">disp</tt> <tt class="py-op">=</tt> <tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-name">disp</tt> <tt class="py-op">=</tt> <tt class="py-name">module</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-8" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-8', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.cargarDispensador()=GestorDeSondas.GestorDeSondas-class.html#cargarDispensador"><a title="GestorDeSondas.GestorDeSondas.cargarDispensador" class="py-name" href="#" onclick="return doclink('link-9', 'cargarDispensador', 'link-9');">cargarDispensador</a></tt><tt class="py-op">(</tt><tt class="py-name">folder</tt><tt class="py-op">,</tt> <tt class="py-name">module</tt><tt class="py-op">,</tt> <tt class="py-name">disp</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt>
+<a name="CargarDispensador.help"></a><div id="CargarDispensador.help-def"><a name="L127"></a><tt class="py-lineno">127</tt> <a class="py-toggle" href="#" id="CargarDispensador.help-toggle" onclick="return toggle('CargarDispensador.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarDispensador-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarDispensador.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarDispensador.help-expanded"><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion CargarDispensador.</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando CargarDispensador help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************** Cargar Dispensador ******************"</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************\n"</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"CargarDispensador &lt;path&gt; : Carga el modulo .py dado en el path y"</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">" la clase\n"</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"con el mismo nombre que el modulo.\n"</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"CargarDispensador &lt;path&gt; &lt;classname&gt; : Carga el modulo .py dado"</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">" en el path y\n"</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"la classe de nombre dado.\n"</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************"</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="CargarEjecutor"></a><div id="CargarEjecutor-def"><a name="L147"></a><tt class="py-lineno">147</tt> <a class="py-toggle" href="#" id="CargarEjecutor-toggle" onclick="return toggle('CargarEjecutor');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.CargarEjecutor-class.html">CargarEjecutor</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarEjecutor-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="CargarEjecutor-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-docstring">    La instruccion CargarEjecutor permite cargar un dispensador dado una</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"><tt class="py-docstring">    direccion de fichero o bien una direccion y un nombre de clase.</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="CargarEjecutor.init"></a><div id="CargarEjecutor.init-def"><a name="L152"></a><tt class="py-lineno">152</tt> <a class="py-toggle" href="#" id="CargarEjecutor.init-toggle" onclick="return toggle('CargarEjecutor.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarEjecutor-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarEjecutor.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarEjecutor.init-expanded"><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'CargarEjecutor'</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"CargarEjecutor"</tt> </tt>
+</div><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">         </tt>
+<a name="CargarEjecutor.run"></a><div id="CargarEjecutor.run-def"><a name="L158"></a><tt class="py-lineno">158</tt> <a class="py-toggle" href="#" id="CargarEjecutor.run-toggle" onclick="return toggle('CargarEjecutor.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarEjecutor-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarEjecutor.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarEjecutor.run-expanded"><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-docstring">        Carga un ejecutor a partir de un path y lo anade a la Lista de </tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-docstring">        ejecutores para configurarse. Calcula la carpeta, el modulo y el</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-docstring">        nombre de la clase a partir de un path dado o de un path y una clase.</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.cargarEjecutor(&lt;folder&gt;,&lt;module&gt;,</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-docstring">        &lt;classname&gt;)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Los parametros pueden ser:</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-docstring">            - &lt;path&gt;: se calcula la carpeta, el modulo y el nombre de la clase</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-docstring">                a partir de un &lt;path&gt;. El modulo y la clase tendran el mismo</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">                nombre.</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">            - &lt;path&gt; &lt;classname&gt;: se calcula la carpeta y el modulo a partir del</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">                &lt;path&gt; y se usa como nombre de clase &lt;classname&gt;</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Cierto si el ejecutor se ha cargado correctamente.</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando CargarEjecutor. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt> <tt class="py-keyword">or</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-10', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">        <tt class="py-name">paramList</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt class="py-name">folder</tt><tt class="py-op">,</tt> <tt class="py-name">module</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="SC12K_utils.pathToFolderModule" class="py-name" href="#" onclick="return doclink('link-11', 'pathToFolderModule', 'link-7');">pathToFolderModule</a></tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">1</tt> <tt class="py-op">:</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">            <tt class="py-name">disp</tt> <tt class="py-op">=</tt> <tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">            <tt class="py-name">disp</tt> <tt class="py-op">=</tt> <tt class="py-name">module</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-12" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-12', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.cargarEjecutor()=GestorDeSondas.GestorDeSondas-class.html#cargarEjecutor"><a title="GestorDeSondas.GestorDeSondas.cargarEjecutor" class="py-name" href="#" onclick="return doclink('link-13', 'cargarEjecutor', 'link-13');">cargarEjecutor</a></tt><tt class="py-op">(</tt><tt class="py-name">folder</tt><tt class="py-op">,</tt> <tt class="py-name">module</tt><tt class="py-op">,</tt> <tt class="py-name">disp</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"> </tt>
+<a name="CargarEjecutor.help"></a><div id="CargarEjecutor.help-def"><a name="L194"></a><tt class="py-lineno">194</tt> <a class="py-toggle" href="#" id="CargarEjecutor.help-toggle" onclick="return toggle('CargarEjecutor.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.CargarEjecutor-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CargarEjecutor.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="CargarEjecutor.help-expanded"><a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion CargarEjecutor.</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando CargarEjecutor help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************** Cargar Ejecutor *********************"</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"CargarEjecutor &lt;path&gt; : Carga el modulo .py dado en el path y la"</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">" clase\n"</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"con el mismo nombre que el modulo.\n"</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"CargarEjecutor &lt;path&gt; &lt;classname&gt; : Carga el modulo .py dado en "</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"el path y\n"</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"la classe de nombre dado.\n"</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************"</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"><tt class="py-comment">#-------------------------------- Funciones de Lista ---------------------------</tt> </tt>
+<a name="ListarSondas"></a><div id="ListarSondas-def"><a name="L215"></a><tt class="py-lineno">215</tt> <a class="py-toggle" href="#" id="ListarSondas-toggle" onclick="return toggle('ListarSondas');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.ListarSondas-class.html">ListarSondas</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarSondas-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ListarSondas-expanded"><a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line"><tt class="py-docstring">    Genera y muestra una Lista de Sondas.</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line"><tt class="py-docstring">    Muestra por pantalla su nombre, su tipo de dispensador y su tipo de</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"><tt class="py-docstring">    ejecutor.</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ListarSondas.init"></a><div id="ListarSondas.init-def"><a name="L221"></a><tt class="py-lineno">221</tt> <a class="py-toggle" href="#" id="ListarSondas.init-toggle" onclick="return toggle('ListarSondas.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarSondas-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarSondas.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarSondas.init-expanded"><a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'ListarSondas'</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"ListarSondas"</tt> </tt>
+</div><a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"> </tt>
+<a name="ListarSondas.run"></a><div id="ListarSondas.run-def"><a name="L227"></a><tt class="py-lineno">227</tt> <a class="py-toggle" href="#" id="ListarSondas.run-toggle" onclick="return toggle('ListarSondas.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarSondas-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarSondas.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarSondas.run-expanded"><a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-docstring">        Muestra por pantalla la lista de sondas.</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.listarSondas()</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Esta instruccion no necesita parametros.</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve True siempre.</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Sondas. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-14', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.listarSondas()=GestorDeSondas.GestorDeSondas-class.html#listarSondas"><a title="GestorDeSondas.GestorDeSondas.listarSondas" class="py-name" href="#" onclick="return doclink('link-15', 'listarSondas', 'link-15');">listarSondas</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"> </tt>
+<a name="ListarSondas.help"></a><div id="ListarSondas.help-def"><a name="L244"></a><tt class="py-lineno">244</tt> <a class="py-toggle" href="#" id="ListarSondas.help-toggle" onclick="return toggle('ListarSondas.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarSondas-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarSondas.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarSondas.help-expanded"><a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion ListarSondas.</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Sondas help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*************************** Listar Sondas **********************"</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"ListarSondas: Muestra por pantalla la lista de sondas.\n"</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">                 </tt>
+<a name="ListarDispensadores"></a><div id="ListarDispensadores-def"><a name="L259"></a><tt class="py-lineno">259</tt> <a class="py-toggle" href="#" id="ListarDispensadores-toggle" onclick="return toggle('ListarDispensadores');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.ListarDispensadores-class.html">ListarDispensadores</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarDispensadores-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ListarDispensadores-expanded"><a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt class="py-docstring">    Genera y muestra una Lista de Dispensadores.</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line"><tt class="py-docstring">    Mostrando su tipo y sus parametros.</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ListarDispensadores.init"></a><div id="ListarDispensadores.init-def"><a name="L264"></a><tt class="py-lineno">264</tt> <a class="py-toggle" href="#" id="ListarDispensadores.init-toggle" onclick="return toggle('ListarDispensadores.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarDispensadores-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarDispensadores.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarDispensadores.init-expanded"><a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'ListarDispensadores'</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"ListarDispensadores"</tt> </tt>
+</div><a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">         </tt>
+<a name="ListarDispensadores.run"></a><div id="ListarDispensadores.run-def"><a name="L270"></a><tt class="py-lineno">270</tt> <a class="py-toggle" href="#" id="ListarDispensadores.run-toggle" onclick="return toggle('ListarDispensadores.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarDispensadores-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarDispensadores.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarDispensadores.run-expanded"><a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"><tt class="py-docstring">        Muestra por pantalla la lista de dispensadores.</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.listarDispensadores()</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Esta instruccion no necesita parametros.</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve True siempre.</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Dispensadores. Parametros: "</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">                      <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">        <tt id="link-16" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-16', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.listarDispensadores()=GestorDeSondas.GestorDeSondas-class.html#listarDispensadores"><a title="GestorDeSondas.GestorDeSondas.listarDispensadores" class="py-name" href="#" onclick="return doclink('link-17', 'listarDispensadores', 'link-17');">listarDispensadores</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"> </tt>
+<a name="ListarDispensadores.help"></a><div id="ListarDispensadores.help-def"><a name="L288"></a><tt class="py-lineno">288</tt> <a class="py-toggle" href="#" id="ListarDispensadores.help-toggle" onclick="return toggle('ListarDispensadores.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarDispensadores-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarDispensadores.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarDispensadores.help-expanded"><a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion ListarDispensadores.</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Dispensadores help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********************** Listar Dispensadores *******************"</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"ListarDispensadores: Muestra por pantalla la lista de "</tt> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"dispensadores.\n"</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line"> </tt>
+<a name="ListarEjecutores"></a><div id="ListarEjecutores-def"><a name="L304"></a><tt class="py-lineno">304</tt> <a class="py-toggle" href="#" id="ListarEjecutores-toggle" onclick="return toggle('ListarEjecutores');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.ListarEjecutores-class.html">ListarEjecutores</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarEjecutores-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ListarEjecutores-expanded"><a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"><tt class="py-docstring">    Genera y muestra una Lista de Ejecutores.</tt> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line"><tt class="py-docstring">    Mostrando su tipo y sus parametros.</tt> </tt>
+<a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ListarEjecutores.init"></a><div id="ListarEjecutores.init-def"><a name="L309"></a><tt class="py-lineno">309</tt> <a class="py-toggle" href="#" id="ListarEjecutores.init-toggle" onclick="return toggle('ListarEjecutores.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarEjecutores-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarEjecutores.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarEjecutores.init-expanded"><a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'ListarEjecutores'</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"ListarEjecutores"</tt> </tt>
+</div><a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line"> </tt>
+<a name="ListarEjecutores.run"></a><div id="ListarEjecutores.run-def"><a name="L315"></a><tt class="py-lineno">315</tt> <a class="py-toggle" href="#" id="ListarEjecutores.run-toggle" onclick="return toggle('ListarEjecutores.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarEjecutores-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarEjecutores.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarEjecutores.run-expanded"><a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line"><tt class="py-docstring">        Muestra por pantalla la lista de ejecutores.</tt> </tt>
+<a name="L318"></a><tt class="py-lineno">318</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.listarEjecutores()</tt> </tt>
+<a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: Esta instruccion no necesita parametros.</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve True siempre.</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Ejecutores. Parametros: "</tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line">                      <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line">        <tt id="link-18" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-18', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.listarEjecutores()=GestorDeSondas.GestorDeSondas-class.html#listarEjecutores"><a title="GestorDeSondas.GestorDeSondas.listarEjecutores" class="py-name" href="#" onclick="return doclink('link-19', 'listarEjecutores', 'link-19');">listarEjecutores</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line"> </tt>
+<a name="ListarEjecutores.help"></a><div id="ListarEjecutores.help-def"><a name="L333"></a><tt class="py-lineno">333</tt> <a class="py-toggle" href="#" id="ListarEjecutores.help-toggle" onclick="return toggle('ListarEjecutores.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.ListarEjecutores-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ListarEjecutores.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ListarEjecutores.help-expanded"><a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion ListarEjecutores.</tt> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Listar Ejecutores help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************* Listar Ejecutores ********************"</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"ListarEjecutores: Muestra por pantalla la lista de Ejecutores.\n"</tt> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line"> </tt>
+<a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line"><tt class="py-comment">#------------------------------ Funciones de Eliminar --------------------------</tt> </tt>
+<a name="EliminarSonda"></a><div id="EliminarSonda-def"><a name="L349"></a><tt class="py-lineno">349</tt> <a class="py-toggle" href="#" id="EliminarSonda-toggle" onclick="return toggle('EliminarSonda');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarSonda-class.html">EliminarSonda</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarSonda-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="EliminarSonda-expanded"><a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line"><tt class="py-docstring">    Elimina una sonda de nombre dado.</tt> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="EliminarSonda.init"></a><div id="EliminarSonda.init-def"><a name="L353"></a><tt class="py-lineno">353</tt> <a class="py-toggle" href="#" id="EliminarSonda.init-toggle" onclick="return toggle('EliminarSonda.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarSonda-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarSonda.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarSonda.init-expanded"><a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'EliminarSonda'</tt> </tt>
+<a name="L356"></a><tt class="py-lineno">356</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"EliminarSonda"</tt> </tt>
+</div><a name="L358"></a><tt class="py-lineno">358</tt>  <tt class="py-line"> </tt>
+<a name="EliminarSonda.run"></a><div id="EliminarSonda.run-def"><a name="L359"></a><tt class="py-lineno">359</tt> <a class="py-toggle" href="#" id="EliminarSonda.run-toggle" onclick="return toggle('EliminarSonda.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarSonda-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarSonda.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarSonda.run-expanded"><a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line"><tt class="py-docstring">        Elimina la sonda con nombre dado como parametro de la lista de Sondas</tt> </tt>
+<a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line"><tt class="py-docstring">        y del arbol xml si existe</tt> </tt>
+<a name="L363"></a><tt class="py-lineno">363</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.eliminarSonda(&lt;nombre&gt;)</tt> </tt>
+<a name="L364"></a><tt class="py-lineno">364</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: &lt;nombre&gt;: Nombre de la sonda a eliminar.</tt> </tt>
+<a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Falso si hay algun problema con los parametros o </tt> </tt>
+<a name="L372"></a><tt class="py-lineno">372</tt>  <tt class="py-line"><tt class="py-docstring">        eliminando la funcion de eliminacion.</tt> </tt>
+<a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarSonda. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt> <tt class="py-keyword">or</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L376"></a><tt class="py-lineno">376</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-20', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L378"></a><tt class="py-lineno">378</tt>  <tt class="py-line"> </tt>
+<a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line">        <tt class="py-name">paramList</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L380"></a><tt class="py-lineno">380</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt> <tt class="py-op">:</tt> </tt>
+<a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line">            <tt class="py-name">nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L383"></a><tt class="py-lineno">383</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-21', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line"> </tt>
+<a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-22" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-22', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method GestorDeEjecucion.GestorDeEjecucion.eliminarSonda()=GestorDeEjecucion.GestorDeEjecucion-class.html#eliminarSonda,Method GestorDeSondas.GestorDeSondas.eliminarSonda()=GestorDeSondas.GestorDeSondas-class.html#eliminarSonda"><a title="GestorDeEjecucion.GestorDeEjecucion.eliminarSonda
+GestorDeSondas.GestorDeSondas.eliminarSonda" class="py-name" href="#" onclick="return doclink('link-23', 'eliminarSonda', 'link-23');">eliminarSonda</a></tt><tt class="py-op">(</tt><tt class="py-name">nombre</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L387"></a><tt class="py-lineno">387</tt>  <tt class="py-line"> </tt>
+<a name="EliminarSonda.help"></a><div id="EliminarSonda.help-def"><a name="L388"></a><tt class="py-lineno">388</tt> <a class="py-toggle" href="#" id="EliminarSonda.help-toggle" onclick="return toggle('EliminarSonda.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarSonda-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarSonda.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarSonda.help-expanded"><a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion EliminarSonda.</tt> </tt>
+<a name="L391"></a><tt class="py-lineno">391</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarSonda help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************** Eliminar Sonda **********************"</tt> </tt>
+<a name="L397"></a><tt class="py-lineno">397</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************\n"</tt> </tt>
+<a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"EliminarSonda &lt;nombre&gt; : Elimina el sonda de nombre dado\n"</tt> </tt>
+<a name="L399"></a><tt class="py-lineno">399</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Si elimina un modulo que esta en uso por alguna sonda guardada, "</tt> </tt>
+<a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"no\n"</tt> </tt>
+<a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"funcionara en la siguiente ejecucion."</tt> </tt>
+<a name="L402"></a><tt class="py-lineno">402</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************"</tt> </tt>
+<a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"> </tt>
+<a name="EliminarDispensador"></a><div id="EliminarDispensador-def"><a name="L406"></a><tt class="py-lineno">406</tt> <a class="py-toggle" href="#" id="EliminarDispensador-toggle" onclick="return toggle('EliminarDispensador');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarDispensador-class.html">EliminarDispensador</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarDispensador-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="EliminarDispensador-expanded"><a name="L407"></a><tt class="py-lineno">407</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L408"></a><tt class="py-lineno">408</tt>  <tt class="py-line"><tt class="py-docstring">    Elimina un dispensador de nombre dado.</tt> </tt>
+<a name="L409"></a><tt class="py-lineno">409</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="EliminarDispensador.init"></a><div id="EliminarDispensador.init-def"><a name="L410"></a><tt class="py-lineno">410</tt> <a class="py-toggle" href="#" id="EliminarDispensador.init-toggle" onclick="return toggle('EliminarDispensador.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarDispensador-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarDispensador.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarDispensador.init-expanded"><a name="L411"></a><tt class="py-lineno">411</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L412"></a><tt class="py-lineno">412</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'EliminarDispensador'</tt> </tt>
+<a name="L413"></a><tt class="py-lineno">413</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L414"></a><tt class="py-lineno">414</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"EliminarDispensador"</tt> </tt>
+</div><a name="L415"></a><tt class="py-lineno">415</tt>  <tt class="py-line"> </tt>
+<a name="EliminarDispensador.run"></a><div id="EliminarDispensador.run-def"><a name="L416"></a><tt class="py-lineno">416</tt> <a class="py-toggle" href="#" id="EliminarDispensador.run-toggle" onclick="return toggle('EliminarDispensador.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarDispensador-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarDispensador.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarDispensador.run-expanded"><a name="L417"></a><tt class="py-lineno">417</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L418"></a><tt class="py-lineno">418</tt>  <tt class="py-line"><tt class="py-docstring">        Elimina el dispensador con nombre dado como parametro de la lista de</tt> </tt>
+<a name="L419"></a><tt class="py-lineno">419</tt>  <tt class="py-line"><tt class="py-docstring">        dispensadores y del arbol xml si existe</tt> </tt>
+<a name="L420"></a><tt class="py-lineno">420</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.eliminarDispensador(&lt;nombre&gt;)</tt> </tt>
+<a name="L421"></a><tt class="py-lineno">421</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L422"></a><tt class="py-lineno">422</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: &lt;nombre&gt;: Nombre del dispensador a eliminar.</tt> </tt>
+<a name="L423"></a><tt class="py-lineno">423</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L424"></a><tt class="py-lineno">424</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L425"></a><tt class="py-lineno">425</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L426"></a><tt class="py-lineno">426</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L427"></a><tt class="py-lineno">427</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L428"></a><tt class="py-lineno">428</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Falso si hay algun problema con los parametros o </tt> </tt>
+<a name="L429"></a><tt class="py-lineno">429</tt>  <tt class="py-line"><tt class="py-docstring">        eliminando la funcion de eliminacion.</tt> </tt>
+<a name="L430"></a><tt class="py-lineno">430</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L431"></a><tt class="py-lineno">431</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarDispensador. Parametros: "</tt> </tt>
+<a name="L432"></a><tt class="py-lineno">432</tt>  <tt class="py-line">                      <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L433"></a><tt class="py-lineno">433</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt> <tt class="py-keyword">or</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L434"></a><tt class="py-lineno">434</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-24', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L435"></a><tt class="py-lineno">435</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L436"></a><tt class="py-lineno">436</tt>  <tt class="py-line"> </tt>
+<a name="L437"></a><tt class="py-lineno">437</tt>  <tt class="py-line">        <tt class="py-name">paramList</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L438"></a><tt class="py-lineno">438</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt> <tt class="py-op">:</tt> </tt>
+<a name="L439"></a><tt class="py-lineno">439</tt>  <tt class="py-line">            <tt class="py-name">nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L440"></a><tt class="py-lineno">440</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L441"></a><tt class="py-lineno">441</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-25', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L442"></a><tt class="py-lineno">442</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L443"></a><tt class="py-lineno">443</tt>  <tt class="py-line"> </tt>
+<a name="L444"></a><tt class="py-lineno">444</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-26" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-26', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.eliminarDispensador()=GestorDeSondas.GestorDeSondas-class.html#eliminarDispensador"><a title="GestorDeSondas.GestorDeSondas.eliminarDispensador" class="py-name" href="#" onclick="return doclink('link-27', 'eliminarDispensador', 'link-27');">eliminarDispensador</a></tt><tt class="py-op">(</tt><tt class="py-name">nombre</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L445"></a><tt class="py-lineno">445</tt>  <tt class="py-line"> </tt>
+<a name="EliminarDispensador.help"></a><div id="EliminarDispensador.help-def"><a name="L446"></a><tt class="py-lineno">446</tt> <a class="py-toggle" href="#" id="EliminarDispensador.help-toggle" onclick="return toggle('EliminarDispensador.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarDispensador-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarDispensador.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarDispensador.help-expanded"><a name="L447"></a><tt class="py-lineno">447</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L448"></a><tt class="py-lineno">448</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion EliminarDispensador.</tt> </tt>
+<a name="L449"></a><tt class="py-lineno">449</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L450"></a><tt class="py-lineno">450</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L451"></a><tt class="py-lineno">451</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L452"></a><tt class="py-lineno">452</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarDispensador help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L453"></a><tt class="py-lineno">453</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L454"></a><tt class="py-lineno">454</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************** Eliminar Dispensador ****************"</tt> </tt>
+<a name="L455"></a><tt class="py-lineno">455</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************\n"</tt> </tt>
+<a name="L456"></a><tt class="py-lineno">456</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"EliminarDispensador &lt;nombre&gt; : Elimina el dispensador de nombre"</tt> </tt>
+<a name="L457"></a><tt class="py-lineno">457</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"dado\n"</tt> </tt>
+<a name="L458"></a><tt class="py-lineno">458</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Si elimina un modulo que esta en uso por alguna sonda guardada, "</tt> </tt>
+<a name="L459"></a><tt class="py-lineno">459</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"no\n"</tt> </tt>
+<a name="L460"></a><tt class="py-lineno">460</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"funcionara en la siguiente ejecucion."</tt> </tt>
+<a name="L461"></a><tt class="py-lineno">461</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L462"></a><tt class="py-lineno">462</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************"</tt> </tt>
+<a name="L463"></a><tt class="py-lineno">463</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L464"></a><tt class="py-lineno">464</tt>  <tt class="py-line"> </tt>
+<a name="EliminarEjecutor"></a><div id="EliminarEjecutor-def"><a name="L465"></a><tt class="py-lineno">465</tt> <a class="py-toggle" href="#" id="EliminarEjecutor-toggle" onclick="return toggle('EliminarEjecutor');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarEjecutor-class.html">EliminarEjecutor</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarEjecutor-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="EliminarEjecutor-expanded"><a name="L466"></a><tt class="py-lineno">466</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L467"></a><tt class="py-lineno">467</tt>  <tt class="py-line"><tt class="py-docstring">    Elimina un ejecutor de nombre dado.</tt> </tt>
+<a name="L468"></a><tt class="py-lineno">468</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="EliminarEjecutor.init"></a><div id="EliminarEjecutor.init-def"><a name="L469"></a><tt class="py-lineno">469</tt> <a class="py-toggle" href="#" id="EliminarEjecutor.init-toggle" onclick="return toggle('EliminarEjecutor.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarEjecutor-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarEjecutor.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarEjecutor.init-expanded"><a name="L470"></a><tt class="py-lineno">470</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L471"></a><tt class="py-lineno">471</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'EliminarEjecutor'</tt> </tt>
+<a name="L472"></a><tt class="py-lineno">472</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L473"></a><tt class="py-lineno">473</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"EliminarEjecutor"</tt> </tt>
+</div><a name="L474"></a><tt class="py-lineno">474</tt>  <tt class="py-line"> </tt>
+<a name="EliminarEjecutor.run"></a><div id="EliminarEjecutor.run-def"><a name="L475"></a><tt class="py-lineno">475</tt> <a class="py-toggle" href="#" id="EliminarEjecutor.run-toggle" onclick="return toggle('EliminarEjecutor.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarEjecutor-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarEjecutor.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarEjecutor.run-expanded"><a name="L476"></a><tt class="py-lineno">476</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L477"></a><tt class="py-lineno">477</tt>  <tt class="py-line"><tt class="py-docstring">        Elimina el ejecutor con nombre dado como parametro de la lista de</tt> </tt>
+<a name="L478"></a><tt class="py-lineno">478</tt>  <tt class="py-line"><tt class="py-docstring">        ejecutores y del arbol xml si existe</tt> </tt>
+<a name="L479"></a><tt class="py-lineno">479</tt>  <tt class="py-line"><tt class="py-docstring">        Ejecuta la funcion GestorDeSondas.eliminarEjecutor(&lt;nombre&gt;)</tt> </tt>
+<a name="L480"></a><tt class="py-lineno">480</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L481"></a><tt class="py-lineno">481</tt>  <tt class="py-line"><tt class="py-docstring">        @param params: &lt;nombre&gt;: Nombre del ejecutor a eliminar.</tt> </tt>
+<a name="L482"></a><tt class="py-lineno">482</tt>  <tt class="py-line"><tt class="py-docstring">        @type params: string</tt> </tt>
+<a name="L483"></a><tt class="py-lineno">483</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L484"></a><tt class="py-lineno">484</tt>  <tt class="py-line"><tt class="py-docstring">        @param interprete: interprete para usar algunas funciones de este.</tt> </tt>
+<a name="L485"></a><tt class="py-lineno">485</tt>  <tt class="py-line"><tt class="py-docstring">        @type interprete: Interprete</tt> </tt>
+<a name="L486"></a><tt class="py-lineno">486</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L487"></a><tt class="py-lineno">487</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve Falso si hay algun problema con los parametros o </tt> </tt>
+<a name="L488"></a><tt class="py-lineno">488</tt>  <tt class="py-line"><tt class="py-docstring">        eliminando la funcion de eliminacion.</tt> </tt>
+<a name="L489"></a><tt class="py-lineno">489</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L490"></a><tt class="py-lineno">490</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarEjecutor. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L491"></a><tt class="py-lineno">491</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt> <tt class="py-keyword">or</tt> <tt class="py-name">params</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L492"></a><tt class="py-lineno">492</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-28', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L493"></a><tt class="py-lineno">493</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L494"></a><tt class="py-lineno">494</tt>  <tt class="py-line"> </tt>
+<a name="L495"></a><tt class="py-lineno">495</tt>  <tt class="py-line">        <tt class="py-name">paramList</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L496"></a><tt class="py-lineno">496</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">paramList</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt> <tt class="py-op">:</tt> </tt>
+<a name="L497"></a><tt class="py-lineno">497</tt>  <tt class="py-line">            <tt class="py-name">nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">paramList</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L498"></a><tt class="py-lineno">498</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L499"></a><tt class="py-lineno">499</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-29', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L500"></a><tt class="py-lineno">500</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L501"></a><tt class="py-lineno">501</tt>  <tt class="py-line"> </tt>
+<a name="L502"></a><tt class="py-lineno">502</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-30" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-30', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.eliminarEjecutor()=GestorDeSondas.GestorDeSondas-class.html#eliminarEjecutor"><a title="GestorDeSondas.GestorDeSondas.eliminarEjecutor" class="py-name" href="#" onclick="return doclink('link-31', 'eliminarEjecutor', 'link-31');">eliminarEjecutor</a></tt><tt class="py-op">(</tt><tt class="py-name">nombre</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L503"></a><tt class="py-lineno">503</tt>  <tt class="py-line"> </tt>
+<a name="EliminarEjecutor.help"></a><div id="EliminarEjecutor.help-def"><a name="L504"></a><tt class="py-lineno">504</tt> <a class="py-toggle" href="#" id="EliminarEjecutor.help-toggle" onclick="return toggle('EliminarEjecutor.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.EliminarEjecutor-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EliminarEjecutor.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EliminarEjecutor.help-expanded"><a name="L505"></a><tt class="py-lineno">505</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L506"></a><tt class="py-lineno">506</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion EliminarEjecutor.</tt> </tt>
+<a name="L507"></a><tt class="py-lineno">507</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L508"></a><tt class="py-lineno">508</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L509"></a><tt class="py-lineno">509</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L510"></a><tt class="py-lineno">510</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando EliminarEjecutor help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L511"></a><tt class="py-lineno">511</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L512"></a><tt class="py-lineno">512</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************************** Eliminar Ejecutor *******************"</tt> </tt>
+<a name="L513"></a><tt class="py-lineno">513</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"*********\n"</tt> </tt>
+<a name="L514"></a><tt class="py-lineno">514</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"EliminarEjecutor &lt;nombre&gt; : Elimina el ejecutor de nombre dado\n"</tt> </tt>
+<a name="L515"></a><tt class="py-lineno">515</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Si elimina un modulo que esta en uso por alguna sonda guardada, "</tt> </tt>
+<a name="L516"></a><tt class="py-lineno">516</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"no\n"</tt> </tt>
+<a name="L517"></a><tt class="py-lineno">517</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"funcionara en la siguiente ejecucion."</tt> </tt>
+<a name="L518"></a><tt class="py-lineno">518</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************"</tt> </tt>
+<a name="L519"></a><tt class="py-lineno">519</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"************"</tt> </tt>
+<a name="L520"></a><tt class="py-lineno">520</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L521"></a><tt class="py-lineno">521</tt>  <tt class="py-line"> </tt>
+<a name="L522"></a><tt class="py-lineno">522</tt>  <tt class="py-line"> </tt>
+<a name="L523"></a><tt class="py-lineno">523</tt>  <tt class="py-line"><tt class="py-comment">#----------------------------------- Parametros --------------------------------</tt> </tt>
+<a name="Parametros"></a><div id="Parametros-def"><a name="L524"></a><tt class="py-lineno">524</tt> <a class="py-toggle" href="#" id="Parametros-toggle" onclick="return toggle('Parametros');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="RepertorioGSondas.Parametros-class.html">Parametros</a><tt class="py-op">(</tt><tt class="py-base-class">Instruccion</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Parametros-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Parametros-expanded"><a name="L525"></a><tt class="py-lineno">525</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L526"></a><tt class="py-lineno">526</tt>  <tt class="py-line"><tt class="py-docstring">    Permite trabajar con los parametros de los dispensadores y de los</tt> </tt>
+<a name="L527"></a><tt class="py-lineno">527</tt>  <tt class="py-line"><tt class="py-docstring">    ejecutores. Permite listar los parametros disponibles en un dispensador o </tt> </tt>
+<a name="L528"></a><tt class="py-lineno">528</tt>  <tt class="py-line"><tt class="py-docstring">    en un ejecutor, ademas de modificar su valor.</tt> </tt>
+<a name="L529"></a><tt class="py-lineno">529</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="Parametros.init"></a><div id="Parametros.init-def"><a name="L530"></a><tt class="py-lineno">530</tt> <a class="py-toggle" href="#" id="Parametros.init-toggle" onclick="return toggle('Parametros.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.Parametros-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Parametros.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Parametros.init-expanded"><a name="L531"></a><tt class="py-lineno">531</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L532"></a><tt class="py-lineno">532</tt>  <tt class="py-line"><tt class="py-docstring">        Inicializa el nombre de la instruccion: 'Parametros'</tt> </tt>
+<a name="L533"></a><tt class="py-lineno">533</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L534"></a><tt class="py-lineno">534</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-string">"Parametros"</tt> </tt>
+</div><a name="L535"></a><tt class="py-lineno">535</tt>  <tt class="py-line"> </tt>
+<a name="Parametros.run"></a><div id="Parametros.run-def"><a name="L536"></a><tt class="py-lineno">536</tt> <a class="py-toggle" href="#" id="Parametros.run-toggle" onclick="return toggle('Parametros.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.Parametros-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">interprete</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Parametros.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Parametros.run-expanded"><a name="L537"></a><tt class="py-lineno">537</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L538"></a><tt class="py-lineno">538</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L539"></a><tt class="py-lineno">539</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Parametros. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L540"></a><tt class="py-lineno">540</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L541"></a><tt class="py-lineno">541</tt>  <tt class="py-line">            <tt class="py-name">options</tt><tt class="py-op">,</tt> <tt class="py-name">args</tt> <tt class="py-op">=</tt> <tt class="py-name">getopt</tt><tt class="py-op">.</tt><tt class="py-name">getopt</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">'s:delk:v:'</tt><tt class="py-op">)</tt> </tt>
+<a name="L542"></a><tt class="py-lineno">542</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L543"></a><tt class="py-lineno">543</tt>  <tt class="py-line">            <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Parametros incorrectos. Parametros: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L544"></a><tt class="py-lineno">544</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L545"></a><tt class="py-lineno">545</tt>  <tt class="py-line"> </tt>
+<a name="L546"></a><tt class="py-lineno">546</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Options: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">options</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L547"></a><tt class="py-lineno">547</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Args: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">args</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L548"></a><tt class="py-lineno">548</tt>  <tt class="py-line">        <tt class="py-name">mdisp</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L549"></a><tt class="py-lineno">549</tt>  <tt class="py-line">        <tt class="py-name">mejec</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L550"></a><tt class="py-lineno">550</tt>  <tt class="py-line">        <tt class="py-name">mlist</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L551"></a><tt class="py-lineno">551</tt>  <tt class="py-line">        <tt class="py-name">sonda</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L552"></a><tt class="py-lineno">552</tt>  <tt class="py-line">        <tt class="py-name">key</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L553"></a><tt class="py-lineno">553</tt>  <tt class="py-line">        <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L554"></a><tt class="py-lineno">554</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">opt</tt> <tt class="py-keyword">in</tt> <tt class="py-name">options</tt><tt class="py-op">:</tt> </tt>
+<a name="L555"></a><tt class="py-lineno">555</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-s'</tt><tt class="py-op">:</tt> </tt>
+<a name="L556"></a><tt class="py-lineno">556</tt>  <tt class="py-line">                <tt class="py-name">sonda</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L557"></a><tt class="py-lineno">557</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-d'</tt><tt class="py-op">:</tt> </tt>
+<a name="L558"></a><tt class="py-lineno">558</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">mejec</tt><tt class="py-op">:</tt> </tt>
+<a name="L559"></a><tt class="py-lineno">559</tt>  <tt class="py-line">                    <tt class="py-name">mdisp</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L560"></a><tt class="py-lineno">560</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-e'</tt><tt class="py-op">:</tt> </tt>
+<a name="L561"></a><tt class="py-lineno">561</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">mdisp</tt><tt class="py-op">:</tt> </tt>
+<a name="L562"></a><tt class="py-lineno">562</tt>  <tt class="py-line">                    <tt class="py-name">mejec</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L563"></a><tt class="py-lineno">563</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-l'</tt><tt class="py-op">:</tt> </tt>
+<a name="L564"></a><tt class="py-lineno">564</tt>  <tt class="py-line">                <tt class="py-name">mlist</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L565"></a><tt class="py-lineno">565</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-k'</tt><tt class="py-op">:</tt> </tt>
+<a name="L566"></a><tt class="py-lineno">566</tt>  <tt class="py-line">                <tt class="py-name">key</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L567"></a><tt class="py-lineno">567</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-v'</tt><tt class="py-op">:</tt> </tt>
+<a name="L568"></a><tt class="py-lineno">568</tt>  <tt class="py-line">                <tt class="py-name">value</tt> <tt class="py-op">=</tt> <tt class="py-name">opt</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L569"></a><tt class="py-lineno">569</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L570"></a><tt class="py-lineno">570</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="Instruccion.Instruccion.help
+Interprete.Interprete.Ayuda.help
+RepertorioEjecucion.Ejecutar.help
+RepertorioEjecucion.EliminarDeEjecucion.help
+RepertorioEjecucion.ListaEjecucion.help
+RepertorioEjecucion.Parar.help
+RepertorioEjecucion.PonerEnCola.help
+RepertorioGSondas.CargarDispensador.help
+RepertorioGSondas.CargarEjecutor.help
+RepertorioGSondas.EliminarDispensador.help
+RepertorioGSondas.EliminarEjecutor.help
+RepertorioGSondas.EliminarSonda.help
+RepertorioGSondas.ListarDispensadores.help
+RepertorioGSondas.ListarEjecutores.help
+RepertorioGSondas.ListarSondas.help
+RepertorioGSondas.NuevaSonda.help
+RepertorioGSondas.Parametros.help" class="py-name" href="#" onclick="return doclink('link-32', 'help', 'link-3');">help</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L571"></a><tt class="py-lineno">571</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L572"></a><tt class="py-lineno">572</tt>  <tt class="py-line">         </tt>
+<a name="L573"></a><tt class="py-lineno">573</tt>  <tt class="py-line">        <tt class="py-comment">#Chequeo de parametros minimos:</tt> </tt>
+<a name="L574"></a><tt class="py-lineno">574</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">mdisp</tt> <tt class="py-op">==</tt> <tt class="py-name">False</tt> <tt class="py-keyword">and</tt> <tt class="py-name">mejec</tt> <tt class="py-op">==</tt> <tt class="py-name">False</tt><tt class="py-op">:</tt> </tt>
+<a name="L575"></a><tt class="py-lineno">575</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">"No has indicado dispensador o ejecutor (-d|-e)."</tt> </tt>
+<a name="L576"></a><tt class="py-lineno">576</tt>  <tt class="py-line">            <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"\tBadArgs"</tt><tt class="py-op">)</tt> </tt>
+<a name="L577"></a><tt class="py-lineno">577</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L578"></a><tt class="py-lineno">578</tt>  <tt class="py-line"> </tt>
+<a name="L579"></a><tt class="py-lineno">579</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">sonda</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L580"></a><tt class="py-lineno">580</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">"No has indicado el nombre de la sonda (-s)."</tt> </tt>
+<a name="L581"></a><tt class="py-lineno">581</tt>  <tt class="py-line">            <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"\tBadArgs"</tt><tt class="py-op">)</tt> </tt>
+<a name="L582"></a><tt class="py-lineno">582</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L583"></a><tt class="py-lineno">583</tt>  <tt class="py-line">         </tt>
+<a name="L584"></a><tt class="py-lineno">584</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">mlist</tt><tt class="py-op">:</tt> </tt>
+<a name="L585"></a><tt class="py-lineno">585</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-33" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-33', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method GestorDeSondas.GestorDeSondas.listarParametros()=GestorDeSondas.GestorDeSondas-class.html#listarParametros"><a title="GestorDeSondas.GestorDeSondas.listarParametros" class="py-name" href="#" onclick="return doclink('link-34', 'listarParametros', 'link-34');">listarParametros</a></tt><tt class="py-op">(</tt><tt class="py-name">sonda</tt><tt class="py-op">,</tt> <tt class="py-name">mdisp</tt><tt class="py-op">)</tt> </tt>
+<a name="L586"></a><tt class="py-lineno">586</tt>  <tt class="py-line"> </tt>
+<a name="L587"></a><tt class="py-lineno">587</tt>  <tt class="py-line">        <tt class="py-comment">#si continua, flag mlist no estaba activado, por tanto se intentara</tt> </tt>
+<a name="L588"></a><tt class="py-lineno">588</tt>  <tt class="py-line">        <tt class="py-comment">#setear un parametro.</tt> </tt>
+<a name="L589"></a><tt class="py-lineno">589</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">key</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L590"></a><tt class="py-lineno">590</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">"No has indicado la key del parametro (-k)."</tt> </tt>
+<a name="L591"></a><tt class="py-lineno">591</tt>  <tt class="py-line">            <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"\tBadArgs"</tt><tt class="py-op">)</tt> </tt>
+<a name="L592"></a><tt class="py-lineno">592</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L593"></a><tt class="py-lineno">593</tt>  <tt class="py-line"> </tt>
+<a name="L594"></a><tt class="py-lineno">594</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">value</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L595"></a><tt class="py-lineno">595</tt>  <tt class="py-line">            <tt class="py-keyword">print</tt> <tt class="py-string">"No has indicado el valor del parametro (-v)."</tt> </tt>
+<a name="L596"></a><tt class="py-lineno">596</tt>  <tt class="py-line">            <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"\tBadArgs"</tt><tt class="py-op">)</tt> </tt>
+<a name="L597"></a><tt class="py-lineno">597</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L598"></a><tt class="py-lineno">598</tt>  <tt class="py-line"> </tt>
+<a name="L599"></a><tt class="py-lineno">599</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-35" class="py-name"><a title="EjecutorSYN.GdS
+Ping.GdS
+RepertorioEjecucion.GdS
+RepertorioGSondas.GdS
+SC12K_utils.GdS" class="py-name" href="#" onclick="return doclink('link-35', 'GdS', 'link-4');">GdS</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Method DispensadorIPv6.DispensadorIPv6.setParametro()=DispensadorIPv6.DispensadorIPv6-class.html#setParametro,Method EjecutorSondeo.EjecutorSondeo.setParametro()=EjecutorSondeo.EjecutorSondeo-class.html#setParametro,Method GestorDeSondas.GestorDeSondas.setParametro()=GestorDeSondas.GestorDeSondas-class.html#setParametro,Method Sonda.Sonda.setParametro()=Sonda.Sonda-class.html#setParametro"><a title="DispensadorIPv6.DispensadorIPv6.setParametro
+EjecutorSondeo.EjecutorSondeo.setParametro
+GestorDeSondas.GestorDeSondas.setParametro
+Sonda.Sonda.setParametro" class="py-name" href="#" onclick="return doclink('link-36', 'setParametro', 'link-36');">setParametro</a></tt><tt class="py-op">(</tt><tt class="py-name">sonda</tt><tt class="py-op">,</tt> <tt class="py-name">mdisp</tt><tt class="py-op">,</tt> <tt class="py-name">key</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L600"></a><tt class="py-lineno">600</tt>  <tt class="py-line"> </tt>
+<a name="Parametros.help"></a><div id="Parametros.help-def"><a name="L601"></a><tt class="py-lineno">601</tt> <a class="py-toggle" href="#" id="Parametros.help-toggle" onclick="return toggle('Parametros.help');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="RepertorioGSondas.Parametros-class.html#help">help</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Parametros.help-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Parametros.help-expanded"><a name="L602"></a><tt class="py-lineno">602</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L603"></a><tt class="py-lineno">603</tt>  <tt class="py-line"><tt class="py-docstring">        Genera el texto de ayuda de la instruccion Parametros.</tt> </tt>
+<a name="L604"></a><tt class="py-lineno">604</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L605"></a><tt class="py-lineno">605</tt>  <tt class="py-line"><tt class="py-docstring">        @return: Devuelve el texto a pintar por pantalla.</tt> </tt>
+<a name="L606"></a><tt class="py-lineno">606</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L607"></a><tt class="py-lineno">607</tt>  <tt class="py-line">        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">debug</tt><tt class="py-op">(</tt><tt class="py-string">"Ejecutando Parametros help"</tt><tt class="py-op">)</tt> </tt>
+<a name="L608"></a><tt class="py-lineno">608</tt>  <tt class="py-line">        <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt class="py-string">"******************************* Parametros ********************************\n"</tt> </tt>
+<a name="L609"></a><tt class="py-lineno">609</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Parametros -s &lt;sonda&gt; -d|-e -l : Muestra la lista de parametros del\n"</tt> </tt>
+<a name="L610"></a><tt class="py-lineno">610</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"dispensador (-d) o del ejecutor (-e) perteneciente a la sonda\n"</tt> </tt>
+<a name="L611"></a><tt class="py-lineno">611</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Parametros -s &lt;sonda&gt; -d|-e -k &lt;key1&gt;,&lt;key2&gt;,&lt;key3&gt; -v &lt;value&gt;,&lt;value2&gt;,&lt;value3&gt;:\n"</tt> </tt>
+<a name="L612"></a><tt class="py-lineno">612</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"Establece el valor, dado como value*, de los parametros, dados como key*, en la\n"</tt> </tt>
+<a name="L613"></a><tt class="py-lineno">613</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"indicada\n"</tt> </tt>
+<a name="L614"></a><tt class="py-lineno">614</tt>  <tt class="py-line">        <tt class="py-name">res</tt><tt class="py-op">+=</tt> <tt class="py-string">"****************************************************************************"</tt> </tt>
+<a name="L615"></a><tt class="py-lineno">615</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div></div><a name="L616"></a><tt class="py-lineno">616</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jan 18 19:35:53 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

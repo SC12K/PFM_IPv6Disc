@@ -7,6 +7,7 @@ class EjecutorSondeo() :
 		
 	def binit(self): 
 		self._atributos = dict()
+		self._inicializado = False
 	
 	def init(self):
 		logging.error(self.__class__.__name__ + ' : init: Metodo no implementado implementado!')

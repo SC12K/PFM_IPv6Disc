@@ -1,5 +1,5 @@
-#Devuelve la direccion IPv6 a partir de una direccion IPv4.
-#Recorre el espectro de forma secuencial.
+import sys
+sys.path.append('../')
 from DispensadorIPv6 import DispensadorIPv6
 from struct import unpack
 from socket import AF_INET, inet_aton
@@ -49,10 +49,10 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
 			self._dirInts[0] = self._dirInts[0] + 1
 	
 	def getDireccionIPv6(self):
-		if not self._inicicializado:
+		if not self._inicializado:
 			ipv4p = self._atributos["ipv4Ini"].split('.')
-			self._dirInts = [format(ipv4p[0]),format(ipv4p[1]),format(ipv4p[2]),format(ipv4p[3])]
-			self._inicicializado = True
+			self._dirInts = [int(ipv4p[0]),int(ipv4p[1]),int(ipv4p[2]),int(ipv4p[3])]
+			self._inicializado = True
 		
 		while self.esPrivada(self.getDireccionIPv4String()):
 			incrementarIPv4()

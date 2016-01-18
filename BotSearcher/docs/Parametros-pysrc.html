@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Parametros</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;Parametros
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Parametros-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Parametros-module.html">Module Parametros</a></h1>
+<pre class="py-src">
+&#239;&#187;&#191;import sys
+sys.path.append('../')
+from SC12K_utils import *
+from Instruccion import Instruccion
+import getopt
+
+class Parametros(Instruccion) :
+
+        def __init__(self):
+                self.init()
+                
+        def init(self):
+                self.name = "Parametros"
+        
+        def run(self, params, interprete):
+                logging.debug("Ejecutando Parametros. Parametros: " + str(params))
+                try:
+                        options, args = getopt.getopt(params.split(),'s:delk:v:')
+                except:
+                        logging.debug("Parametros incorrectos. Parametros: " + str(params))
+                        return False
+                        
+                logging.debug("Options: " + str(options))
+                logging.debug("Args: " + str(args))
+                mdisp = False
+                mejec = False
+                mlist = False
+                sonda = ""
+                key = ""
+                value = ""
+                for opt in options:
+                        if opt[0] == '-s':
+                                sonda = opt[1]
+                        elif opt[0] == '-d':
+                                if not mejec:
+                                        mdisp = True
+                        elif opt[0] == '-e':
+                                if not mdisp:
+                                        mejec = True
+                        elif opt[0] == '-l':
+                                mlist = True
+                        elif opt[0] == '-k':
+                                key = opt[1]
+                        elif opt[0] == '-v':
+                                value = opt[1]
+                        else:
+                                self.help()
+                                return False
+                                
+                #Chequeo de parametros m&#195;&#173;nimos:
+                if mdisp == False and mejec == False:
+                        print "No has indicado dispensador o ejecutor (-d|-e)."
+                        logging.debug("\tBadArgs")
+                        return False
+                        
+                if sonda == "":
+                        print "No has indicado el nombre de la sonda (-s)."
+                        logging.debug("\tBadArgs")
+                        return False
+        
+                if mlist:
+                        return GdS.listarParametros(sonda, mdisp)
+                        
+                #si continua, flag mlist no estaba activado, por tanto se intentara
+                #setear un parametro.
+                if key == "":
+                        print "No has indicado la key del parametro (-k)."
+                        logging.debug("\tBadArgs")
+                        return False
+                        
+                if value == "":
+                        print "No has indicado el valor del parametro (-v)."
+                        logging.debug("\tBadArgs")
+                        return False
+                        
+                GdS.setParametro(sonda, mdisp, key, value)
+                
+                return True
+                
+        def help(self):
+                logging.debug("Ejecutando Parametros help")
+                res = "******************************* Parametros ********************************\n"
+                res+= "Parametros -s <sonda> -d|-e -l : Muestra la lista de parametros del\n"
+                res+= "dispensador (-d) o del ejecutor (-e) perteneciente a la sonda\n"
+                res+= "Parametros -s <sonda> -d|-e -k <key1>,<key2>,<key3> -v <value>,<value2>,<value3>:\n"
+                res+= "Establece el valor, dado como value*, de los parametros, dados como key*, en la\n"
+                res+= "indicada\n"
+                res+= "****************************************************************************"
+                return res
+<script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jan 18 15:16:56 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

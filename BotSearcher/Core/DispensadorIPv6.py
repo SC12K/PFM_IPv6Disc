@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 from SC12K_utils import *
 
-class DispensadorIPv6() :
+class DispensadorIPv6:
 	def __init__(self):
 		logging.debug('DispensadorIPv6 __init__')
 		self.binit()
@@ -11,7 +11,7 @@ class DispensadorIPv6() :
 	def binit(self):
 		logging.debug('DispensadorIPv6 binit')
 		self._atributos = dict()
-		self._inicicializado = False
+		self._inicializado = False
 	
 	def init(self):
 		logging.error(self.__class__.__name__ + ' : init: Metodo no implementado implementado!')
