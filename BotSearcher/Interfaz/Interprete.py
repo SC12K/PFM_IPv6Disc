@@ -4,7 +4,7 @@ from SC12K_utils import *
 import Instruccion
 import xml.etree.ElementTree as xmlparser
 
-class Interprete :
+class Interprete(object):
     """
     Interficie de usuario que nos permite manejar las sondas, los ejecutores,
     los dispensadores, las salidas y la cola de ejeucion.

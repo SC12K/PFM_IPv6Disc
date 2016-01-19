@@ -108,14 +108,12 @@ Variable global para referenciar el interprete.
 """
 interprete = Interprete()
 
-
 #Gestor de Sondas
 global GdS
 """
 Variable global para referenciar el Gestor de Sondas.
 """
 GdS = GestorDeSondas()
-
 
 global GdE
 """

@@ -2,7 +2,7 @@
 sys.path.append('../')
 from SC12K_utils import *
 
-class Instruccion :
+class Instruccion(object):
     """
     Clase base para todas las instrucciones ejecutables, excepto Exit.
     """

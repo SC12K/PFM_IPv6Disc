@@ -60152,3 +60152,1375 @@
 [2016-01-18 20:01:03,676]	WARNING	: No route found for IPv6 destination :: (no default route?)
 [2016-01-18 20:01:21,984]	INFO	: Abriendo interprete...
 [2016-01-18 20:01:22,063]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-18 20:41:19,910]	INFO	: Abriendo interprete...
+[2016-01-18 20:41:20,860]	WARNING	: Failed to execute tcpdump. Check it is installed and in the PATH
+[2016-01-18 20:41:20,883]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-18 20:42:50,587]	INFO	: Abriendo interprete...
+[2016-01-18 20:42:50,666]	WARNING	: Failed to execute tcpdump. Check it is installed and in the PATH
+[2016-01-18 20:42:50,669]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-18 20:42:59,949]	INFO	: Abriendo interprete...
+[2016-01-18 20:43:00,026]	WARNING	: Failed to execute tcpdump. Check it is installed and in the PATH
+[2016-01-18 20:43:00,028]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-18 20:43:15,111]	INFO	: Abriendo interprete...
+[2016-01-18 20:43:15,250]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-18 20:45:17,322]	INFO	: Abriendo interprete...
+[2016-01-18 20:45:17,399]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:01:52,384]	INFO	: Abriendo interprete...
+[2016-01-19 00:01:53,350]	WARNING	: Failed to execute tcpdump. Check it is installed and in the PATH
+[2016-01-19 00:01:53,380]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:02:06,606]	INFO	: Abriendo interprete...
+[2016-01-19 00:02:06,690]	WARNING	: Failed to execute tcpdump. Check it is installed and in the PATH
+[2016-01-19 00:02:06,692]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:02:21,280]	INFO	: Abriendo interprete...
+[2016-01-19 00:02:21,664]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:04:53,319]	INFO	: Abriendo interprete...
+[2016-01-19 00:04:53,405]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:06:10,385]	INFO	: Abriendo interprete...
+[2016-01-19 00:06:10,467]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:06:41,491]	INFO	: Abriendo interprete...
+[2016-01-19 00:06:41,587]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:08:08,187]	INFO	: Abriendo interprete...
+[2016-01-19 00:08:08,268]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:25:48,563]	INFO	: Abriendo interprete...
+[2016-01-19 00:25:48,737]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:27:40,500]	INFO	: Abriendo interprete...
+[2016-01-19 00:27:40,665]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:28:01,382]	INFO	: Abriendo interprete...
+[2016-01-19 00:28:01,546]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:28:25,579]	INFO	: Abriendo interprete...
+[2016-01-19 00:28:33,392]	INFO	: Abriendo interprete...
+[2016-01-19 00:30:39,099]	INFO	: Abriendo interprete...
+[2016-01-19 00:31:32,012]	INFO	: Abriendo interprete...
+[2016-01-19 00:31:32,013]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:31:32,013]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:31:32,311]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:31:32,312]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:31:32,314]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,315]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:31:32,315]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:31:32,315]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,316]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:31:32,318]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:31:32,318]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,319]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:31:32,319]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:31:32,319]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,319]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:31:32,320]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:31:32,320]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,320]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:31:32,320]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:31:32,320]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,321]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:31:32,321]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:31:32,321]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,321]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:31:32,322]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:31:32,322]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,322]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:31:32,322]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:31:32,323]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,323]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:31:32,323]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:31:32,324]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,324]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:31:32,325]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:31:32,325]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,325]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:31:32,325]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:31:32,326]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,326]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:31:32,326]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:31:32,328]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,328]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:31:32,329]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:31:32,329]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:32,329]	INFO	: Repositorio cargado.
+[2016-01-19 00:31:32,329]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:31:32,329]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:31:32,331]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:31:32,345]	INFO	: 	Ok
+[2016-01-19 00:31:32,345]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:31:32,586]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:31:32,753]	INFO	: 	Ok
+[2016-01-19 00:31:32,753]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:31:32,754]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:31:32,754]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:31:32,754]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:31:32,754]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:31:32,754]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:31:32,754]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:31:36,058]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:31:36,058]	INFO	: 	No contiene parametros
+[2016-01-19 00:31:36,058]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:31:36,059]	INFO	: Interprete Cerrado
+[2016-01-19 00:31:36,059]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:31:36,059]	INFO	: Cerrar
+[2016-01-19 00:31:46,164]	INFO	: Abriendo interprete...
+[2016-01-19 00:31:46,166]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:31:46,166]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:31:46,167]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:31:46,167]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:31:46,168]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,169]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:31:46,169]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:31:46,169]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,169]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:31:46,169]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:31:46,169]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,169]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:31:46,169]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:31:46,170]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,170]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:31:46,170]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:31:46,170]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,170]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:31:46,170]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:31:46,170]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,170]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,171]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,171]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:31:46,171]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,171]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:31:46,172]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:31:46,172]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,172]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:31:46,172]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:31:46,173]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,173]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:31:46,173]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:31:46,173]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,173]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:31:46,173]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:31:46,173]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,173]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:31:46,174]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:31:46,174]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__doc__', '__init__', '__module__', 'help', 'init', 'run']
+[2016-01-19 00:31:46,174]	INFO	: Repositorio cargado.
+[2016-01-19 00:31:46,174]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:31:46,174]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:31:46,178]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:31:46,188]	INFO	: 	Ok
+[2016-01-19 00:31:46,189]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:31:46,377]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:31:46,481]	INFO	: 	Ok
+[2016-01-19 00:31:46,481]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:31:46,482]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:31:46,482]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:31:46,482]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:31:46,482]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:31:46,482]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:31:46,482]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:31:53,102]	INFO	: Instruccion introducida: PonerEnCola Sonda1
+[2016-01-19 00:31:53,103]	INFO	: 	Contiene parametros
+[2016-01-19 00:31:53,103]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:31:53,103]	DEBUG	: Ejecutando Poner En Cola. Parametros: Sonda1
+[2016-01-19 00:31:53,103]	DEBUG	: Options: []
+[2016-01-19 00:31:53,103]	DEBUG	: Args: ['Sonda1']
+[2016-01-19 00:31:53,103]	WARNING	: 	Error de ejecucion
+[2016-01-19 00:31:53,103]	WARNING	: 	La instruccion existe.
+[2016-01-19 00:31:58,588]	INFO	: Instruccion introducida: PonerEnCola -n Sonda1
+[2016-01-19 00:31:58,588]	INFO	: 	Contiene parametros
+[2016-01-19 00:31:58,588]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:31:58,588]	DEBUG	: Ejecutando Poner En Cola. Parametros: -n Sonda1
+[2016-01-19 00:31:58,588]	DEBUG	: Options: [('-n', 'Sonda1')]
+[2016-01-19 00:31:58,588]	DEBUG	: Args: []
+[2016-01-19 00:31:58,588]	INFO	: Anadiendo sonda Sonda1 Dispensador: D_IPv4TEST Ejecutor: Ping a la cola de ejecucion
+[2016-01-19 00:32:00,744]	INFO	: Instruccion introducida: Ejecutar
+[2016-01-19 00:32:00,745]	INFO	: 	No contiene parametros
+[2016-01-19 00:32:00,745]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:32:00,745]	DEBUG	: Ejecutando Ejecutar. Parametros: None
+[2016-01-19 00:32:00,746]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:00,746]	DEBUG	: IPv6: 0.0.0.0
+[2016-01-19 00:32:00,746]	DEBUG	: IP: 0.0.0.0
+[2016-01-19 00:32:00,746]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:00,747]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,767]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,769]	DEBUG	: No PC in 0.0.0.0
+[2016-01-19 00:32:01,769]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,770]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,770]	DEBUG	: IPv6: 0.0.0.1
+[2016-01-19 00:32:01,770]	DEBUG	: IP: 0.0.0.1
+[2016-01-19 00:32:01,771]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,771]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,801]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,801]	DEBUG	: No PC in 0.0.0.1
+[2016-01-19 00:32:01,801]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,801]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,802]	DEBUG	: IPv6: 0.0.0.2
+[2016-01-19 00:32:01,802]	DEBUG	: IP: 0.0.0.2
+[2016-01-19 00:32:01,802]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,802]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,819]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,819]	DEBUG	: No PC in 0.0.0.2
+[2016-01-19 00:32:01,819]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,819]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,820]	DEBUG	: IPv6: 0.0.0.3
+[2016-01-19 00:32:01,820]	DEBUG	: IP: 0.0.0.3
+[2016-01-19 00:32:01,820]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,821]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,835]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,835]	DEBUG	: No PC in 0.0.0.3
+[2016-01-19 00:32:01,835]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,835]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,835]	DEBUG	: IPv6: 0.0.0.4
+[2016-01-19 00:32:01,836]	DEBUG	: IP: 0.0.0.4
+[2016-01-19 00:32:01,836]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,836]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,857]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,857]	DEBUG	: No PC in 0.0.0.4
+[2016-01-19 00:32:01,857]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,857]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,858]	DEBUG	: IPv6: 0.0.0.5
+[2016-01-19 00:32:01,858]	DEBUG	: IP: 0.0.0.5
+[2016-01-19 00:32:01,858]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,858]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,872]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,873]	DEBUG	: No PC in 0.0.0.5
+[2016-01-19 00:32:01,873]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,873]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,873]	DEBUG	: IPv6: 0.0.0.6
+[2016-01-19 00:32:01,873]	DEBUG	: IP: 0.0.0.6
+[2016-01-19 00:32:01,873]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,874]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,890]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,890]	DEBUG	: No PC in 0.0.0.6
+[2016-01-19 00:32:01,891]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,891]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,891]	DEBUG	: IPv6: 0.0.0.7
+[2016-01-19 00:32:01,891]	DEBUG	: IP: 0.0.0.7
+[2016-01-19 00:32:01,891]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,892]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,913]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,913]	DEBUG	: No PC in 0.0.0.7
+[2016-01-19 00:32:01,913]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,914]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,914]	DEBUG	: IPv6: 0.0.0.8
+[2016-01-19 00:32:01,914]	DEBUG	: IP: 0.0.0.8
+[2016-01-19 00:32:01,914]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,914]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,931]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,931]	DEBUG	: No PC in 0.0.0.8
+[2016-01-19 00:32:01,931]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,931]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,932]	DEBUG	: IPv6: 0.0.0.9
+[2016-01-19 00:32:01,932]	DEBUG	: IP: 0.0.0.9
+[2016-01-19 00:32:01,932]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,932]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,961]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,961]	DEBUG	: No PC in 0.0.0.9
+[2016-01-19 00:32:01,962]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,962]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,962]	DEBUG	: IPv6: 0.0.0.10
+[2016-01-19 00:32:01,963]	DEBUG	: IP: 0.0.0.10
+[2016-01-19 00:32:01,963]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,964]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,980]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,980]	DEBUG	: No PC in 0.0.0.10
+[2016-01-19 00:32:01,981]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,981]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,981]	DEBUG	: IPv6: 0.0.0.11
+[2016-01-19 00:32:01,981]	DEBUG	: IP: 0.0.0.11
+[2016-01-19 00:32:01,981]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,982]	DEBUG	: Ejecutando
+[2016-01-19 00:32:01,994]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:01,995]	DEBUG	: No PC in 0.0.0.11
+[2016-01-19 00:32:01,995]	DEBUG	: finEjecucion
+[2016-01-19 00:32:01,996]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:01,996]	DEBUG	: IPv6: 0.0.0.12
+[2016-01-19 00:32:01,996]	DEBUG	: IP: 0.0.0.12
+[2016-01-19 00:32:01,996]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:01,996]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,013]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,014]	DEBUG	: No PC in 0.0.0.12
+[2016-01-19 00:32:02,014]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,014]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,014]	DEBUG	: IPv6: 0.0.0.13
+[2016-01-19 00:32:02,014]	DEBUG	: IP: 0.0.0.13
+[2016-01-19 00:32:02,014]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,016]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,032]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,033]	DEBUG	: No PC in 0.0.0.13
+[2016-01-19 00:32:02,033]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,033]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,033]	DEBUG	: IPv6: 0.0.0.14
+[2016-01-19 00:32:02,033]	DEBUG	: IP: 0.0.0.14
+[2016-01-19 00:32:02,033]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,034]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,047]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,047]	DEBUG	: No PC in 0.0.0.14
+[2016-01-19 00:32:02,047]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,048]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,048]	DEBUG	: IPv6: 0.0.0.15
+[2016-01-19 00:32:02,048]	DEBUG	: IP: 0.0.0.15
+[2016-01-19 00:32:02,048]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,048]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,065]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,066]	DEBUG	: No PC in 0.0.0.15
+[2016-01-19 00:32:02,066]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,066]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,066]	DEBUG	: IPv6: 0.0.0.16
+[2016-01-19 00:32:02,066]	DEBUG	: IP: 0.0.0.16
+[2016-01-19 00:32:02,067]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,067]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,082]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,082]	DEBUG	: No PC in 0.0.0.16
+[2016-01-19 00:32:02,083]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,083]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,083]	DEBUG	: IPv6: 0.0.0.17
+[2016-01-19 00:32:02,083]	DEBUG	: IP: 0.0.0.17
+[2016-01-19 00:32:02,083]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,084]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,098]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,098]	DEBUG	: No PC in 0.0.0.17
+[2016-01-19 00:32:02,098]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,098]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,099]	DEBUG	: IPv6: 0.0.0.18
+[2016-01-19 00:32:02,099]	DEBUG	: IP: 0.0.0.18
+[2016-01-19 00:32:02,099]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,100]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,116]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,117]	DEBUG	: No PC in 0.0.0.18
+[2016-01-19 00:32:02,117]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,117]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,117]	DEBUG	: IPv6: 0.0.0.19
+[2016-01-19 00:32:02,117]	DEBUG	: IP: 0.0.0.19
+[2016-01-19 00:32:02,117]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,118]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,134]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,134]	DEBUG	: No PC in 0.0.0.19
+[2016-01-19 00:32:02,134]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,134]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,134]	DEBUG	: IPv6: 0.0.0.20
+[2016-01-19 00:32:02,135]	DEBUG	: IP: 0.0.0.20
+[2016-01-19 00:32:02,135]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,135]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,153]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,153]	DEBUG	: No PC in 0.0.0.20
+[2016-01-19 00:32:02,153]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,153]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,153]	DEBUG	: IPv6: 0.0.0.21
+[2016-01-19 00:32:02,154]	DEBUG	: IP: 0.0.0.21
+[2016-01-19 00:32:02,154]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,154]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,172]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,173]	DEBUG	: No PC in 0.0.0.21
+[2016-01-19 00:32:02,173]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,174]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,174]	DEBUG	: IPv6: 0.0.0.22
+[2016-01-19 00:32:02,174]	DEBUG	: IP: 0.0.0.22
+[2016-01-19 00:32:02,174]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,174]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,190]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,190]	DEBUG	: No PC in 0.0.0.22
+[2016-01-19 00:32:02,190]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,191]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,191]	DEBUG	: IPv6: 0.0.0.23
+[2016-01-19 00:32:02,191]	DEBUG	: IP: 0.0.0.23
+[2016-01-19 00:32:02,191]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,192]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,205]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,206]	DEBUG	: No PC in 0.0.0.23
+[2016-01-19 00:32:02,206]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,206]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,206]	DEBUG	: IPv6: 0.0.0.24
+[2016-01-19 00:32:02,206]	DEBUG	: IP: 0.0.0.24
+[2016-01-19 00:32:02,206]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,207]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,226]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,227]	DEBUG	: No PC in 0.0.0.24
+[2016-01-19 00:32:02,227]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,227]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,227]	DEBUG	: IPv6: 0.0.0.25
+[2016-01-19 00:32:02,228]	DEBUG	: IP: 0.0.0.25
+[2016-01-19 00:32:02,228]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,228]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,242]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,242]	DEBUG	: No PC in 0.0.0.25
+[2016-01-19 00:32:02,242]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,242]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,242]	DEBUG	: IPv6: 0.0.0.26
+[2016-01-19 00:32:02,242]	DEBUG	: IP: 0.0.0.26
+[2016-01-19 00:32:02,243]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,243]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,259]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,260]	DEBUG	: No PC in 0.0.0.26
+[2016-01-19 00:32:02,260]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,260]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,260]	DEBUG	: IPv6: 0.0.0.27
+[2016-01-19 00:32:02,261]	DEBUG	: IP: 0.0.0.27
+[2016-01-19 00:32:02,261]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,261]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,281]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,281]	DEBUG	: No PC in 0.0.0.27
+[2016-01-19 00:32:02,281]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,281]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,282]	DEBUG	: IPv6: 0.0.0.28
+[2016-01-19 00:32:02,282]	DEBUG	: IP: 0.0.0.28
+[2016-01-19 00:32:02,282]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,282]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,296]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,297]	DEBUG	: No PC in 0.0.0.28
+[2016-01-19 00:32:02,297]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,297]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,297]	DEBUG	: IPv6: 0.0.0.29
+[2016-01-19 00:32:02,297]	DEBUG	: IP: 0.0.0.29
+[2016-01-19 00:32:02,297]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,298]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,314]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,315]	DEBUG	: No PC in 0.0.0.29
+[2016-01-19 00:32:02,315]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,315]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,315]	DEBUG	: IPv6: 0.0.0.30
+[2016-01-19 00:32:02,315]	DEBUG	: IP: 0.0.0.30
+[2016-01-19 00:32:02,316]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,316]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,334]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,334]	DEBUG	: No PC in 0.0.0.30
+[2016-01-19 00:32:02,334]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,334]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,334]	DEBUG	: IPv6: 0.0.0.31
+[2016-01-19 00:32:02,334]	DEBUG	: IP: 0.0.0.31
+[2016-01-19 00:32:02,335]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,335]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,348]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,349]	DEBUG	: No PC in 0.0.0.31
+[2016-01-19 00:32:02,349]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,349]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,349]	DEBUG	: IPv6: 0.0.0.32
+[2016-01-19 00:32:02,349]	DEBUG	: IP: 0.0.0.32
+[2016-01-19 00:32:02,350]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,350]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,367]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,368]	DEBUG	: No PC in 0.0.0.32
+[2016-01-19 00:32:02,368]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,368]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,368]	DEBUG	: IPv6: 0.0.0.33
+[2016-01-19 00:32:02,368]	DEBUG	: IP: 0.0.0.33
+[2016-01-19 00:32:02,368]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,369]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,386]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,386]	DEBUG	: No PC in 0.0.0.33
+[2016-01-19 00:32:02,387]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,387]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,387]	DEBUG	: IPv6: 0.0.0.34
+[2016-01-19 00:32:02,387]	DEBUG	: IP: 0.0.0.34
+[2016-01-19 00:32:02,387]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,388]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,401]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,402]	DEBUG	: No PC in 0.0.0.34
+[2016-01-19 00:32:02,402]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,402]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,402]	DEBUG	: IPv6: 0.0.0.35
+[2016-01-19 00:32:02,402]	DEBUG	: IP: 0.0.0.35
+[2016-01-19 00:32:02,402]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,403]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,419]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,419]	DEBUG	: No PC in 0.0.0.35
+[2016-01-19 00:32:02,419]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,419]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,420]	DEBUG	: IPv6: 0.0.0.36
+[2016-01-19 00:32:02,420]	DEBUG	: IP: 0.0.0.36
+[2016-01-19 00:32:02,420]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,421]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,439]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,439]	DEBUG	: No PC in 0.0.0.36
+[2016-01-19 00:32:02,440]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,440]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,440]	DEBUG	: IPv6: 0.0.0.37
+[2016-01-19 00:32:02,440]	DEBUG	: IP: 0.0.0.37
+[2016-01-19 00:32:02,440]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,441]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,454]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,454]	DEBUG	: No PC in 0.0.0.37
+[2016-01-19 00:32:02,454]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,454]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,454]	DEBUG	: IPv6: 0.0.0.38
+[2016-01-19 00:32:02,455]	DEBUG	: IP: 0.0.0.38
+[2016-01-19 00:32:02,455]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,455]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,474]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,474]	DEBUG	: No PC in 0.0.0.38
+[2016-01-19 00:32:02,474]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,474]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,474]	DEBUG	: IPv6: 0.0.0.39
+[2016-01-19 00:32:02,474]	DEBUG	: IP: 0.0.0.39
+[2016-01-19 00:32:02,475]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,475]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,490]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,491]	DEBUG	: No PC in 0.0.0.39
+[2016-01-19 00:32:02,491]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,491]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,491]	DEBUG	: IPv6: 0.0.0.40
+[2016-01-19 00:32:02,492]	DEBUG	: IP: 0.0.0.40
+[2016-01-19 00:32:02,492]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,492]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,506]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,506]	DEBUG	: No PC in 0.0.0.40
+[2016-01-19 00:32:02,506]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,507]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,507]	DEBUG	: IPv6: 0.0.0.41
+[2016-01-19 00:32:02,507]	DEBUG	: IP: 0.0.0.41
+[2016-01-19 00:32:02,507]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,508]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,525]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,528]	DEBUG	: No PC in 0.0.0.41
+[2016-01-19 00:32:02,529]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,529]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,529]	DEBUG	: IPv6: 0.0.0.42
+[2016-01-19 00:32:02,529]	DEBUG	: IP: 0.0.0.42
+[2016-01-19 00:32:02,529]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,530]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,543]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,543]	DEBUG	: No PC in 0.0.0.42
+[2016-01-19 00:32:02,544]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,544]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,544]	DEBUG	: IPv6: 0.0.0.43
+[2016-01-19 00:32:02,544]	DEBUG	: IP: 0.0.0.43
+[2016-01-19 00:32:02,544]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,545]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,558]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,558]	DEBUG	: No PC in 0.0.0.43
+[2016-01-19 00:32:02,558]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,558]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,559]	DEBUG	: IPv6: 0.0.0.44
+[2016-01-19 00:32:02,563]	DEBUG	: IP: 0.0.0.44
+[2016-01-19 00:32:02,564]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,564]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,584]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,585]	DEBUG	: No PC in 0.0.0.44
+[2016-01-19 00:32:02,585]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,585]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,585]	DEBUG	: IPv6: 0.0.0.45
+[2016-01-19 00:32:02,585]	DEBUG	: IP: 0.0.0.45
+[2016-01-19 00:32:02,585]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,586]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,600]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,601]	DEBUG	: No PC in 0.0.0.45
+[2016-01-19 00:32:02,601]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,601]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,601]	DEBUG	: IPv6: 0.0.0.46
+[2016-01-19 00:32:02,601]	DEBUG	: IP: 0.0.0.46
+[2016-01-19 00:32:02,601]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,602]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,619]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,619]	DEBUG	: No PC in 0.0.0.46
+[2016-01-19 00:32:02,619]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,620]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,620]	DEBUG	: IPv6: 0.0.0.47
+[2016-01-19 00:32:02,621]	DEBUG	: IP: 0.0.0.47
+[2016-01-19 00:32:02,621]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,621]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,639]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,640]	DEBUG	: No PC in 0.0.0.47
+[2016-01-19 00:32:02,640]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,640]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,640]	DEBUG	: IPv6: 0.0.0.48
+[2016-01-19 00:32:02,640]	DEBUG	: IP: 0.0.0.48
+[2016-01-19 00:32:02,640]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,641]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,654]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,654]	DEBUG	: No PC in 0.0.0.48
+[2016-01-19 00:32:02,655]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,655]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,655]	DEBUG	: IPv6: 0.0.0.49
+[2016-01-19 00:32:02,655]	DEBUG	: IP: 0.0.0.49
+[2016-01-19 00:32:02,655]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,656]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,674]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,674]	DEBUG	: No PC in 0.0.0.49
+[2016-01-19 00:32:02,674]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,674]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,675]	DEBUG	: IPv6: 0.0.0.50
+[2016-01-19 00:32:02,675]	DEBUG	: IP: 0.0.0.50
+[2016-01-19 00:32:02,675]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,675]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,691]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,692]	DEBUG	: No PC in 0.0.0.50
+[2016-01-19 00:32:02,692]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,692]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,692]	DEBUG	: IPv6: 0.0.0.51
+[2016-01-19 00:32:02,692]	DEBUG	: IP: 0.0.0.51
+[2016-01-19 00:32:02,693]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,693]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,706]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,707]	DEBUG	: No PC in 0.0.0.51
+[2016-01-19 00:32:02,707]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,707]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,707]	DEBUG	: IPv6: 0.0.0.52
+[2016-01-19 00:32:02,708]	DEBUG	: IP: 0.0.0.52
+[2016-01-19 00:32:02,708]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,708]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,725]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,726]	DEBUG	: No PC in 0.0.0.52
+[2016-01-19 00:32:02,730]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,731]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,732]	DEBUG	: IPv6: 0.0.0.53
+[2016-01-19 00:32:02,732]	DEBUG	: IP: 0.0.0.53
+[2016-01-19 00:32:02,732]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,733]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,765]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,765]	DEBUG	: No PC in 0.0.0.53
+[2016-01-19 00:32:02,765]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,765]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,765]	DEBUG	: IPv6: 0.0.0.54
+[2016-01-19 00:32:02,766]	DEBUG	: IP: 0.0.0.54
+[2016-01-19 00:32:02,766]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,766]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,781]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,782]	DEBUG	: No PC in 0.0.0.54
+[2016-01-19 00:32:02,782]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,782]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,782]	DEBUG	: IPv6: 0.0.0.55
+[2016-01-19 00:32:02,782]	DEBUG	: IP: 0.0.0.55
+[2016-01-19 00:32:02,782]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,783]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,801]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,803]	DEBUG	: No PC in 0.0.0.55
+[2016-01-19 00:32:02,803]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,803]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,803]	DEBUG	: IPv6: 0.0.0.56
+[2016-01-19 00:32:02,804]	DEBUG	: IP: 0.0.0.56
+[2016-01-19 00:32:02,804]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,805]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,820]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,821]	DEBUG	: No PC in 0.0.0.56
+[2016-01-19 00:32:02,821]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,821]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,821]	DEBUG	: IPv6: 0.0.0.57
+[2016-01-19 00:32:02,821]	DEBUG	: IP: 0.0.0.57
+[2016-01-19 00:32:02,821]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,822]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,835]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,836]	DEBUG	: No PC in 0.0.0.57
+[2016-01-19 00:32:02,836]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,836]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,836]	DEBUG	: IPv6: 0.0.0.58
+[2016-01-19 00:32:02,836]	DEBUG	: IP: 0.0.0.58
+[2016-01-19 00:32:02,837]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,837]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,854]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,855]	DEBUG	: No PC in 0.0.0.58
+[2016-01-19 00:32:02,855]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,855]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,855]	DEBUG	: IPv6: 0.0.0.59
+[2016-01-19 00:32:02,856]	DEBUG	: IP: 0.0.0.59
+[2016-01-19 00:32:02,856]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,856]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,872]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,872]	DEBUG	: No PC in 0.0.0.59
+[2016-01-19 00:32:02,872]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,873]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,873]	DEBUG	: IPv6: 0.0.0.60
+[2016-01-19 00:32:02,873]	DEBUG	: IP: 0.0.0.60
+[2016-01-19 00:32:02,873]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,873]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,886]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,886]	DEBUG	: No PC in 0.0.0.60
+[2016-01-19 00:32:02,887]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,887]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,887]	DEBUG	: IPv6: 0.0.0.61
+[2016-01-19 00:32:02,887]	DEBUG	: IP: 0.0.0.61
+[2016-01-19 00:32:02,887]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,888]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,905]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,905]	DEBUG	: No PC in 0.0.0.61
+[2016-01-19 00:32:02,906]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,906]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,906]	DEBUG	: IPv6: 0.0.0.62
+[2016-01-19 00:32:02,906]	DEBUG	: IP: 0.0.0.62
+[2016-01-19 00:32:02,906]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,907]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,923]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,923]	DEBUG	: No PC in 0.0.0.62
+[2016-01-19 00:32:02,923]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,923]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,924]	DEBUG	: IPv6: 0.0.0.63
+[2016-01-19 00:32:02,924]	DEBUG	: IP: 0.0.0.63
+[2016-01-19 00:32:02,924]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,924]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,938]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,938]	DEBUG	: No PC in 0.0.0.63
+[2016-01-19 00:32:02,939]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,939]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,939]	DEBUG	: IPv6: 0.0.0.64
+[2016-01-19 00:32:02,939]	DEBUG	: IP: 0.0.0.64
+[2016-01-19 00:32:02,939]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,940]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,961]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,962]	DEBUG	: No PC in 0.0.0.64
+[2016-01-19 00:32:02,962]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,962]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,962]	DEBUG	: IPv6: 0.0.0.65
+[2016-01-19 00:32:02,962]	DEBUG	: IP: 0.0.0.65
+[2016-01-19 00:32:02,963]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,963]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,977]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,977]	DEBUG	: No PC in 0.0.0.65
+[2016-01-19 00:32:02,977]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,978]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,978]	DEBUG	: IPv6: 0.0.0.66
+[2016-01-19 00:32:02,978]	DEBUG	: IP: 0.0.0.66
+[2016-01-19 00:32:02,978]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,978]	DEBUG	: Ejecutando
+[2016-01-19 00:32:02,993]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:02,995]	DEBUG	: No PC in 0.0.0.66
+[2016-01-19 00:32:02,996]	DEBUG	: finEjecucion
+[2016-01-19 00:32:02,996]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:02,996]	DEBUG	: IPv6: 0.0.0.67
+[2016-01-19 00:32:02,996]	DEBUG	: IP: 0.0.0.67
+[2016-01-19 00:32:02,996]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:02,996]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,014]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,014]	DEBUG	: No PC in 0.0.0.67
+[2016-01-19 00:32:03,015]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,015]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,015]	DEBUG	: IPv6: 0.0.0.68
+[2016-01-19 00:32:03,015]	DEBUG	: IP: 0.0.0.68
+[2016-01-19 00:32:03,015]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,016]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,030]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,030]	DEBUG	: No PC in 0.0.0.68
+[2016-01-19 00:32:03,030]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,030]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,030]	DEBUG	: IPv6: 0.0.0.69
+[2016-01-19 00:32:03,031]	DEBUG	: IP: 0.0.0.69
+[2016-01-19 00:32:03,031]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,031]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,046]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,047]	DEBUG	: No PC in 0.0.0.69
+[2016-01-19 00:32:03,048]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,048]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,048]	DEBUG	: IPv6: 0.0.0.70
+[2016-01-19 00:32:03,049]	DEBUG	: IP: 0.0.0.70
+[2016-01-19 00:32:03,050]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,050]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,077]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,077]	DEBUG	: No PC in 0.0.0.70
+[2016-01-19 00:32:03,078]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,078]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,078]	DEBUG	: IPv6: 0.0.0.71
+[2016-01-19 00:32:03,078]	DEBUG	: IP: 0.0.0.71
+[2016-01-19 00:32:03,078]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,079]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,104]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,104]	DEBUG	: No PC in 0.0.0.71
+[2016-01-19 00:32:03,105]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,105]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,105]	DEBUG	: IPv6: 0.0.0.72
+[2016-01-19 00:32:03,105]	DEBUG	: IP: 0.0.0.72
+[2016-01-19 00:32:03,105]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,106]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,119]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,119]	DEBUG	: No PC in 0.0.0.72
+[2016-01-19 00:32:03,119]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,119]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,120]	DEBUG	: IPv6: 0.0.0.73
+[2016-01-19 00:32:03,120]	DEBUG	: IP: 0.0.0.73
+[2016-01-19 00:32:03,120]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,120]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,137]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,138]	DEBUG	: No PC in 0.0.0.73
+[2016-01-19 00:32:03,138]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,138]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,138]	DEBUG	: IPv6: 0.0.0.74
+[2016-01-19 00:32:03,138]	DEBUG	: IP: 0.0.0.74
+[2016-01-19 00:32:03,138]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,139]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,166]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,166]	DEBUG	: No PC in 0.0.0.74
+[2016-01-19 00:32:03,166]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,166]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,166]	DEBUG	: IPv6: 0.0.0.75
+[2016-01-19 00:32:03,167]	DEBUG	: IP: 0.0.0.75
+[2016-01-19 00:32:03,167]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,167]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,183]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,183]	DEBUG	: No PC in 0.0.0.75
+[2016-01-19 00:32:03,183]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,183]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,183]	DEBUG	: IPv6: 0.0.0.76
+[2016-01-19 00:32:03,184]	DEBUG	: IP: 0.0.0.76
+[2016-01-19 00:32:03,184]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,184]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,198]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,198]	DEBUG	: No PC in 0.0.0.76
+[2016-01-19 00:32:03,198]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,198]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,198]	DEBUG	: IPv6: 0.0.0.77
+[2016-01-19 00:32:03,203]	DEBUG	: IP: 0.0.0.77
+[2016-01-19 00:32:03,203]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,203]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,221]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,221]	DEBUG	: No PC in 0.0.0.77
+[2016-01-19 00:32:03,221]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,221]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,221]	DEBUG	: IPv6: 0.0.0.78
+[2016-01-19 00:32:03,222]	DEBUG	: IP: 0.0.0.78
+[2016-01-19 00:32:03,222]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,222]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,236]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,237]	DEBUG	: No PC in 0.0.0.78
+[2016-01-19 00:32:03,238]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,238]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,238]	DEBUG	: IPv6: 0.0.0.79
+[2016-01-19 00:32:03,238]	DEBUG	: IP: 0.0.0.79
+[2016-01-19 00:32:03,238]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,239]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,255]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,256]	DEBUG	: No PC in 0.0.0.79
+[2016-01-19 00:32:03,256]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,256]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,256]	DEBUG	: IPv6: 0.0.0.80
+[2016-01-19 00:32:03,256]	DEBUG	: IP: 0.0.0.80
+[2016-01-19 00:32:03,257]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,257]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,275]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,275]	DEBUG	: No PC in 0.0.0.80
+[2016-01-19 00:32:03,275]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,276]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,276]	DEBUG	: IPv6: 0.0.0.81
+[2016-01-19 00:32:03,276]	DEBUG	: IP: 0.0.0.81
+[2016-01-19 00:32:03,276]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,276]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,290]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,290]	DEBUG	: No PC in 0.0.0.81
+[2016-01-19 00:32:03,290]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,290]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,291]	DEBUG	: IPv6: 0.0.0.82
+[2016-01-19 00:32:03,291]	DEBUG	: IP: 0.0.0.82
+[2016-01-19 00:32:03,291]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,291]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,310]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,310]	DEBUG	: No PC in 0.0.0.82
+[2016-01-19 00:32:03,310]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,310]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,310]	DEBUG	: IPv6: 0.0.0.83
+[2016-01-19 00:32:03,311]	DEBUG	: IP: 0.0.0.83
+[2016-01-19 00:32:03,311]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,311]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,330]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,330]	DEBUG	: No PC in 0.0.0.83
+[2016-01-19 00:32:03,330]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,330]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,330]	DEBUG	: IPv6: 0.0.0.84
+[2016-01-19 00:32:03,331]	DEBUG	: IP: 0.0.0.84
+[2016-01-19 00:32:03,331]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,331]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,345]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,345]	DEBUG	: No PC in 0.0.0.84
+[2016-01-19 00:32:03,345]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,346]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,346]	DEBUG	: IPv6: 0.0.0.85
+[2016-01-19 00:32:03,346]	DEBUG	: IP: 0.0.0.85
+[2016-01-19 00:32:03,346]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,346]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,367]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,367]	DEBUG	: No PC in 0.0.0.85
+[2016-01-19 00:32:03,368]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,368]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,368]	DEBUG	: IPv6: 0.0.0.86
+[2016-01-19 00:32:03,368]	DEBUG	: IP: 0.0.0.86
+[2016-01-19 00:32:03,368]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,369]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,382]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,382]	DEBUG	: No PC in 0.0.0.86
+[2016-01-19 00:32:03,382]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,382]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,382]	DEBUG	: IPv6: 0.0.0.87
+[2016-01-19 00:32:03,383]	DEBUG	: IP: 0.0.0.87
+[2016-01-19 00:32:03,383]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,383]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,398]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,398]	DEBUG	: No PC in 0.0.0.87
+[2016-01-19 00:32:03,398]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,398]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,398]	DEBUG	: IPv6: 0.0.0.88
+[2016-01-19 00:32:03,402]	DEBUG	: IP: 0.0.0.88
+[2016-01-19 00:32:03,402]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,403]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,420]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,421]	DEBUG	: No PC in 0.0.0.88
+[2016-01-19 00:32:03,421]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,421]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,421]	DEBUG	: IPv6: 0.0.0.89
+[2016-01-19 00:32:03,421]	DEBUG	: IP: 0.0.0.89
+[2016-01-19 00:32:03,421]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,422]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,436]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,436]	DEBUG	: No PC in 0.0.0.89
+[2016-01-19 00:32:03,436]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,436]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,436]	DEBUG	: IPv6: 0.0.0.90
+[2016-01-19 00:32:03,437]	DEBUG	: IP: 0.0.0.90
+[2016-01-19 00:32:03,437]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,437]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,453]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,453]	DEBUG	: No PC in 0.0.0.90
+[2016-01-19 00:32:03,454]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,454]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,454]	DEBUG	: IPv6: 0.0.0.91
+[2016-01-19 00:32:03,454]	DEBUG	: IP: 0.0.0.91
+[2016-01-19 00:32:03,454]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,454]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,473]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,474]	DEBUG	: No PC in 0.0.0.91
+[2016-01-19 00:32:03,474]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,477]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,478]	DEBUG	: IPv6: 0.0.0.92
+[2016-01-19 00:32:03,478]	DEBUG	: IP: 0.0.0.92
+[2016-01-19 00:32:03,478]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,479]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,493]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,493]	DEBUG	: No PC in 0.0.0.92
+[2016-01-19 00:32:03,493]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,493]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,493]	DEBUG	: IPv6: 0.0.0.93
+[2016-01-19 00:32:03,494]	DEBUG	: IP: 0.0.0.93
+[2016-01-19 00:32:03,494]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,494]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,514]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,514]	DEBUG	: No PC in 0.0.0.93
+[2016-01-19 00:32:03,514]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,515]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,515]	DEBUG	: IPv6: 0.0.0.94
+[2016-01-19 00:32:03,515]	DEBUG	: IP: 0.0.0.94
+[2016-01-19 00:32:03,515]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,516]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,533]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,533]	DEBUG	: No PC in 0.0.0.94
+[2016-01-19 00:32:03,533]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,533]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,533]	DEBUG	: IPv6: 0.0.0.95
+[2016-01-19 00:32:03,534]	DEBUG	: IP: 0.0.0.95
+[2016-01-19 00:32:03,534]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,534]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,547]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,548]	DEBUG	: No PC in 0.0.0.95
+[2016-01-19 00:32:03,548]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,548]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,548]	DEBUG	: IPv6: 0.0.0.96
+[2016-01-19 00:32:03,548]	DEBUG	: IP: 0.0.0.96
+[2016-01-19 00:32:03,549]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,549]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,574]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,574]	DEBUG	: No PC in 0.0.0.96
+[2016-01-19 00:32:03,574]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,574]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,574]	DEBUG	: IPv6: 0.0.0.97
+[2016-01-19 00:32:03,575]	DEBUG	: IP: 0.0.0.97
+[2016-01-19 00:32:03,575]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,575]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,589]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,589]	DEBUG	: No PC in 0.0.0.97
+[2016-01-19 00:32:03,589]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,590]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,590]	DEBUG	: IPv6: 0.0.0.98
+[2016-01-19 00:32:03,590]	DEBUG	: IP: 0.0.0.98
+[2016-01-19 00:32:03,590]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,590]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,609]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,609]	DEBUG	: No PC in 0.0.0.98
+[2016-01-19 00:32:03,609]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,609]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,610]	DEBUG	: IPv6: 0.0.0.99
+[2016-01-19 00:32:03,610]	DEBUG	: IP: 0.0.0.99
+[2016-01-19 00:32:03,610]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,610]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,626]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,626]	DEBUG	: No PC in 0.0.0.99
+[2016-01-19 00:32:03,627]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,627]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,627]	DEBUG	: IPv6: 0.0.0.100
+[2016-01-19 00:32:03,628]	DEBUG	: IP: 0.0.0.100
+[2016-01-19 00:32:03,628]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,628]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,642]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,643]	DEBUG	: No PC in 0.0.0.100
+[2016-01-19 00:32:03,643]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,643]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,643]	DEBUG	: IPv6: 0.0.0.101
+[2016-01-19 00:32:03,644]	DEBUG	: IP: 0.0.0.101
+[2016-01-19 00:32:03,644]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,644]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,665]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,666]	DEBUG	: No PC in 0.0.0.101
+[2016-01-19 00:32:03,666]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,666]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,666]	DEBUG	: IPv6: 0.0.0.102
+[2016-01-19 00:32:03,666]	DEBUG	: IP: 0.0.0.102
+[2016-01-19 00:32:03,666]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,667]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,682]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,683]	DEBUG	: No PC in 0.0.0.102
+[2016-01-19 00:32:03,683]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,683]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,683]	DEBUG	: IPv6: 0.0.0.103
+[2016-01-19 00:32:03,683]	DEBUG	: IP: 0.0.0.103
+[2016-01-19 00:32:03,684]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,684]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,701]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,701]	DEBUG	: No PC in 0.0.0.103
+[2016-01-19 00:32:03,702]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,702]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,703]	DEBUG	: IPv6: 0.0.0.104
+[2016-01-19 00:32:03,703]	DEBUG	: IP: 0.0.0.104
+[2016-01-19 00:32:03,703]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,704]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,721]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,721]	DEBUG	: No PC in 0.0.0.104
+[2016-01-19 00:32:03,722]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,722]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,722]	DEBUG	: IPv6: 0.0.0.105
+[2016-01-19 00:32:03,722]	DEBUG	: IP: 0.0.0.105
+[2016-01-19 00:32:03,722]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,723]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,737]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,737]	DEBUG	: No PC in 0.0.0.105
+[2016-01-19 00:32:03,737]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,737]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,737]	DEBUG	: IPv6: 0.0.0.106
+[2016-01-19 00:32:03,737]	DEBUG	: IP: 0.0.0.106
+[2016-01-19 00:32:03,738]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,738]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,755]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,756]	DEBUG	: No PC in 0.0.0.106
+[2016-01-19 00:32:03,756]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,756]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,756]	DEBUG	: IPv6: 0.0.0.107
+[2016-01-19 00:32:03,756]	DEBUG	: IP: 0.0.0.107
+[2016-01-19 00:32:03,756]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,757]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,777]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,777]	DEBUG	: No PC in 0.0.0.107
+[2016-01-19 00:32:03,777]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,777]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,777]	DEBUG	: IPv6: 0.0.0.108
+[2016-01-19 00:32:03,778]	DEBUG	: IP: 0.0.0.108
+[2016-01-19 00:32:03,778]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,778]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,793]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,793]	DEBUG	: No PC in 0.0.0.108
+[2016-01-19 00:32:03,794]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,794]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,794]	DEBUG	: IPv6: 0.0.0.109
+[2016-01-19 00:32:03,794]	DEBUG	: IP: 0.0.0.109
+[2016-01-19 00:32:03,794]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,795]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,813]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,814]	DEBUG	: No PC in 0.0.0.109
+[2016-01-19 00:32:03,814]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,815]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,815]	DEBUG	: IPv6: 0.0.0.110
+[2016-01-19 00:32:03,815]	DEBUG	: IP: 0.0.0.110
+[2016-01-19 00:32:03,815]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,816]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,832]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,833]	DEBUG	: No PC in 0.0.0.110
+[2016-01-19 00:32:03,833]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,833]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,833]	DEBUG	: IPv6: 0.0.0.111
+[2016-01-19 00:32:03,833]	DEBUG	: IP: 0.0.0.111
+[2016-01-19 00:32:03,833]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,834]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,847]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,847]	DEBUG	: No PC in 0.0.0.111
+[2016-01-19 00:32:03,848]	DEBUG	: finEjecucion
+[2016-01-19 00:32:03,848]	DEBUG	: sonda.ejecutarPaso
+[2016-01-19 00:32:03,848]	DEBUG	: IPv6: 0.0.0.112
+[2016-01-19 00:32:03,849]	DEBUG	: IP: 0.0.0.112
+[2016-01-19 00:32:03,849]	DEBUG	: Configurando paquete IP...
+[2016-01-19 00:32:03,849]	DEBUG	: Ejecutando
+[2016-01-19 00:32:03,872]	INFO	: Instruccion introducida: Parar
+[2016-01-19 00:32:03,872]	INFO	: 	No contiene parametros
+[2016-01-19 00:32:03,872]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:32:03,872]	DEBUG	: Ejecutando Parar. Parametros: None
+[2016-01-19 00:32:03,873]	DEBUG	: AnalizandoResultado
+[2016-01-19 00:32:03,873]	DEBUG	: No PC in 0.0.0.112
+[2016-01-19 00:32:03,873]	DEBUG	: finEjecucion
+[2016-01-19 00:32:05,499]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:32:05,499]	INFO	: 	No contiene parametros
+[2016-01-19 00:32:05,500]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:32:05,500]	INFO	: Interprete Cerrado
+[2016-01-19 00:32:05,500]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:32:05,500]	INFO	: Cerrar
+[2016-01-19 00:35:13,637]	INFO	: Abriendo interprete...
+[2016-01-19 00:35:13,638]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:35:13,638]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:35:13,639]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:35:13,639]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:35:13,640]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,640]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,641]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,641]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:35:13,641]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,642]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:35:13,642]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:35:13,642]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,642]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:35:13,642]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:35:13,642]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,643]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:35:13,643]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:35:13,643]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,643]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:35:13,644]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:35:13,644]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,644]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:35:13,644]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:35:13,644]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,644]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:35:13,644]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:35:13,645]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,645]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:35:13,645]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:35:13,646]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,646]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:35:13,646]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:35:13,646]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,646]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:35:13,646]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:35:13,646]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,647]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:35:13,650]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:35:13,651]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:35:13,651]	INFO	: Repositorio cargado.
+[2016-01-19 00:35:13,652]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:35:13,653]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:35:13,653]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:35:13,667]	INFO	: 	Ok
+[2016-01-19 00:35:13,667]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:35:13,953]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:35:14,063]	INFO	: 	Ok
+[2016-01-19 00:35:14,064]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:35:14,064]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:35:14,064]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:35:14,064]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:35:14,065]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:35:14,065]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:35:14,065]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:35:15,265]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:35:15,265]	INFO	: 	No contiene parametros
+[2016-01-19 00:35:15,266]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:35:15,266]	INFO	: Interprete Cerrado
+[2016-01-19 00:35:15,266]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:35:15,266]	INFO	: Cerrar
+[2016-01-19 00:36:10,988]	INFO	: Abriendo interprete...
+[2016-01-19 00:36:10,989]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:36:10,989]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:36:10,991]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:36:10,991]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:36:10,992]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,993]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:36:10,993]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:36:10,993]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,993]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:36:10,993]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:36:10,993]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,993]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,994]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,994]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:36:10,994]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,995]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:36:10,995]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:36:10,995]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,995]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:36:10,995]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:36:10,995]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,995]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:36:10,995]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:36:10,996]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,996]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:36:10,996]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:36:10,996]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,997]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:36:10,997]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:36:10,997]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,997]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:36:10,997]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:36:10,997]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,997]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:36:10,997]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:36:10,998]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,998]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:36:10,998]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:36:10,998]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:36:10,998]	INFO	: Repositorio cargado.
+[2016-01-19 00:36:10,998]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:36:11,002]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:36:11,004]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:36:11,013]	INFO	: 	Ok
+[2016-01-19 00:36:11,014]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:36:11,197]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:36:11,300]	INFO	: 	Ok
+[2016-01-19 00:36:11,300]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:36:11,300]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:36:11,300]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:36:11,301]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:36:11,301]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:36:11,301]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:36:11,301]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:36:13,482]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:36:13,482]	INFO	: 	No contiene parametros
+[2016-01-19 00:36:13,482]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:36:13,482]	INFO	: Interprete Cerrado
+[2016-01-19 00:36:13,482]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:36:13,483]	INFO	: Cerrar
+[2016-01-19 00:36:15,982]	INFO	: Abriendo interprete...
+[2016-01-19 00:36:16,165]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:37:47,675]	INFO	: Abriendo interprete...
+[2016-01-19 00:37:47,968]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:37:52,021]	INFO	: Abriendo interprete...
+[2016-01-19 00:37:52,022]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:37:52,022]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:37:52,023]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:37:52,023]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:37:52,024]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,025]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:37:52,025]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:37:52,025]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,025]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:37:52,025]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:37:52,025]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,025]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:37:52,026]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:37:52,026]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,026]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:37:52,026]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:37:52,026]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,026]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:37:52,027]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:37:52,027]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,027]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:37:52,027]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:37:52,027]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,027]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:37:52,027]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:37:52,028]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,035]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:37:52,036]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:37:52,037]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,038]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:37:52,038]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:37:52,039]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,039]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:37:52,039]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:37:52,039]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,039]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:37:52,040]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:37:52,040]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,040]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:37:52,040]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:37:52,040]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,040]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:37:52,040]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:37:52,041]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:37:52,041]	INFO	: Repositorio cargado.
+[2016-01-19 00:37:52,041]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:37:52,041]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:37:52,042]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:37:52,055]	INFO	: 	Ok
+[2016-01-19 00:37:52,055]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:37:52,238]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:37:52,344]	INFO	: 	Ok
+[2016-01-19 00:37:52,344]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:37:52,344]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:37:52,345]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:37:52,345]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:37:52,345]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:37:52,345]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:37:52,345]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:37:54,885]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:37:54,886]	INFO	: 	No contiene parametros
+[2016-01-19 00:37:54,886]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:37:54,886]	INFO	: Interprete Cerrado
+[2016-01-19 00:37:54,886]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:37:54,886]	INFO	: Cerrar
+[2016-01-19 00:55:42,483]	INFO	: Abriendo interprete...
+[2016-01-19 00:55:42,484]	INFO	: Consola iniciada en Lo:Suyo:Seria:Una:IP:To:Chula (o.ip.v.4)
+[2016-01-19 00:55:42,484]	INFO	: Cargando repositorio de instrucciones en interprete. Fichero:./configuration.xml
+[2016-01-19 00:55:42,485]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarSondas
+[2016-01-19 00:55:42,485]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarSondas
+[2016-01-19 00:55:42,486]	DEBUG	: cargarInstruccion atributos y funciones de ListarSondas : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,487]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarDispensadores
+[2016-01-19 00:55:42,487]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarDispensadores
+[2016-01-19 00:55:42,487]	DEBUG	: cargarInstruccion atributos y funciones de ListarDispensadores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,487]	INFO	: Cargando instruccion: ./ RepertorioGSondas ListarEjecutores
+[2016-01-19 00:55:42,487]	DEBUG	: cargarInstruccion: ./RepertorioGSondasListarEjecutores
+[2016-01-19 00:55:42,487]	DEBUG	: cargarInstruccion atributos y funciones de ListarEjecutores : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,488]	INFO	: Cargando instruccion: ./ RepertorioGSondas NuevaSonda
+[2016-01-19 00:55:42,488]	DEBUG	: cargarInstruccion: ./RepertorioGSondasNuevaSonda
+[2016-01-19 00:55:42,488]	DEBUG	: cargarInstruccion atributos y funciones de NuevaSonda : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,488]	INFO	: Cargando instruccion: ./ RepertorioGSondas Parametros
+[2016-01-19 00:55:42,488]	DEBUG	: cargarInstruccion: ./RepertorioGSondasParametros
+[2016-01-19 00:55:42,488]	DEBUG	: cargarInstruccion atributos y funciones de Parametros : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,488]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarDispensador
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarDispensador
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion atributos y funciones de CargarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,489]	INFO	: Cargando instruccion: ./ RepertorioGSondas CargarEjecutor
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion: ./RepertorioGSondasCargarEjecutor
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion atributos y funciones de CargarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,489]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarEjecutor
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarEjecutor
+[2016-01-19 00:55:42,489]	DEBUG	: cargarInstruccion atributos y funciones de EliminarEjecutor : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,490]	INFO	: Cargando instruccion: ./ RepertorioGSondas EliminarDispensador
+[2016-01-19 00:55:42,490]	DEBUG	: cargarInstruccion: ./RepertorioGSondasEliminarDispensador
+[2016-01-19 00:55:42,490]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDispensador : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,490]	INFO	: Cargando instruccion: ./ RepertorioEjecucion ListaEjecucion
+[2016-01-19 00:55:42,490]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionListaEjecucion
+[2016-01-19 00:55:42,491]	DEBUG	: cargarInstruccion atributos y funciones de ListaEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,491]	INFO	: Cargando instruccion: ./ RepertorioEjecucion PonerEnCola
+[2016-01-19 00:55:42,491]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionPonerEnCola
+[2016-01-19 00:55:42,491]	DEBUG	: cargarInstruccion atributos y funciones de PonerEnCola : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,491]	INFO	: Cargando instruccion: ./ RepertorioEjecucion EliminarDeEjecucion
+[2016-01-19 00:55:42,491]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEliminarDeEjecucion
+[2016-01-19 00:55:42,491]	DEBUG	: cargarInstruccion atributos y funciones de EliminarDeEjecucion : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,492]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Ejecutar
+[2016-01-19 00:55:42,492]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionEjecutar
+[2016-01-19 00:55:42,492]	DEBUG	: cargarInstruccion atributos y funciones de Ejecutar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,492]	INFO	: Cargando instruccion: ./ RepertorioEjecucion Parar
+[2016-01-19 00:55:42,492]	DEBUG	: cargarInstruccion: ./RepertorioEjecucionParar
+[2016-01-19 00:55:42,492]	DEBUG	: cargarInstruccion atributos y funciones de Parar : ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'help', 'init', 'run']
+[2016-01-19 00:55:42,492]	INFO	: Repositorio cargado.
+[2016-01-19 00:55:42,492]	INFO	: Cargando gestor de sondas.
+[2016-01-19 00:55:42,493]	INFO	: Cargando modulos desde el fichero modulos.xml
+[2016-01-19 00:55:42,493]	INFO	: cargarDispensador Folder: ./ ModuleD_IPv4TESTDispensador D_IPv4TEST
+[2016-01-19 00:55:42,501]	INFO	: 	Ok
+[2016-01-19 00:55:42,502]	INFO	: cargarEjecutor Folder: ./ Module Ping Ejecutor Ping
+[2016-01-19 00:55:42,671]	WARNING	: No route found for IPv6 destination :: (no default route?)
+[2016-01-19 00:55:42,772]	INFO	: 	Ok
+[2016-01-19 00:55:42,772]	DEBUG	: DispensadorIPv6 __init__
+[2016-01-19 00:55:42,772]	DEBUG	: DispensadorIPv6 binit
+[2016-01-19 00:55:42,773]	DEBUG	: Sonda cargarDesdeTree
+[2016-01-19 00:55:42,773]	DEBUG	: DispensadorIPv6 cargarDesdeTree
+[2016-01-19 00:55:42,773]	DEBUG	: 	Attr --> ipv4Ini : 0.0.0.0
+[2016-01-19 00:55:42,773]	DEBUG	: EjecutorSondeo cargarDesdeTree
+[2016-01-19 00:55:42,773]	INFO	: Gestor de sondas cargado.
+[2016-01-19 00:55:44,452]	INFO	: Instruccion introducida: Exi
+[2016-01-19 00:55:44,452]	INFO	: 	No contiene parametros
+[2016-01-19 00:55:44,453]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:55:44,453]	WARNING	: 	Error de ejecucion
+[2016-01-19 00:55:44,453]	WARNING	: 	La instruccion no existe.
+[2016-01-19 00:55:45,644]	INFO	: Instruccion introducida: Exit
+[2016-01-19 00:55:45,644]	INFO	: 	No contiene parametros
+[2016-01-19 00:55:45,644]	DEBUG	: ejecInstr repo keys: dict_keys(['EliminarEjecutor', 'ListarSondas', 'ListaEjecucion', 'PonerEnCola', 'ListarEjecutores', 'Parar', 'CargarEjecutor', 'EliminarDispensador', 'CargarDispensador', 'Parametros', 'Ayuda', 'ListarDispensadores', 'NuevaSonda', 'EliminarDeEjecucion', 'Ejecutar'])
+[2016-01-19 00:55:45,644]	INFO	: Interprete Cerrado
+[2016-01-19 00:55:45,644]	INFO	: Guardando Gestor de Sondas
+[2016-01-19 00:55:45,645]	INFO	: Cerrar
+[2016-01-19 00:55:47,928]	INFO	: Abriendo interprete...
+[2016-01-19 00:55:48,105]	WARNING	: No route found for IPv6 destination :: (no default route?)

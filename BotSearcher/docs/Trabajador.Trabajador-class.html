@@ -53,17 +53,33 @@
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Trabajador</h1><p class="nomargin-top"></p>
-<pre class="base-tree">
-        object --+        
-                 |        
-threading._Verbose --+    
-                     |    
-      threading.Thread --+
-                         |
-                        <strong class="uidshort">Trabajador</strong>
-</pre>
-
+<center>
+<center>  <map id="uml_class_diagram_for_trabajad" name="uml_class_diagram_for_trabajad">
+<area shape="rect" id="node1_14" href="javascript:void(0);" title="A boolean value indicating whether this thread is a daemon thread (True) or not (False)." alt="" coords="18,92,185,112"/>
+<area shape="rect" id="node1_15" href="javascript:void(0);" title="Thread identifier of this thread or None if it has not been started." alt="" coords="18,112,185,132"/>
+<area shape="rect" id="node1_16" href="javascript:void(0);" title="A string used for identification purposes only." alt="" coords="18,132,185,152"/>
+<area shape="rect" id="node1_17" href="javascript:void(0);" title="repr(x)" alt="" coords="18,155,185,175"/>
+<area shape="rect" id="node1_18" href="javascript:void(0);" title="threading.Thread.getName" alt="" coords="18,175,185,195"/>
+<area shape="rect" id="node1_19" href="javascript:void(0);" title="Return whether the thread is alive." alt="" coords="18,195,185,215"/>
+<area shape="rect" id="node1_20" href="javascript:void(0);" title="threading.Thread.isDaemon" alt="" coords="18,215,185,235"/>
+<area shape="rect" id="node1_21" href="javascript:void(0);" title="Return whether the thread is alive." alt="" coords="18,235,185,255"/>
+<area shape="rect" id="node1_22" href="javascript:void(0);" title="Wait until the thread terminates." alt="" coords="18,255,185,275"/>
+<area shape="rect" id="node1_23" href="javascript:void(0);" title="Method representing the thread&#39;s activity." alt="" coords="18,275,185,295"/>
+<area shape="rect" id="node1_24" href="javascript:void(0);" title="threading.Thread.setDaemon" alt="" coords="18,295,185,315"/>
+<area shape="rect" id="node1_25" href="javascript:void(0);" title="threading.Thread.setName" alt="" coords="18,315,185,335"/>
+<area shape="rect" id="node1_26" href="javascript:void(0);" title="Start the thread&#39;s activity." alt="" coords="18,335,185,355"/>
+<area shape="rect" id="node1" href="javascript:void(0);" title="A class that represents a thread of control." alt="" coords="5,68,196,361"/>
+<area shape="rect" id="node2_27" href="Trabajador.Trabajador-class.html#__init__" title="Inicializa las senales de trabajoPendiente y running a Falso." alt="" coords="41,412,162,432"/>
+<area shape="rect" id="node2" href="Trabajador.Trabajador-class.html" title="Thread personalizado con senales de control para el rearranque y el control de la cola de ejecucion." alt="" coords="28,380,173,439"/>
+<area shape="rect" id="node3" href="javascript:void(0);" title="threading._Verbose" alt="" coords="32,5,169,49"/>
+</map>
+  <img src="uml_class_diagram_for_trabajad.gif" alt='' usemap="#uml_class_diagram_for_trabajad" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
+<p>Thread personalizado con senales de control para el rearranque y el 
+  control de la cola de ejecucion.</p>
+
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -89,7 +105,7 @@ threading._Verbose --+
         <tr>
           <td><span class="summary-sig"><a href="Trabajador.Trabajador-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">target</span>)</span><br />
-      This constructor should always be called with keyword arguments.</td>
+      Inicializa las senales de trabajoPendiente y running a Falso.</td>
           <td align="right" valign="top">
             
             
@@ -204,25 +220,14 @@ threading._Verbose --+
     </td>
   </tr></table>
   
-  <p>This constructor should always be called with keyword arguments. 
-  Arguments are:</p>
-  <p>*group* should be None; reserved for future extension when a 
-  ThreadGroup class is implemented.</p>
-  <p>*target* is the callable object to be invoked by the run() method. 
-  Defaults to None, meaning nothing is called.</p>
-  <p>*name* is the thread name. By default, a unique name is constructed of
-  the form &quot;Thread-N&quot; where N is a small decimal number.</p>
-  <p>*args* is the argument tuple for the target invocation. Defaults to 
-  ().</p>
-  <p>*kwargs* is a dictionary of keyword arguments for the target 
-  invocation. Defaults to {}.</p>
-  <p>If a subclass overrides the constructor, it must make sure to invoke 
-  the base class constructor (Thread.__init__()) before doing anything else
-  to the thread.</p>
+  <p>Inicializa las senales de trabajoPendiente y running a Falso.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>target</code></strong> (funcion) - Funcion que se ejecutara en el thread. Se pasa al padre.</li>
+    </ul></dd>
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -251,7 +256,7 @@ threading._Verbose --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Jan 18 20:01:22 2016
+    Generated by Epydoc 3.0.1 on Tue Jan 19 00:55:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -5,8 +5,9 @@ interprete. Cuando el interprete se cierra, guarda el Gestor De Sondas antes de
 salir.
 """
 from SC12K_utils import *
+import sys
 
-def main(argv):
+def main():
     """
     Funcion main. Recibe como parametro el fichero de configuracion.
     """

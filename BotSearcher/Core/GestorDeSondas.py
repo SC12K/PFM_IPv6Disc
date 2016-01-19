@@ -6,7 +6,7 @@ from EjecutorSondeo import EjecutorSondeo
 from Sonda import Sonda
 import xml.etree.ElementTree as xmlparser
 
-class GestorDeSondas():
+class GestorDeSondas(object):
     """
     Gestor que permite la edicion de sondas. Permite la carga de modulos
     dispensadores y ejecutores de forma interactiva y su configuracion. La
