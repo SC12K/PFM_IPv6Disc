@@ -1,7 +1,6 @@
 from SC12K_utils import *
-from Sonda import Sonda
 import threading
-
+from Sonda import Sonda
 
 class Trabajador(threading.Thread):
     """

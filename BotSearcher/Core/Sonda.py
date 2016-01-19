@@ -2,6 +2,10 @@
 from SC12K_utils import logging
 
 class Sonda(object):
+    """
+    Union de un dispensador IPv6 y un Ejecutor que permite hacer restreos IPv6
+    y generar unos resultados.
+    """
     def __init__(self, nombre, dispensador, ejecutor):
         self.id = 0
         self._dispensador = dispensador
@@ -10,11 +14,25 @@ class Sonda(object):
         self._treeroot = None
 
     def ejecutarPaso(self):
+        if not self._dispensador.estaInicializado():
+             logging.debug("inicializaDisp")
+             if not self._dispensador.reinicializa():
+                 logging.error("error inicializando disp")
+                 return False
+             
+        if not self._ejecutor.estaInicializado():
+             logging.debug("inicializaEjec")
+             if not self._ejecutor.reinicializa():
+                 logging.error("error inicializando ejec")
+                 return False
+        
         logging.debug("sonda.ejecutarPaso")
         ipv6 = self._dispensador.getDireccionIPv6()
         logging.debug("IPv6: " + ipv6)
         self._ejecutor.ejecutarPaso(ipv6)
         logging.debug("finEjecucion")
+        
+        return True
 
     def getResultInfo(self):
         return "Algo"

@@ -3,7 +3,11 @@ from Sonda import Sonda
 from Trabajador import Trabajador
 
 class GestorDeEjecucion(object):
-  
+    """
+    Gestor para controlar la ejecucion de las sondas a traves de una cola de
+    ejecucion. Se pueden poner sondas en cola y se ejecutaran de forma
+    secuencial.
+    """
     def __init__(self) :
         self.sondasFIFO = list()
         self.trabajador = Trabajador(target=self.runningFunc)
@@ -79,7 +83,7 @@ class GestorDeEjecucion(object):
                 continue
             try:
                 res = sonda.ejecutarPaso()
-                if res == "":
+                if res == False:
                     sonda = None
             except:
                 print "Error ejecutando la sonda: ", sys.exc_info()[0], sys.exc_info()[1]

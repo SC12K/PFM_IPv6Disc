@@ -6,12 +6,30 @@ from socket import AF_INET, inet_aton
 
 
 class D_IPv4MappedIPv6(DispensadorIPv6) :
-
+    """
+    Implementacion de un DispensadorIPv6 que genera direcciones IPv4-Mapped
+    IPv6. Genera las direcciones de forma secuencial desde una direccion
+    inicial.
+    """
     def init(self):
+        """
+        Inicializa los parametros configurables:
+            
+            - ipv4Ini : Indica la IPv4 inicial, de la forma 0.0.0.0
+        """
         self._atributos["ipv4Ini"] = "0.0.0.0"
 
-
     def esPrivada(self, ip):
+        """
+        Comprueba si una IPv4 esta en uno de los rangos privados de este
+        protocolo.
+        
+        @param ip: IPv4 de la forma 0.0.0.0
+        @type ip: string
+        
+        @return: Cierto si la IP esta en un rango privado, Falso en otro caso.
+        @rtype: boolean
+        """
         ip_rep = unpack('!I',inet_aton(ip))[0]
         redesPrivadas = (
             [ 2130706432, 4278190080 ], # 127.0.0.0,   255.0.0.0
@@ -24,7 +42,26 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
                 return True
         return False
 
+    def inicializa():
+        """
+        Inicializa la IPv4 numerica con la direccion IPv4Ini establecida como
+        parametro.
+        
+        @return: Cierto si se genera correctamente.
+        @rtype: boolean
+        """
+        ipv4p = self._atributos["ipv4Ini"].split('.')
+        self._dirInts = [int(ipv4p[0]),int(ipv4p[1]),int(ipv4p[2]),\
+                         int(ipv4p[3])]
+        return True
+      
     def getDireccionIPv4String(self):
+        """
+        Convierte la direccion IPv4 numerica interna en un string de tipo
+        0.0.0.0
+        
+        @return: IPv4 de la forma 0.0.0.0 en formato texto.
+        """
         if self._dirInts[0] > 255:
             return ""
         else:
@@ -35,6 +72,14 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
         return ipv4_rep[:-1]
 
     def incrementarIPv4(self):
+        """
+        Incrementa la direccion IPv4 numerica interna.
+        
+        Cuando el digito de menor peso llega a 255 se pone a 0 y actualiza el 
+        digito posterior.
+        De esta forma, cuando se llega al limite, la direccion dada sera
+        256.0.0.0 esto indicara que se ha recorrido todo el rango.
+        """
         self._dirInts[3] = self._dirInts[3] + 1
 
         if self._dirInts[3] > 255:
@@ -50,12 +95,12 @@ class D_IPv4MappedIPv6(DispensadorIPv6) :
             self._dirInts[0] = self._dirInts[0] + 1
 
     def getDireccionIPv6(self):
-        if not self._inicializado:
-            ipv4p = self._atributos["ipv4Ini"].split('.')
-            self._dirInts = [int(ipv4p[0]),int(ipv4p[1]),int(ipv4p[2]),\
-                             int(ipv4p[3])]
-            self._inicializado = True
-
+        """
+        Devuelve una direccion IPv4-Mapped IPv6 a partir de una IPv4 dada.
+        
+        Recorre el rango desde una IPv4 inicial hasta 255.255.255.255, evitando
+        las IPv4 privadas.
+        """
         while self.esPrivada(self.getDireccionIPv4String()):
             incrementarIPv4()
 
