@@ -1,6 +1,5 @@
 ﻿import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
 import Instruccion
 import xml.etree.ElementTree as xmlparser
 
@@ -101,33 +100,43 @@ class Interprete(object):
         else :
             return False
 
-    def cargarInstruccion(self, path, modulename, classname):
+    def cargarInstruccion(self, carpeta, modulo, clase):
         """
         Carga una instruccion al repertorio.
         
-        @param path: carpeta donde se encuentra el modulo.
-        @type path: string
+        @param carpeta: carpeta donde se encuentra el modulo.
+        @type carpeta: string
         
-        @param modulename: Fichero *.py que contiene la instruccion.
-        @type modulename: string
+        @param modulo: Fichero *.py que contiene la instruccion.
+        @type modulo: string
         
-        @param classname: Nombre de la clase deribada de Instruccion.
-        @type classname: string
+        @param clase: Nombre de la clase deribada de Instruccion.
+        @type clase: string
         
         @returns: Devuelve None si hay algun problema. En otro caso devuelve una
         instancia de la funcion.
         """
-        logging.debug("cargarInstruccion: " + path + "" + modulename + "" +\
-                      classname)
-        clase = cargarClase(path, modulename, classname)
-        logging.debug('cargarInstruccion atributos y funciones de ' + classname
-                     + ' : ' + str(dir(clase)))
-        if clase == None:
+        logging.debug("cargarInstruccion: " + carpeta + "" + modulo + "" +\
+                      clase)
+
+        clase_ = None
+        try:
+            if (carpeta != "" and carpeta != "./") and\
+	       not (carpeta in sys.path):
+                sys.path.append(carpeta)
+            modulo_ = __import__(modulo)
+            clase_ = getattr(modulo_, clase)
+        except Exception as E:
+            print E
+            
+        logging.debug('cargarInstruccion atributos y funciones de ' + clase
+                     + ' : ' + str(dir(clase_)))
+        if clase_ == None:
             return None
         
-        if not self.checkInstr(clase):
+        if not self.checkInstr(clase_):
             return None
-        instancia = clase()
+        instancia = clase_()
         
         return instancia
 

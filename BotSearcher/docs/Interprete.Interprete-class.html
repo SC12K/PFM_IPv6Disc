@@ -55,15 +55,15 @@
 <h1 class="epydoc">Class Interprete</h1><p class="nomargin-top"></p>
 <center>
 <center>  <map id="uml_class_diagram_for_interpre" name="uml_class_diagram_for_interpre">
-<area shape="rect" id="node1_8" href="Interprete.Interprete.Ayuda-class.html" title="La Ayuda es una Instruccion basica del interprete." alt="" coords="18,30,339,50"/>
-<area shape="rect" id="node1_9" href="Interprete.Interprete-class.html#__init__" title="Inicializa el interprete y muestra la firma por pantalla." alt="" coords="18,53,339,73"/>
-<area shape="rect" id="node1_10" href="Interprete.Interprete-class.html#cargarInstruccion" title="Carga una instruccion al repertorio." alt="" coords="18,73,339,93"/>
-<area shape="rect" id="node1_11" href="Interprete.Interprete-class.html#cargarRepertorio" title="Carga el repertorio de instrucciones a partir de un fichero XML con el &#160;siguiente formato:" alt="" coords="18,93,339,113"/>
-<area shape="rect" id="node1_12" href="Interprete.Interprete-class.html#checkInstr" title="Metodo que comprueba si una clase cargada es una instruccion valida para la ejecucion en el interprete." alt="" coords="18,113,339,133"/>
-<area shape="rect" id="node1_13" href="Interprete.Interprete-class.html#ejecHelp" title="Ejecuta la instruccion help() de una Instruccion dada." alt="" coords="18,133,339,153"/>
-<area shape="rect" id="node1_14" href="Interprete.Interprete-class.html#ejecInstr" title="Ejecuta una instruccion dado un nombre con unos parametros dados." alt="" coords="18,153,339,173"/>
-<area shape="rect" id="node1_15" href="Interprete.Interprete-class.html#ejecutarBucle" title="Bucle principal de ejecucion del interprete." alt="" coords="18,173,339,193"/>
-<area shape="rect" id="node1" href="Interprete.Interprete-class.html" title="Interficie de usuario que nos permite manejar las sondas, los ejecutores, los dispensadores, las salidas y la cola de ejeucion." alt="" coords="5,5,351,199"/>
+<area shape="rect" id="node1_8" href="Interprete.Interprete.Ayuda-class.html" title="La Ayuda es una Instruccion basica del interprete." alt="" coords="17,30,292,50"/>
+<area shape="rect" id="node1_9" href="Interprete.Interprete-class.html#__init__" title="Inicializa el interprete y muestra la firma por pantalla." alt="" coords="17,53,292,73"/>
+<area shape="rect" id="node1_10" href="Interprete.Interprete-class.html#cargarInstruccion" title="Carga una instruccion al repertorio." alt="" coords="17,73,292,93"/>
+<area shape="rect" id="node1_11" href="Interprete.Interprete-class.html#cargarRepertorio" title="Carga el repertorio de instrucciones a partir de un fichero XML con el &#160;siguiente formato:" alt="" coords="17,93,292,113"/>
+<area shape="rect" id="node1_12" href="Interprete.Interprete-class.html#checkInstr" title="Metodo que comprueba si una clase cargada es una instruccion valida para la ejecucion en el interprete." alt="" coords="17,113,292,133"/>
+<area shape="rect" id="node1_13" href="Interprete.Interprete-class.html#ejecHelp" title="Ejecuta la instruccion help() de una Instruccion dada." alt="" coords="17,133,292,153"/>
+<area shape="rect" id="node1_14" href="Interprete.Interprete-class.html#ejecInstr" title="Ejecuta una instruccion dado un nombre con unos parametros dados." alt="" coords="17,153,292,173"/>
+<area shape="rect" id="node1_15" href="Interprete.Interprete-class.html#ejecutarBucle" title="Bucle principal de ejecucion del interprete." alt="" coords="17,173,292,193"/>
+<area shape="rect" id="node1" href="Interprete.Interprete-class.html" title="Interficie de usuario que nos permite manejar las sondas, los ejecutores, los dispensadores, las salidas y la cola de ejeucion." alt="" coords="5,5,304,199"/>
 </map>
   <img src="uml_class_diagram_for_interpre.gif" alt='' usemap="#uml_class_diagram_for_interpre" ismap="ismap" class="graph-without-title" />
 </center>
@@ -139,9 +139,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Interprete.Interprete-class.html#cargarInstruccion" class="summary-sig-name">cargarInstruccion</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">path</span>,
-        <span class="summary-sig-arg">modulename</span>,
-        <span class="summary-sig-arg">classname</span>)</span><br />
+        <span class="summary-sig-arg">carpeta</span>,
+        <span class="summary-sig-arg">modulo</span>,
+        <span class="summary-sig-arg">clase</span>)</span><br />
       Carga una instruccion al repertorio.</td>
           <td align="right" valign="top">
             
@@ -337,9 +337,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">cargarInstruccion</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">path</span>,
-        <span class="sig-arg">modulename</span>,
-        <span class="sig-arg">classname</span>)</span>
+        <span class="sig-arg">carpeta</span>,
+        <span class="sig-arg">modulo</span>,
+        <span class="sig-arg">clase</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
@@ -350,9 +350,9 @@
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>path</code></strong> (string) - carpeta donde se encuentra el modulo.</li>
-        <li><strong class="pname"><code>modulename</code></strong> (string) - Fichero *.py que contiene la instruccion.</li>
-        <li><strong class="pname"><code>classname</code></strong> (string) - Nombre de la clase deribada de Instruccion.</li>
+        <li><strong class="pname"><code>carpeta</code></strong> (string) - carpeta donde se encuentra el modulo.</li>
+        <li><strong class="pname"><code>modulo</code></strong> (string) - Fichero *.py que contiene la instruccion.</li>
+        <li><strong class="pname"><code>clase</code></strong> (string) - Nombre de la clase deribada de Instruccion.</li>
     </ul></dd>
     <dt>Returns:</dt>
         <dd>Devuelve None si hay algun problema. En otro caso devuelve una 
@@ -513,7 +513,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 19:03:18 2016
+    Generated by Epydoc 3.0.1 on Sun Jan 24 22:19:52 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

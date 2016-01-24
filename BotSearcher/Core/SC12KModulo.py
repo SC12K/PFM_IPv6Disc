@@ -1,11 +1,9 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
 
 class SC12KModulo(object):
     """
-    Plantilla basica para los modelos de los modulos dispensadores y
-    ejecutores.
+    Plantilla basica para los modelos de los modulos dispensadores, 
+    ejecutores y escritores..
     """
     def __init__(self):
         """

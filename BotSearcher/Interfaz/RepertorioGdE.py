@@ -1,6 +1,5 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
+from GestorDeEjecucion import *
 from Instruccion import Instruccion
 import getopt
 

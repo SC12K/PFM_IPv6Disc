@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <instrucciones>
-	<instruccion nombre='ListarSondas' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='ListarDispensadores' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='ListarEjecutores' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='NuevaSonda' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='Parametros' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='CargarDispensador' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='CargarEjecutor' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='EliminarEjecutor' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='EliminarDispensador' modulo='RepertorioGSondas' path='./'/>
-	<instruccion nombre='ListaEjecucion' modulo='RepertorioEjecucion' path='./'/>
-	<instruccion nombre='PonerEnCola' modulo='RepertorioEjecucion' path='./'/>
-	<instruccion nombre='EliminarDeEjecucion' modulo='RepertorioEjecucion' path='./'/>
-	<instruccion nombre='Ejecutar' modulo='RepertorioEjecucion' path='./'/>
-	<instruccion nombre='Parar' modulo='RepertorioEjecucion' path='./'/>
+	<instruccion nombre='CargarModulo'        modulo='RepertorioGdM' path='./Interfaz'/>
+	<instruccion nombre='ListarModulos'       modulo='RepertorioGdM' path='./Interfaz'/>
+	<instruccion nombre='EliminarModulo'      modulo='RepertorioGdM' path='./Interfaz'/>
+	<instruccion nombre='ListarSondas'        modulo='RepertorioGdS' path='./Interfaz'/>
+	<instruccion nombre='NuevaSonda'          modulo='RepertorioGdS' path='./Interfaz'/>
+	<instruccion nombre='Parametros'          modulo='RepertorioGdS' path='./Interfaz'/>
+	<instruccion nombre='EliminarSonda'       modulo='RepertorioGdS' path='./Interfaz'/>
+	<instruccion nombre='ListarEscritores'    modulo='RepertorioGdR' path='./Interfaz'/>
+	<instruccion nombre='NuevoEscritor'       modulo='RepertorioGdR' path='./Interfaz'/>
+	<instruccion nombre='ParametrosEscritor'  modulo='RepertorioGdR' path='./Interfaz'/>
+	<instruccion nombre='EliminarEscritor'    modulo='RepertorioGdR' path='./Interfaz'/>
+	<instruccion nombre='ListaEjecucion'      modulo='RepertorioGdE' path='./Interfaz'/>
+	<instruccion nombre='PonerEnCola'         modulo='RepertorioGdE' path='./Interfaz'/>
+	<instruccion nombre='EliminarDeEjecucion' modulo='RepertorioGdE' path='./Interfaz'/>
+	<instruccion nombre='Ejecutar'            modulo='RepertorioGdE' path='./Interfaz'/>
+	<instruccion nombre='Parar'               modulo='RepertorioGdE' path='./Interfaz'/>
 </instrucciones>

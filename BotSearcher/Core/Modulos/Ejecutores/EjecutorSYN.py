@@ -1,4 +1,4 @@
-from SC12K_utils import *
+from logger import *
 from EjecutorSondeo import EjecutorSondeo
 import sys
 

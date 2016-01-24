@@ -1,8 +1,5 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
-from DispensadorIPv6 import DispensadorIPv6
-from EjecutorSondeo import EjecutorSondeo
+from logger import *
+from GestorDeModulos import *
 from Sonda import Sonda
 import xml.etree.ElementTree as xmlparser
 
@@ -12,24 +9,15 @@ class GestorDeSondas(object):
     dispensadores y ejecutores de forma interactiva y su configuracion. La
     creacion de nuevas sondas, la carga y el guardado.
     """
-#-------------------------------------------------------------------------------
-#------------------------------- GESTOR DE SONDAS ------------------------------
-
+    
     def __init__(self):
-        self._Sondas = dict()
+        self._sondas = dict()
         """
         Lista de sondas creadas. Guardadas como (nombre, instancia).
         """
-        self._Dispensadores = dict()
-        """
-        Lista de dispensadores cargados. Guardados como (nombre, clase).
-        """
-        self._Ejecutores = dict()
-        """
-        Lista de ejecutores cargados. Guardados como (nombre, clase).
-        """
+        self._tree = None
 
-    def cargar(self, xmlfile):
+    def cargarXML(self, xmlfile):
         """
         Carga los modulos dispensadores y ejecutores y las sondas guardadas
         a partir de un fichero xml dado. Elimina del fichero de configuracion
@@ -39,40 +27,29 @@ class GestorDeSondas(object):
         @type xmlfile: string
         """
         logging.info('Cargando modulos desde el fichero ' + xmlfile)
-        #importar el fichero:
-        self.tree = xmlparser.parse(xmlfile)
-        root = self.tree.getroot()
-
-        for xml_dispensador in root.findall('dispensador'):
-            print 'Cargando dispensador ' + xml_dispensador.attrib['clase']
-            if not self._cargarDispensador(xml_dispensador.attrib['folder'],
-                                           xml_dispensador.attrib['modulo'],
-                                           xml_dispensador.attrib['clase']):
-                root.remove(xml_dispensador)
-
-        for xml_ejecutor in root.findall('ejecutor'):
-            print 'Cargando ejecutor ' + xml_ejecutor.attrib['clase']
-            if not self._cargarEjecutor(xml_ejecutor.attrib['folder'],
-                                        xml_ejecutor.attrib['modulo'],
-                                        xml_ejecutor.attrib['clase']):
-                root.remove(xml_ejecutor)
-
-        for xml_sonda in root.findall('sonda'):
-            print 'Creando sonda ' + xml_sonda.attrib['nombre']
-            if not self._anadirSonda(xml_sonda.attrib['nombre'],
-                                     xml_sonda.attrib['dispensador'],
-                                     xml_sonda.attrib['ejecutor']):
-                root.remove(xml_sonda)
-            else:
-                self._Sondas[xml_sonda.attrib['nombre']].\
+        #importar el fichero y obtiene la raiz:
+        root = xmlparser.parse(xmlfile).getroot()
+        self._tree = root.find('sondas')
+        
+        if self._tree == None:
+            self._tree = xmlparser.SubElement(root, 'sondas')
+        else:
+            for xml_sonda in root.findall('sonda'):
+                print 'Creando sonda ' + xml_sonda.attrib['nombre']
+                if not self._anadirSonda(xml_sonda.attrib['nombre'],
+                                         xml_sonda.attrib['dispensador'],
+                                         xml_sonda.attrib['ejecutor']):
+                    root.remove(xml_sonda)
+                else:
+                    self._sondas[xml_sonda.attrib['nombre']].\
                                                       cargarDesdeTree(xml_sonda)
 
-    def	guardar(self):
+    def	guardarXML(self):
         """
         Guarda los modulos dispensadores y ejecutores y las sondas creadas
         en el fichero xml. Se cargaran automaticamente en la siguiente carga.
         """
-        self.tree.write('modulos.xml')
+        return self._tree
 
     def listarParametros(self, sonda, doe):
         """
@@ -88,17 +65,34 @@ class GestorDeSondas(object):
         
         @return: Devuelve Falso si la sonda no existe y Cierto en otro caso.
         """
-        if sonda in self._Sondas:
-            return self._Sondas[sonda].listParam(doe)
+        if sonda in self._sondas:
+            return self._sondas[sonda].listParam(doe)
         return False
 		
     def setParametro(self, sonda, doe, key, value):
-        if sonda in self._Sondas:
-            return self._Sondas[sonda].setParametro(doe, key, value)
+        """
+        Permite establecer el valor de un parametro a una sonda de 
+        nombre dado.
+        
+        @param sonda: nombre de la sonda.
+        @type sonda: string
+        
+        @param doe: 'dispensador o ejecutor'. Cuando es Cierto indica
+        Dispensador y Falso indica Ejecutor.
+        @type doe: boolean
+        
+        @param key: Nombre del parametro a modificar.
+        @type key: string
+        
+        @param value: Valor a establecer en el parametro.
+        @type value: Cualquiera
+        
+        @return: Devuelve Falso si la sonda no existe y Cierto en otro caso.
+        """
+        if sonda in self._sondas:
+            return self._sondas[sonda].setParametro(doe, key, value)
         return False
 
-#-------------------------------------------------------------------------------
-#----------------------------------- SONDAS ------------------------------------
     def anadirSonda(self,nombre, dispensadorIPv6, ejecutorSondeo):
         """
         Interficie para anadir sondas.
@@ -117,14 +111,19 @@ class GestorDeSondas(object):
         @return: Devuelve Falso hay algun error al anadir la sonda y Cierto si
         se anade de forma correcta.
         """
+        if nombre in self._sondas:
+            logging.warning("La sonda " + nombre + " ya existe")
+            print "La sonda " + nombre + " ya existe"
+            return False
+        
         result = self._anadirSonda(nombre, dispensadorIPv6, ejecutorSondeo)
         if result:
             if 'Y' == raw_input('Escriba Y para cargar siempre  '):
                 attributes={'nombre' : nombre, 'dispensador': dispensadorIPv6,
                             'ejecutor' : ejecutorSondeo}
-                elem = xmlparser.SubElement(self.tree.getroot(),"sonda",
+                elem = xmlparser.SubElement(self._tree,"sonda",
                                             attrib=attributes)
-                self._Sondas[nombre].newTreeRoot(elem)
+                self._sondas[nombre].newTreeRoot(elem)
         return result
 
     def _anadirSonda(self, nombre, dispensadorIPv6, ejecutorSondeo):
@@ -145,27 +144,22 @@ class GestorDeSondas(object):
         @return: Devuelve Falso hay algun error al crear o anadir la sonda y
         Cierto si se anade de forma correcta.
         """
-        if not (dispensadorIPv6 in self._Dispensadores):
+        disp = GdM.instanciarModulo("dispensador", dispensadorIPv6)
+        if disp == None:
             logging.warning("Dispensador IPv6 " + dispensadorIPv6
                             + " no existe")
             print "Dispensador IPv6 " + dispensadorIPv6 + " no existe"
             return False
 
-        if not (ejecutorSondeo in self._Ejecutores):
+        ejec = GdM.instanciarModulo("ejecutor", ejecutorSondeo)
+        if ejec == None:
             logging.warning("Ejecutor de Sondeo " + ejecutorSondeo
                             + " no existe")
             print "Ejecutor de Sondeo " + ejecutorSondeo + " no existe"
             return False
 
-        if nombre in self._Sondas:
-            logging.warning("La sonda " + nombre + " ya existe")
-            print "La sonda " + nombre + " ya existe"
-            return False
-
-        disp = self._Dispensadores[dispensadorIPv6]()
-        ejec = self._Ejecutores[ejecutorSondeo]()
         sonda = Sonda(nombre, disp, ejec)
-        self._Sondas[nombre] = sonda
+        self._sondas[nombre] = sonda
         return True
 
     def listarSondas(self):
@@ -173,13 +167,13 @@ class GestorDeSondas(object):
         Dibuja por pantalla la lista de sondas.
         Muestra el tipo de dispensador y de ejecutor contiene.
         """
-        nameKeys = self._Sondas.viewkeys()
+        nameKeys = self._sondas.viewkeys()
         print("---------------------------- Sondas ----------------------------"
               "----")
         print "Nombre\t\t\tDispensadorIPv6\t\t\tSondeo"
         for key in nameKeys:
-            print(key + "\t\t\t" + self._Sondas[key].getNombreDispensador() +\
-                  "\t\t\t" + self._Sondas[key].getNombreEjecutor())
+            print(key + "\t\t\t" + self._sondas[key].getNombreDispensador() +\
+                  "\t\t\t" + self._sondas[key].getNombreEjecutor())
         print("----------------------------------------------------------------"
               "----")
 
@@ -192,12 +186,11 @@ class GestorDeSondas(object):
         
         @return: Devuelve Falso si la sonda no existe y Cierto en otro caso.
         """
-        if nombre in self._Sondas:
-            del self._Sondas[nombre]
-            root = self.tree.getroot()
-            for sonda in root.findall("sonda"):
+        if nombre in self._sondas:
+            del self._sondas[nombre]
+            for sonda in self._tree.findall("sonda"):
                 if sonda.attrib['nombre'] == nombre:
-                    root.remove(sonda)
+                    self._tree.remove(sonda)
             return True
         else:
             print "No existe la sonda " + nombre
@@ -212,256 +205,45 @@ class GestorDeSondas(object):
         
         @return: Devuelve Falso si la sonda no existe y Cierto en otro caso.
         """
-        if nombre in self._Sondas:
-            return self._Sondas[nombre]
+        if nombre in self._sondas:
+            return self._sondas[nombre]
         else:
             return None
 
-#-------------------------------------------------------------------------------
-#-------------------------------- DISPENSADORES --------------------------------			
-    def cargarDispensador(self, folder, modulename, disp):
-        """
-        Interficie para cargar dispensadores.
-        Pregunta si desea guardar el dispensadores de forma permanente. En caso
-        afirmativo la anade al arbol xml.
-        
-        @param folder: carpeta donde esta el modulo.
-        @type folder: string
-        
-        @param modulename: nombre del modulo.
-        @type modulename: string
-        
-        @param disp: nombre del dispensador.
-        @type disp: string
-        
-        @return: Devuelve Falso hay algun error al cargar el dispensador y
-        Cierto si se carga de forma correcta.
-        """
-        result = self._cargarDispensador(folder, modulename, disp)
-        if result:
-            if 'Y' == raw_input('Escriba Y para cargar siempre  '):
-                attributes={'folder' : folder, 'modulo': modulename,
-                            'clase' : disp}
-                xmlparser.SubElement(self.tree.getroot(),"dispensador",
-                                     attrib=attributes)
-        return result
-
-    def _cargarDispensador(self, folder, modulename, disp):
-        """
-        Funcion de carga de dispensadores. Carga una clase derivada de 
-        DispensadorIPv6 y la guarda en la lista de dispensadores.
-        Posteriormente se podran crear instancias de dicha clase.
-        
-        @param folder: carpeta donde esta el modulo.
-        @type folder: string
-        
-        @param modulename: nombre del modulo.
-        @type modulename: string
-        
-        @param disp: nombre del dispensador.
-        @type disp: string
-        
-        @return: Devuelve Falso hay algun error al cargar el dispensador y
-        Cierto si se carga de forma correcta.
-        """
-        sobr = 'Y'
-        if disp in self._Dispensadores:
-            print "El dispensador " + disp + " ya esta cargado."
-            sobr = raw_input("Escriba 'Y' para sobrescribirlo")
-
-        if sobr == 'Y':
-            logging.info('cargarDispensador Folder: ' + folder + ' Module'
-                         + modulename + 'Dispensador ' + disp)
-            clase = cargarClase(folder, modulename, disp)
-            if clase != None :
-                self._Dispensadores[disp] = clase
-                if self.checkDisp(clase):
-                    logging.info('\tOk')
-                    print "Cargado"
-                    return True
-                else:
-                    logging.warning('\tLa clase no coincide con el patron. '
-                                    + str(dir(clase)))
-                    print "Error: La clase no coincide con el patron."
-                    return False
-            else :
-                logging.warning('\tError al abrir el archivo')
-                print "Error: Error al abrir el archivo"
-                return False
-        else:
-            return True
-
-    def checkDisp(self, DispClass):
+    def checkDispensador(self, clase):
         """
         Metodo que comprueba si una clase cargada es un DispensadorIPv6 valido.
         
-        @param DispClass: clase a comprobar.
-        @type DispClass: DispensadorIPv6
+        @param clase: clase a comprobar.
+        @type clase: DispensadorIPv6
         
         @return: Devuelve Cierto si la clase cargada es un DispensadorIPv6
         valido. Falso en otro caso.
         """
-        methods = dir(DispClass)
+        methods = dir(clase)
         if 'getDireccionIPv6' in methods:
             return True
         else:
             return False
 
-    def listarDispensadores(self):
-        """
-        Dibuja por pantalla la lista de dispensadores.
-        """
-        nameKeys = self._Dispensadores.viewkeys()
-        print("------------------------- Dispensadores ------------------------"
-              "----")
-        print "  Nombre\t\t\t\tParametros"
-        for key in nameKeys:
-            print "  " + key + "\t\t\t" + "IRAN LOS PARAMETROS"
-        print("----------------------------------------------------------------"
-              "----")
-
-    def eliminarDispensador(self, nombre):
-        """
-        Elimina el dispensador de la lista de dispensadores y del arbol xml si
-        existe.
-        
-        @param nombre: nombre del dispensador a eliminar.
-        @type nombre: string
-        
-        @return: Devuelve Falso si el dispensador no existe y Cierto en otro caso.
-        """
-        if nombre in self._Dispensadores:
-            del self._Dispensadores[nombre]
-            root = self.tree.getroot()
-            for disp in root.findall("dispensador"):
-                if disp.attrib['clase'] == nombre:
-                    root.remove(disp)
-                    break
-            return True
-        else:
-            print "No existe el dispensador " + nombre
-            return False
-
-#-------------------------------------------------------------------------------
-#------------------------------------ EJECUTORES -------------------------------
-    def cargarEjecutor(self,folder, modulename, ejec):
-        """
-        Interficie para cargar ejecutor.
-        Pregunta si desea guardar el ejecutor de forma permanente. En caso
-        afirmativo la anade al arbol xml.
-        
-        @param folder: carpeta donde esta el modulo.
-        @type folder: string
-        
-        @param modulename: nombre del modulo.
-        @type modulename: string
-        
-        @param ejec: nombre del ejecutor.
-        @type ejec: string
-        
-        @return: Devuelve Falso hay algun error al cargar el ejecutor y
-        Cierto si se carga de forma correcta.
-        """
-        result = self._cargarEjecutor(folder, modulename, ejec)
-        if result:
-            if 'Y' == raw_input('Escriba Y para cargar siempre  '):
-                attributes={'folder' : folder, 'modulo': modulename,
-                            'clase' : ejec}
-                xmlparser.SubElement(self.tree.getroot(),"ejecutor",
-                                     attrib=attributes)
-        return result
-
-    def _cargarEjecutor(self, folder, modulename, ejec):
-        """
-        Funcion de carga de ejecutores. Carga una clase derivada de 
-        EjecutorSondeo y la guarda en la lista de ejecutores.
-        Posteriormente se podran crear instancias de dicha clase.
-        
-        @param folder: carpeta donde esta el modulo.
-        @type folder: string
-        
-        @param modulename: nombre del modulo.
-        @type modulename: string
-        
-        @param ejec: nombre del ejecutores.
-        @type ejec: string
-        
-        @return: Devuelve Falso hay algun error al cargar el ejecutores y
-        Cierto si se carga de forma correcta.
-        """
-        sobr = 'Y'
-        if ejec in self._Ejecutores:
-            print "El ejecutor " + ejec + " ya esta cargado."
-            sobr = raw_input("Escriba 'Y' para sobrescribirlo")
-         
-        if sobr == 'Y':
-            logging.info('cargarEjecutor Folder: ' + folder + ' Module '
-                         + modulename + ' Ejecutor ' + ejec)
-            clase = cargarClase(folder, modulename, ejec)
-            if clase != None :
-                self._Ejecutores[ejec] = clase
-                if self.checkEjec(clase):
-                    logging.info('\tOk')
-                    print "Cargado"
-                    return True
-                else:
-                    logging.warning('\tLa clase no coincide con el patron.'
-                                    + str(dir(clase)))
-                    print "Error: La clase no coincide con el patron."		
-                return False
-            else :
-                logging.warning('\tError al abrir el archivo')
-                print "Error: Error al abrir el archivo"
-                return False
-        else:
-            return True
-
-    def checkEjec(self, EjecClass):
+    def checkEjecutor(self, clase):
         """
         Metodo que comprueba si una clase cargada es un EjecutorSondeo valido.
         
-        @param EjecClass: clase a comprobar.
-        @type EjecClass: EjecutorSondeo
+        @param clase: clase a comprobar.
+        @type clase: EjecutorSondeo
         
         @return: Devuelve Cierto si la clase cargada es un EjecutorSondeo
         valido. Falso en otro caso.
         """
-        methods = dir(EjecClass)
+        methods = dir(clase)
         if 'getResultInfo' in methods:
             return True
         else:
             return False
 
-    def listarEjecutores(self):
-        """
-        Dibuja por pantalla la lista de ejecutores.
-        """
-        nameKeys = self._Ejecutores.viewkeys()
-        print("---------------------------- Ejecutores ------------------------"
-              "----")
-        print "  Nombre\t\t\t\tParametros"
-        for key in nameKeys:
-            print "  " + key + "\t\t\t" + "IRAN LOS PARAMETROS"
-        print("----------------------------------------------------------------"
-              "----")
-
-    def eliminarEjecutor(self, nombre):
-        """
-        Elimina el ejecutor de la lista de ejecutores y del arbol xml si existe.
-        
-        @param nombre: nombre del ejecutor a eliminar.
-        @type nombre: string
-        
-        @return: Devuelve Falso si el ejecutor no existe y Cierto en otro caso.
-        """
-        if nombre in self._Ejecutores:
-            del self._Ejecutores[nombre]
-            root = self.tree.getroot()
-            for ejec in root.findall("ejecutor"):
-                if ejec.attrib['clase'] == nombre:
-                    root.remove(ejec)
-                    break
-            return True
-        else:
-            print "No existe el ejecutor " + nombre
-            return False
+global GdS
+"""
+Variable global para referenciar el Gestor de Sondas.
+"""
+GdS = GestorDeSondas()

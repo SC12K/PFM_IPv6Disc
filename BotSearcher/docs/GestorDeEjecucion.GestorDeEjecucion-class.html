@@ -55,15 +55,14 @@
 <h1 class="epydoc">Class GestorDeEjecucion</h1><p class="nomargin-top"></p>
 <center>
 <center>  <map id="uml_class_diagram_for_gestorde" name="uml_class_diagram_for_gestorde">
-<area shape="rect" id="node1_8" href="GestorDeEjecucion.GestorDeEjecucion-class.html#Ejecutar" title="GestorDeEjecucion.GestorDeEjecucion.Ejecutar" alt="" coords="18,38,174,58"/>
-<area shape="rect" id="node1_9" href="GestorDeEjecucion.GestorDeEjecucion-class.html#Parar" title="GestorDeEjecucion.GestorDeEjecucion.Parar" alt="" coords="18,58,174,78"/>
-<area shape="rect" id="node1_10" href="GestorDeEjecucion.GestorDeEjecucion-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="18,78,174,98"/>
-<area shape="rect" id="node1_11" href="GestorDeEjecucion.GestorDeEjecucion-class.html#anadirSonda" title="GestorDeEjecucion.GestorDeEjecucion.anadirSonda" alt="" coords="18,98,174,118"/>
-<area shape="rect" id="node1_12" href="GestorDeEjecucion.GestorDeEjecucion-class.html#eliminarSonda" title="GestorDeEjecucion.GestorDeEjecucion.eliminarSonda" alt="" coords="18,118,174,138"/>
-<area shape="rect" id="node1_13" href="GestorDeEjecucion.GestorDeEjecucion-class.html#getSiguienteSonda" title="GestorDeEjecucion.GestorDeEjecucion.getSiguienteSonda" alt="" coords="18,138,174,158"/>
-<area shape="rect" id="node1_14" href="GestorDeEjecucion.GestorDeEjecucion-class.html#listarEjecucion" title="GestorDeEjecucion.GestorDeEjecucion.listarEjecucion" alt="" coords="18,158,174,178"/>
-<area shape="rect" id="node1_15" href="GestorDeEjecucion.GestorDeEjecucion-class.html#runningFunc" title="GestorDeEjecucion.GestorDeEjecucion.runningFunc" alt="" coords="18,178,174,198"/>
-<area shape="rect" id="node1" href="GestorDeEjecucion.GestorDeEjecucion-class.html" title="Gestor para controlar la ejecucion de las sondas a traves de una cola de ejecucion." alt="" coords="5,5,185,204"/>
+<area shape="rect" id="node1_7" href="GestorDeEjecucion.GestorDeEjecucion-class.html#Ejecutar" title="Activa la ejecucion del Thread trabajador si existe alguna sonda en la cola de ejecucion o si existe alguna sonda pausada." alt="" coords="18,37,174,57"/>
+<area shape="rect" id="node1_8" href="GestorDeEjecucion.GestorDeEjecucion-class.html#Parar" title="Para la ejecucion de la sonda actual." alt="" coords="18,57,174,77"/>
+<area shape="rect" id="node1_9" href="GestorDeEjecucion.GestorDeEjecucion-class.html#__init__" title="Inicializa la cola de ejecucion y la lista de escritores." alt="" coords="18,77,174,97"/>
+<area shape="rect" id="node1_10" href="GestorDeEjecucion.GestorDeEjecucion-class.html#anadirSonda" title="Anade una sonda dada a la cola de ejecucion." alt="" coords="18,97,174,117"/>
+<area shape="rect" id="node1_11" href="GestorDeEjecucion.GestorDeEjecucion-class.html#eliminarSonda" title="Elimina una sonda de la cola de ejecucion dado un indice." alt="" coords="18,117,174,137"/>
+<area shape="rect" id="node1_12" href="GestorDeEjecucion.GestorDeEjecucion-class.html#listarEjecucion" title="Muestra por pantalla la lista de sondas que estan en la cola de ejecucion." alt="" coords="18,137,174,157"/>
+<area shape="rect" id="node1_13" href="GestorDeEjecucion.GestorDeEjecucion-class.html#runningFunc" title="Funcion ejecutada por el Thread que ejecuta la sonda y el proceso de &#160;guardado de resultados." alt="" coords="18,157,174,177"/>
+<area shape="rect" id="node1" href="GestorDeEjecucion.GestorDeEjecucion-class.html" title="Gestor para controlar la ejecucion de las sondas a traves de una cola de ejecucion." alt="" coords="5,5,185,184"/>
 </map>
   <img src="uml_class_diagram_for_gestorde.gif" alt='' usemap="#uml_class_diagram_for_gestorde" ismap="ismap" class="graph-without-title" />
 </center>
@@ -71,7 +70,8 @@
 <hr />
 <p>Gestor para controlar la ejecucion de las sondas a traves de una cola 
   de ejecucion. Se pueden poner sondas en cola y se ejecutaran de forma 
-  secuencial.</p>
+  secuencial. Por un lado almacenara las sondas a ajecutar y se propagara 
+  la informacion a todos los escritores.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -96,7 +96,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="Ejecutar"></a><span class="summary-sig-name">Ejecutar</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="Ejecutar"></a><span class="summary-sig-name">Ejecutar</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Activa la ejecucion del Thread trabajador si existe alguna sonda en 
+      la cola de ejecucion o si existe alguna sonda pausada.</td>
           <td align="right" valign="top">
             
             
@@ -112,7 +114,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="Parar"></a><span class="summary-sig-name">Parar</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="Parar"></a><span class="summary-sig-name">Parar</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Para la ejecucion de la sonda actual.</td>
           <td align="right" valign="top">
             
             
@@ -129,7 +132,44 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="GestorDeEjecucion.GestorDeEjecucion-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+      Inicializa la cola de ejecucion y la lista de escritores.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_getSiguienteSonda"></a><span class="summary-sig-name">_getSiguienteSonda</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Devuelve la primera sonda de la cola de ejecucion, eliminandola de 
+      esta y estableciendola como sonda actual.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="GestorDeEjecucion.GestorDeEjecucion-class.html#_informar" class="summary-sig-name" onclick="show_private();">_informar</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">infoRes</span>)</span><br />
+      Metodo que propaga la informacion por todos los escritores 
+      disponibles durante la ejecucion.</td>
           <td align="right" valign="top">
             
             
@@ -145,8 +185,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="anadirSonda"></a><span class="summary-sig-name">anadirSonda</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">sonda</span>)</span></td>
+          <td><span class="summary-sig"><a href="GestorDeEjecucion.GestorDeEjecucion-class.html#anadirSonda" class="summary-sig-name">anadirSonda</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sonda</span>)</span><br />
+      Anade una sonda dada a la cola de ejecucion.</td>
           <td align="right" valign="top">
             
             
@@ -162,8 +203,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="eliminarSonda"></a><span class="summary-sig-name">eliminarSonda</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">index</span>)</span></td>
+          <td><span class="summary-sig"><a href="GestorDeEjecucion.GestorDeEjecucion-class.html#eliminarSonda" class="summary-sig-name">eliminarSonda</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Elimina una sonda de la cola de ejecucion dado un indice.</td>
           <td align="right" valign="top">
             
             
@@ -179,7 +221,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="getSiguienteSonda"></a><span class="summary-sig-name">getSiguienteSonda</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="GestorDeEjecucion.GestorDeEjecucion-class.html#listarEjecucion" class="summary-sig-name">listarEjecucion</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Muestra por pantalla la lista de sondas que estan en la cola de 
+      ejecucion.</td>
           <td align="right" valign="top">
             
             
@@ -195,23 +239,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="listarEjecucion"></a><span class="summary-sig-name">listarEjecucion</span>(<span class="summary-sig-arg">self</span>)</span></td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="runningFunc"></a><span class="summary-sig-name">runningFunc</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="runningFunc"></a><span class="summary-sig-name">runningFunc</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Funcion ejecutada por el Thread que ejecuta la sonda y el proceso de 
+      guardado de resultados.</td>
           <td align="right" valign="top">
             
             
@@ -298,12 +328,105 @@
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <p>Inicializa la cola de ejecucion y la lista de escritores. Tambien 
+  incializa el thread de ejecucion, dejandolo parado.</p>
   <dl class="fields">
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_informar"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_informar</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">infoRes</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Metodo que propaga la informacion por todos los escritores disponibles
+  durante la ejecucion.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>infoRes</code></strong> (InfoResultado) - Informacion de resultados obtenidos por la sonda.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="anadirSonda"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">anadirSonda</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sonda</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Anade una sonda dada a la cola de ejecucion.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>sonda</code></strong> (Sonda) - sonda que se quiere anadir a la ejecucion.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eliminarSonda"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eliminarSonda</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Elimina una sonda de la cola de ejecucion dado un indice.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - Indice de la sonda que se quiere eliminar.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listarEjecucion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listarEjecucion</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Muestra por pantalla la lista de sondas que estan en la cola de 
+  ejecucion. Muestra el indice asociado a cada sonda.</p>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -331,7 +454,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 19:03:18 2016
+    Generated by Epydoc 3.0.1 on Sun Jan 24 22:19:52 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

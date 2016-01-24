@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
 from SC12KModulo import SC12KModulo
 
 class EjecutorSondeo(SC12KModulo):

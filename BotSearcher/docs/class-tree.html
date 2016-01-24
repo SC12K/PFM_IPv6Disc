@@ -59,8 +59,19 @@
       <em class="summary">Gestor para controlar la ejecucion de las sondas a traves de una 
         cola de ejecucion.</em>
     </li>
+    <li> <strong class="uidlink"><a href="GestorDeModulos.GestorDeModulos-class.html">GestorDeModulos.GestorDeModulos</a></strong>:
+      <em class="summary">Gestor encargado de gestionar todos los modulos antes de ser 
+        instanciados.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="GestorDeResultados.GestorDeResultados-class.html">GestorDeResultados.GestorDeResultados</a></strong>:
+      <em class="summary">Gestor que permite gestionar los diferentes modulos escritores.</em>
+    </li>
     <li> <strong class="uidlink"><a href="GestorDeSondas.GestorDeSondas-class.html">GestorDeSondas.GestorDeSondas</a></strong>:
       <em class="summary">Gestor que permite la edicion de sondas.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="InfoResultados.InfoResultados-class.html">InfoResultados.InfoResultados</a></strong>:
+      <em class="summary">Convencion de comunicacion de resultados entre la sonda y los 
+        modulos de escritura.</em>
     </li>
     <li> <strong class="uidlink"><a href="Instruccion.Instruccion-class.html">Instruccion.Instruccion</a></strong>:
       <em class="summary">Clase base para todas las instrucciones ejecutables, excepto Exit.</em>
@@ -68,53 +79,58 @@
     <li> <strong class="uidlink"><a href="Interprete.Interprete.Ayuda-class.html">Interprete.Interprete.Ayuda</a></strong>:
       <em class="summary">La Ayuda es una Instruccion basica del interprete.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.CargarDispensador-class.html">RepertorioGSondas.CargarDispensador</a></strong>:
-      <em class="summary">La instruccion CargarDispensador permite cargar un dispensador dado
-        una direccion de fichero o bien una direccion y un nombre de clase.</em>
+    <li> <strong class="uidlink"><a href="RepertorioGdM.CargarModulo-class.html">RepertorioGdM.CargarModulo</a></strong>:
+      <em class="summary">La instruccion CargarModulo permite cargar un moduos y anadirlos al
+        gestor de modulos dada una etiqueta, una direccion de fichero o 
+        bien una direccion y un nombre de clase.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.CargarEjecutor-class.html">RepertorioGSondas.CargarEjecutor</a></strong>:
-      <em class="summary">La instruccion CargarEjecutor permite cargar un dispensador dado 
-        una direccion de fichero o bien una direccion y un nombre de clase.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="RepertorioEjecucion.Ejecutar-class.html">RepertorioEjecucion.Ejecutar</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdE.Ejecutar-class.html">RepertorioGdE.Ejecutar</a></strong>:
       <em class="summary">Inicia la ejecucion de las sondas.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioEjecucion.EliminarDeEjecucion-class.html">RepertorioEjecucion.EliminarDeEjecucion</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdE.EliminarDeEjecucion-class.html">RepertorioGdE.EliminarDeEjecucion</a></strong>:
       <em class="summary">Elimina una sonda de nombre dado a la cola de ejecucion</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.EliminarDispensador-class.html">RepertorioGSondas.EliminarDispensador</a></strong>:
-      <em class="summary">Elimina un dispensador de nombre dado.</em>
+    <li> <strong class="uidlink"><a href="RepertorioGdR.EliminarEscritor-class.html">RepertorioGdR.EliminarEscritor</a></strong>:
+      <em class="summary">Elimina una escritor de nombre dado.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.EliminarEjecutor-class.html">RepertorioGSondas.EliminarEjecutor</a></strong>:
-      <em class="summary">Elimina un ejecutor de nombre dado.</em>
+    <li> <strong class="uidlink"><a href="RepertorioGdM.EliminarModulo-class.html">RepertorioGdM.EliminarModulo</a></strong>:
+      <em class="summary">Elimina un modulo de nombre dado.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.EliminarSonda-class.html">RepertorioGSondas.EliminarSonda</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdS.EliminarSonda-class.html">RepertorioGdS.EliminarSonda</a></strong>:
       <em class="summary">Elimina una sonda de nombre dado.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioEjecucion.ListaEjecucion-class.html">RepertorioEjecucion.ListaEjecucion</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdE.ListaEjecucion-class.html">RepertorioGdE.ListaEjecucion</a></strong>:
       <em class="summary">Muestra por pantalla la lista de Sondas de la cola de ejecucion.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.ListarDispensadores-class.html">RepertorioGSondas.ListarDispensadores</a></strong>:
-      <em class="summary">Genera y muestra una Lista de Dispensadores.</em>
+    <li> <strong class="uidlink"><a href="RepertorioGdR.ListarEscritores-class.html">RepertorioGdR.ListarEscritores</a></strong>:
+      <em class="summary">Genera y muestra una Lista de Escritores.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.ListarEjecutores-class.html">RepertorioGSondas.ListarEjecutores</a></strong>:
-      <em class="summary">Genera y muestra una Lista de Ejecutores.</em>
+    <li> <strong class="uidlink"><a href="RepertorioGdM.ListarModulos-class.html">RepertorioGdM.ListarModulos</a></strong>:
+      <em class="summary">Genera y muestra una Lista de Modulos.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.ListarSondas-class.html">RepertorioGSondas.ListarSondas</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdS.ListarSondas-class.html">RepertorioGdS.ListarSondas</a></strong>:
       <em class="summary">Genera y muestra una Lista de Sondas.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.NuevaSonda-class.html">RepertorioGSondas.NuevaSonda</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdS.NuevaSonda-class.html">RepertorioGdS.NuevaSonda</a></strong>:
       <em class="summary">La instruccion NuevaSonda permite crear una sonda con un 
         dispensador y un ejecutor previamente cargado.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioGSondas.Parametros-class.html">RepertorioGSondas.Parametros</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdR.NuevoEscritor-class.html">RepertorioGdR.NuevoEscritor</a></strong>:
+      <em class="summary">La instruccion NuevoEscritor permite crear una sonda con un 
+        dispensador y un ejecutor previamente cargado.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="RepertorioGdS.Parametros-class.html">RepertorioGdS.Parametros</a></strong>:
       <em class="summary">Permite trabajar con los parametros de los dispensadores y de los 
         ejecutores.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioEjecucion.Parar-class.html">RepertorioEjecucion.Parar</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdR.ParametrosEscritor-class.html">RepertorioGdR.ParametrosEscritor</a></strong>:
+      <em class="summary">Permite trabajar con los parametros de los dispensadores y de los 
+        ejecutores.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="RepertorioGdE.Parar-class.html">RepertorioGdE.Parar</a></strong>:
       <em class="summary">Detiene la ejecucion de las sondas.</em>
     </li>
-    <li> <strong class="uidlink"><a href="RepertorioEjecucion.PonerEnCola-class.html">RepertorioEjecucion.PonerEnCola</a></strong>:
+    <li> <strong class="uidlink"><a href="RepertorioGdE.PonerEnCola-class.html">RepertorioGdE.PonerEnCola</a></strong>:
       <em class="summary">Anade una sonda de nombre dado a la cola de ejecucion</em>
     </li>
     </ul>
@@ -124,8 +140,8 @@
         ejecutores, los dispensadores, las salidas y la cola de ejeucion.</em>
     </li>
     <li> <strong class="uidlink"><a href="SC12KModulo.SC12KModulo-class.html">SC12KModulo.SC12KModulo</a></strong>:
-      <em class="summary">Plantilla basica para los modelos de los modulos dispensadores y 
-        ejecutores.</em>
+      <em class="summary">Plantilla basica para los modelos de los modulos dispensadores, 
+        ejecutores y escritores..</em>
     <ul>
     <li> <strong class="uidlink"><a href="DispensadorIPv6.DispensadorIPv6-class.html">DispensadorIPv6.DispensadorIPv6</a></strong>:
       <em class="summary">Modelo para modulos que proporcionen direcciones IPv6.</em>
@@ -196,7 +212,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 19 19:03:18 2016
+    Generated by Epydoc 3.0.1 on Sun Jan 24 22:19:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
 from DispensadorIPv6 import DispensadorIPv6
 from struct import unpack
 from socket import AF_INET, inet_aton

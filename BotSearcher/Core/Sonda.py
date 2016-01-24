@@ -1,5 +1,5 @@
-﻿import xml.etree.ElementTree as xmlparser
-from SC12K_utils import logging
+﻿from logger import *
+import xml.etree.ElementTree as xmlparser
 
 class Sonda(object):
     """
@@ -11,7 +11,7 @@ class Sonda(object):
         self._dispensador = dispensador
         self._ejecutor = ejecutor
         self._name = nombre
-        self._treeroot = None
+        self._tree = None
 
     def ejecutarPaso(self):
         if not self._dispensador.estaInicializado():
@@ -39,14 +39,14 @@ class Sonda(object):
         
     def newTreeRoot(self, tree):
         logging.debug('Sonda newTreeRoot')
-        self._treeroot = tree
+        self._tree = tree
         #añade parametros dispensador
-        idisp = xmlparser.SubElement(self._treeroot,"idisp")
+        idisp = xmlparser.SubElement(self._tree,"idisp")
         keylist = self._dispensador.getParamList()
         for key in keylist:
             idisp.set(key, self._dispensador.getParamValue(key))
 
-        iejec = xmlparser.SubElement(self._treeroot,"iejec")
+        iejec = xmlparser.SubElement(self._tree,"iejec")
         keylist = self._ejecutor.getParamList()
         for key in keylist:
             iejec.set(key, self._ejecutor.getParamValue(key))
@@ -57,7 +57,7 @@ class Sonda(object):
         self._dispensador.cargarDesdeTree(idisp)
         iejec = tree.find('iejec')
         self._ejecutor.cargarDesdeTree(iejec)
-        self._treeroot = tree
+        self._tree = tree
 
 
     def setName(self, name):
@@ -70,14 +70,14 @@ class Sonda(object):
             #si cierto dispensador
             logging.debug('\tdispensador')
             res = self._dispensador.setParametro(key,value)
-            if res and not self._treeroot == None:
-                self._treeroot.find('idisp').attrib[key] = value
+            if res and not self._tree == None:
+                self._tree.find('idisp').attrib[key] = value
         else:
             #si falso ejecutor
             logging.debug('\tejecutor')
             res = self._ejecutor.setParametro(key,value)
-            if res and not self._treeroot == None:
-                self._treeroot.find('iejec').attrib[key] = value
+            if res and not self._tree == None:
+                self._tree.find('iejec').attrib[key] = value
         return res
 
     def listParam(self,deo):

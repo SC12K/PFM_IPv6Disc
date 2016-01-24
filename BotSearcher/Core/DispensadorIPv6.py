@@ -1,6 +1,4 @@
-import sys
-sys.path.append('../')
-from SC12K_utils import *
+from logger import *
 from SC12KModulo import SC12KModulo
 
 class DispensadorIPv6(SC12KModulo):
@@ -9,6 +7,9 @@ class DispensadorIPv6(SC12KModulo):
     encargan de implementar algoritmos para generar direcciones IPv6 para el
     rastreo, o bien conseguir estas direcciones de un fichero o una base de
     datos.
+    
+    Cada implementacion debe reimplementar los metedos:
+    init(), inicializa(), getDireccionIPv6()
     """
     def inicializa(self):
         """

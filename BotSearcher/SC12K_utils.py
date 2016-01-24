@@ -1,47 +1,4 @@
-﻿#modulo unificado
-import sys
-#Anexo el Directorio en donde se encuentra la clase a llamar
-sys.path.append('./Interfaz')
-sys.path.append('./Core')
-#Función para realizar prints solo cuando debug este activado.
-
-import logging
-tlevel=logging.DEBUG
-"""
-Nivel a escribir en el fichero de log.
-"""
-#tlevel=logging.INFO
-#tlevel=logging.WARNING
-logging.basicConfig(filename='BotSearcherIPv6.log',
-                    format='[%(asctime)s]\t%(levelname)s\t: %(message)s',
-                    level=tlevel)
-
-def cargarClase(path, modulename, classname):
-    """
-    Carga una clase dado un path, un modulo y un nombre de clase.
-    
-    @param path: carpeta donde se encuentra el modulo.
-    @type path: string
-        
-    @param modulename: Fichero *.py que contiene la clase..
-    @type modulename: string
-        
-    @param classname: Nombre de la clase.
-    @type classname: string
-        
-    @returns: Devuelve None si hay algun problema. En otro caso devuelve la
-    clase.
-    """
-    try:
-        if (path != "" and path != "./"):
-            sys.path.append(path)
-        module = __import__(modulename)
-        class_ = getattr(module, classname)
-        return class_
-    except Exception as E:
-        print E
-        class_ = None
-        return class_
+﻿from logger import *
 
 def pathToFolderModule(path):
     """
@@ -60,10 +17,10 @@ def pathToFolderModule(path):
     else :
         module = pathParts[0].split('.',1)[0]
         folder = "./"
-	
+
     logging.debug("pathToFolderModule path: " + path + "--> Folder: " + folder + " Module: " + module)
     return folder, module
-		
+
 def NormalizeAddr(addr):
     """
     Normaliza una direccion IPv6. Por ejemplo:
@@ -97,26 +54,3 @@ def NormalizeAddr(addr):
     
     return addrNorm[:-1]	
 
-#importamos las clases base
-from Interprete import Interprete
-from GestorDeSondas import GestorDeSondas
-from GestorDeEjecucion import GestorDeEjecucion
-
-global interprete
-"""
-Variable global para referenciar el interprete.
-"""
-interprete = Interprete()
-
-#Gestor de Sondas
-global GdS
-"""
-Variable global para referenciar el Gestor de Sondas.
-"""
-GdS = GestorDeSondas()
-
-global GdE
-"""
-Variable global para referenciar el Gestor de Ejecucion.
-"""
-GdE = GestorDeEjecucion()

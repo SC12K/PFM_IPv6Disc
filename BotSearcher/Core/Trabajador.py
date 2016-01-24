@@ -1,4 +1,4 @@
-from SC12K_utils import *
+from logger import *
 import threading
 from Sonda import Sonda
 
@@ -9,7 +9,7 @@ class Trabajador(threading.Thread):
     """
     def __init__(self, target):
         """
-        Inicializa las senales de trabajoPendiente y running a Falso.
+        Inicializa las senales de trabajoPendiente y trabajando a Falso.
         
         @param target: Funcion que se ejecutara en el thread. Se pasa al padre.
         @type target: funcion 
@@ -19,11 +19,11 @@ class Trabajador(threading.Thread):
         Senal de control que indica si la cola tiene elementos (cierto) o no 
         (falso).
         """
-        self.running = threading.Event()
+        self.trabajando = threading.Event()
         """
         Senal de control que indica si se ha solicitado que el thread funcion
         (cierto) o no (falso).
         """
         self.trabajoPendiente.clear()
-        self.running.clear()
+        self.trabajando.clear()
         threading.Thread.__init__(self, target=target)
