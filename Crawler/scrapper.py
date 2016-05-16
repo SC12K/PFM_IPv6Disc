@@ -1,3 +1,9 @@
+'''
+Crawler para sacar IPs de myip.ms
+v1 -> 16MAY, JC
+'''
+
+
 import random
 import urllib2
 import cookielib
@@ -7,6 +13,7 @@ import socks
 import socket
 import os
 import subprocess
+
 
 class CustomRequest(object):
 	# Constructor
@@ -18,20 +25,17 @@ class CustomRequest(object):
 		self.hdr_referer = ''
 		self.hdr_connection = ''
 		# Other settings
-		self.delay = 0 #segs
 		self.html_content = ''
 		# I am not a robooot
 		self.randomize()
 			
 
-	# Returns and opener object
+	# Returns an opener object
 	def openCon(self):
 		cookieJar = cookielib.CookieJar()
 		try:
 			cookie_handler = urllib2.HTTPCookieProcessor(cookieJar)
-			# If this is not added, the credentials will be send in clear text
-			#https_handler=urllib2.HTTPSHandler() 
-			opener = urllib2.build_opener(cookie_handler)#, https_handler) #returns an OpenerDirector
+			opener = urllib2.build_opener(cookie_handler) #returns an OpenerDirector
 		except urllib2.HTTPError as e:
 			print('HTTPError :',e.code)			
 		# Custom HTTP headers
@@ -60,8 +64,9 @@ class CustomRequest(object):
 
 	def shouldIStop(self):
 		regex = ('You have already viewed the maximum number of Myip.ms pages per day' + # no user
-				'|' + # or
-		 		'The maximum daily number of Myip.ms pages per day has already been viewed from your IP address') #logged user
+			'|' + # or
+		 	'The maximum daily number of Myip.ms pages per day has already been viewed from your IP address' #logged user
+		 	) 
 		regex_c = re.compile(regex)
 		if re.search(regex_c, self.html_content): #not NONE
 			print ">> Maximum request per day regex match!"
@@ -134,11 +139,9 @@ class CustomRequest(object):
 			"https://www.myip.ms/view/best_hosting/USA/Best_Hosting_in_USA.html",
 			"https://www.myip.ms/view/best_hosting/JPN/Best_Hosting_in_Japan.html"
 		]				
-		accept_list = ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"] #should be improved
+		accept_list = ["text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"] # should be improved...
 		connection_list = ["keep-alive", "close"]
-		
-		# 
-		self.delay = random.uniform(1,5) #random float x, 1<= x <= 5
+
 		# Headers
 		self.hdr_userAgent = random.choice(userAgent_list)
 		self.hdr_accept = random.choice(accept_list)
@@ -147,7 +150,8 @@ class CustomRequest(object):
 		self.hdr_acceptLanguage = acceptLanguage_req
 		for i in range(1, random.randint(1,3)): # up to 3 random languages with random quantifiers
 			self.hdr_acceptLanguage += ( ', ' + random.choice(acceptLanguage_list) 
-			+ ';q=' + str(random.uniform(0.1, 0.9))[:3] ) # the preference quantifier quantifier					
+				+ ';q=' + str(random.uniform(0.1, 0.9))[:3] # the preference quantifier 
+				) 					
 		
 		return
 	
@@ -161,7 +165,8 @@ class CustomRequest(object):
 				"[a-f0-9]{0,4}" + r":" +
 				"[a-f0-9]{0,4}" + r":" +
 				"[a-f0-9]{0,4}" + r":" +
-				"[a-f0-9]{1,4}")
+				"[a-f0-9]{1,4}"
+				)
 		regex_c = re.compile(regex)
 
 		ip_list = re.findall(regex_c, self.html_content) #list of regex results througth the html				
@@ -181,27 +186,27 @@ if __name__=="__main__":
 	url_base = "https://www.myip.ms/browse/comp_ip6/" #1, 2, 3...
 	ip_file = 'myipms.txt'
 	total_myipms = 20063 #16MAY
-	first_page = 48
+	first_page = 48 #16MAY
 	last_page = total_myipms
-
 	# Set TOR 			
 	socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050, True)
 	socket.socket = socks.socksocket
-
+	# Print IP
 	curl_out = subprocess.check_output(['curl','icanhazip.com'], shell=False).strip()
 	print "Current IP, new IP: " + curl_out
-	
+	# Go for it!
 	for i in range(first_page, last_page):
 		rq = CustomRequest()
 		opener = rq.openCon()
 		rq.getHTML(opener, url_base + str(i))
 		print "Working on page ", i
-		
+		# Avoid banning
 		if rq.shouldIStop():
 			os.system('sudo service tor restart')
+			time.sleep(1)
+			# Print IP
 			curl_out = subprocess.check_output(['curl','icanhazip.com'], shell=False).strip()
-			print "TOR restarted, new IP: " + curl_out
-			time.sleep(1)			
+			print "TOR restarted, new IP: " + curl_out						
 		else:
 			appendIPs(rq.xtractMyipms(), ip_file)
 		
