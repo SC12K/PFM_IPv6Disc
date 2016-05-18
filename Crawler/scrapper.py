@@ -1,6 +1,7 @@
 '''
 Crawler para sacar IPs de myip.ms
 v1 -> 16MAY, JC
+v2 -> 18MAY, JC
 '''
 
 
@@ -30,38 +31,37 @@ class CustomRequest(object):
 		self.randomize()
 			
 
-	# Returns an opener object
-	def openCon(self):
-		cookieJar = cookielib.CookieJar()
-		try:
-			cookie_handler = urllib2.HTTPCookieProcessor(cookieJar)
-			opener = urllib2.build_opener(cookie_handler) #returns an OpenerDirector
-		except urllib2.HTTPError as e:
-			print('HTTPError :',e.code)			
-		# Custom HTTP headers
-		opener.addheaders = [('Connection', self.hdr_connection),
-							('Referer', self.hdr_referer),
-							('User-Agent', self.hdr_userAgent),
-							('Accept', self.hdr_accept),
-							('Accept-Language', self.hdr_acceptLanguage)
-							]
-		return opener
-	
-
 	# Returns the HTML content in a string
-	def getHTML(self, opener, url):
-		try:
-			url_file = opener.open(url)
-			# Set attribute
-			self.html_content = url_file.read() 
-		except urllib2.HTTPError as e:
-			print('HTTPError :',e.code,url)
-		except urllib2.URLError as e:
-			print('URLError :',e.reason,url)
+	def getHTML(self, url):
+		body = StringIO() # needs something to acts liek a buffer
+		petition = pycurl.Curl()
+		# Target
+		petition.setopt(pycurl.URL, url)
+		# Headers
+		c.setopt(pycurl.HTTPHEADER, 
+				[
+				'User-Agent: ' + self.hdr_userAgent,
+				'Accept: ' + self.hdr_accept,
+				'Accept-Language: ' + self.hdr_acceptLanguage,
+				'Referer: ' + elf.hdr_referer,
+				'Connection: ' + self.hdr_connection,
+				])
+		# Forcing IPv4
+		c.setopt(c.IPRESOLVE, c.IPRESOLVE_V4)
+		# Pointing results
+		c.setopt(c.WRITEFUNCTION, body.write)
+		# Enabling TOR
+		c.setopt(pycurl.PROXY, "127.0.0.1")
+		c.setopt(pycurl.PROXYPORT, 9050)
+		c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
+		# Go TOR!
+		c.perform()
+		c.close()
 
-		return 
+		return body.getvalue()
 
 
+	# Returns a boolean. Checks if the limit have been reached 
 	def shouldIStop(self):
 		regex = ('You have already viewed the maximum number of Myip.ms pages per day' + # no user
 			'|' + # or
