@@ -188,24 +188,20 @@ if __name__=="__main__":
 	total_myipms = 20063 #16MAY
 	first_page = 48 #16MAY
 	last_page = total_myipms
-	# Set TOR 			
-	socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050, True)
-	socket.socket = socks.socksocket
 	# Print IP
-	curl_out = subprocess.check_output(['curl','icanhazip.com'], shell=False).strip()
+	curl_out = subprocess.check_output(['curl','icanhazip.com'], shell = False).strip()
 	print "Current IP, new IP: " + curl_out
 	# Go for it!
 	for i in range(first_page, last_page):
 		rq = CustomRequest()
-		opener = rq.openCon()
-		rq.getHTML(opener, url_base + str(i))
+		rq.getHTML(url_base + str(i))
 		print "Working on page ", i
 		# Avoid banning
 		if rq.shouldIStop():
-			os.system('sudo service tor restart')
-			time.sleep(1)
+			subprocess.call(['sudo', 'service', 'tor', 'restart'], shell = False)
+			time.sleep(2)
 			# Print IP
-			curl_out = subprocess.check_output(['curl','icanhazip.com'], shell=False).strip()
+			curl_out = subprocess.check_output(['curl','icanhazip.com'], shell = False).strip()
 			print "TOR restarted, new IP: " + curl_out						
 		else:
 			appendIPs(rq.xtractMyipms(), ip_file)
