@@ -7,13 +7,17 @@ v2 -> 18MAY, JC
 
 import random
 import urllib2
-import cookielib
 import re
 import time
-import socks
-import socket
-import os
 import subprocess
+from StringIO import StringIO
+import pycurl
+
+
+class color:
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
 
 
 class CustomRequest(object):
@@ -38,39 +42,50 @@ class CustomRequest(object):
 		# Target
 		petition.setopt(pycurl.URL, url)
 		# Headers
-		c.setopt(pycurl.HTTPHEADER, 
+		petition.setopt(pycurl.HTTPHEADER, 
 				[
 				'User-Agent: ' + self.hdr_userAgent,
 				'Accept: ' + self.hdr_accept,
 				'Accept-Language: ' + self.hdr_acceptLanguage,
-				'Referer: ' + elf.hdr_referer,
+				'Referer: ' + self.hdr_referer,
 				'Connection: ' + self.hdr_connection,
 				])
 		# Forcing IPv4
-		c.setopt(c.IPRESOLVE, c.IPRESOLVE_V4)
+		petition.setopt(petition.IPRESOLVE, petition.IPRESOLVE_V4)
 		# Pointing results
-		c.setopt(c.WRITEFUNCTION, body.write)
+		petition.setopt(petition.WRITEFUNCTION, body.write)
 		# Enabling TOR
-		c.setopt(pycurl.PROXY, "127.0.0.1")
-		c.setopt(pycurl.PROXYPORT, 9050)
-		c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
+		petition.setopt(pycurl.PROXY, "127.0.0.1")
+		petition.setopt(pycurl.PROXYPORT, 9050)
+		petition.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
 		# Go TOR!
-		c.perform()
-		c.close()
+		petition.perform()
+		petition.close()
+		self.html_content = body.getvalue()
+		return 
 
-		return body.getvalue()
+
+	# Writes the hmtl contento to a file
+	def saveHTML(self, f_name):
+		f = open(f_name, 'w')
+		f.write(self.html_content)
+		f.close()
+		return
 
 
 	# Returns a boolean. Checks if the limit have been reached 
 	def shouldIStop(self):
 		regex = ('You have already viewed the maximum number of Myip.ms pages per day' + # no user
 			'|' + # or
-		 	'The maximum daily number of Myip.ms pages per day has already been viewed from your IP address' #logged user
+		 	'The maximum daily number of Myip.ms pages per day has already been viewed from your IP address' +#logged user
+		 	'|' + #or
+		 	"window.location='https://www.myip.ms/info/limitexcess'"
 		 	) 
 		regex_c = re.compile(regex)
-		if re.search(regex_c, self.html_content): #not NONE
-			print ">> Maximum request per day regex match!"
+		if re.search(regex_c, self.html_content): #if nothing found
+			print color.FAIL + ">> Maximum request per day regex match!" + color.ENDC
 			return True
+
 		return False
 
 	
@@ -181,6 +196,29 @@ def appendIPs(myset, f_name):
 	f.close()
 	return
 
+def torRestart():
+	# Restart TOR
+	subprocess.call(['sudo', 'service', 'tor', 'restart'], shell = False)
+	time.sleep(2)
+
+	body = StringIO() # needs something to acts liek a buffer
+	petition = pycurl.Curl()
+	# Target
+	petition.setopt(pycurl.URL, "http://icanhazip.com")
+	# Forcing IPv4
+	petition.setopt(petition.IPRESOLVE, petition.IPRESOLVE_V4)
+	# Pointing results
+	petition.setopt(petition.WRITEFUNCTION, body.write)
+	# Enabling TOR
+	petition.setopt(pycurl.PROXY, "127.0.0.1")
+	petition.setopt(pycurl.PROXYPORT, 9050)
+	petition.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
+	# Go TOR!
+	petition.perform()
+	petition.close()
+	# Print IP
+	print color.WARNING + "TOR restarted, new IP: " + body.getvalue() + color.ENDC	
+	return
 			
 if __name__=="__main__":
 	url_base = "https://www.myip.ms/browse/comp_ip6/" #1, 2, 3...
@@ -188,23 +226,29 @@ if __name__=="__main__":
 	total_myipms = 20063 #16MAY
 	first_page = 48 #16MAY
 	last_page = total_myipms
-	# Print IP
-	curl_out = subprocess.check_output(['curl','icanhazip.com'], shell = False).strip()
-	print "Current IP, new IP: " + curl_out
+
+	torRestart()
 	# Go for it!
 	for i in range(first_page, last_page):
 		rq = CustomRequest()
 		rq.getHTML(url_base + str(i))
 		print "Working on page ", i
+
 		# Avoid banning
 		if rq.shouldIStop():
-			subprocess.call(['sudo', 'service', 'tor', 'restart'], shell = False)
-			time.sleep(2)
-			# Print IP
-			curl_out = subprocess.check_output(['curl','icanhazip.com'], shell = False).strip()
-			print "TOR restarted, new IP: " + curl_out						
+			torRestart()			
 		else:
-			appendIPs(rq.xtractMyipms(), ip_file)
+			dump = rq.xtractMyipms()
+			appendIPs(dump, ip_file)
+
+			# Check if empty page (stop condition not expected)
+			if len(dump) < 20: # should be over 45-50, but...
+				print (color.FAIL + ">>> Dump too short (" + str(len(dump)) + 
+					" lines) something might be broken. Writing last HTML to a error_" + 
+					url_base + str(i) + ".html" + color.ENDC)
+				rq.saveHTML("error_" + str(i) + ".html")
+				exit(1)
+
 		
 
 
